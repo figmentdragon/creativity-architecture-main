@@ -1,0 +1,84 @@
+// Figures
+
+// scss-docs-start figure-variables
+$figure-caption-font-size:          $sm-font-size !default;
+$figure-caption-color:              $gray-600 !default;
+// scss-docs-end figure-variables
+
+figure {
+	border: 1px solid darken($accent, $border-percentage);
+	display: inline-block;
+	padding: 1rem;
+	width: 100%;
+  margin: 1em 40px;
+}
+
+figure img {
+	margin: 0 auto;
+}
+
+figure figcaption {
+	font-size: $sm-font-size;
+	margin-top: 0.5rem;
+	text-align: center;
+}
+
+table {
+	border: 1px 0 0 1px;
+  border-style: solid;
+  border-spacing: 0;
+  border-collapse: separate;
+  table-layout: fixed;/* Prevents HTML tables from becoming too wide */
+	text-align: left;
+  margin: 0 0 0.7777777777777778em;
+	width: 100%;
+  a {
+    text-decoration: $link-text-decoration;
+  }
+  caption {
+  	margin: 2rem 0;
+  }
+  tr {
+  	border-bottom: 1px solid $primary;
+  }
+  th,
+  td {
+    padding: $offset;
+  }
+}
+
+table tbody tr:nth-child(even) {
+	background: $accent;
+}
+
+th {
+	background: $secondary;
+	font-weight: 700;
+}
+
+thead th {
+    border-width: 0 1px 1px 0;
+}
+
+th,
+td {
+  border-width: 0 1px 1px 0;
+  font-weight: normal;
+  text-align: left;
+
+  :not(last-of-type) {
+    border-right: 1px solid $primary;
+  }
+}
+
+caption {
+    border-width: 1px 1px 0 1px;
+    font-weight: 700;
+    text-align: center;
+}
+
+caption,
+th,
+td {
+    padding: 0.667em;
+}

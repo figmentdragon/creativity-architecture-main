@@ -1,0 +1,22 @@
+/**
+ * structure/footer
+ * ---
+ */
+
+.footer {}
+
+#site-info,
+.site-info {}
+
+.copyright {
+  color: $primary;
+  font-weight: bold;
+  font-size: .75em;
+  float: right;
+  line-height: .5em;
+  margin-top: -.15vh;
+
+  a {
+    color: tint($secondary, $link-percentage);
+  }
+}

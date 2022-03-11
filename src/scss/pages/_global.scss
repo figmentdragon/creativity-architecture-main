@@ -1,0 +1,169 @@
+*,
+*::after,
+*::before,
+*:after,
+*:before,
+*:fullscreen {
+  text-rendering: geometricPrecision;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  @include box-sizing($type: inherit);
+  transition: all .3s cubic-bezier(.5, 0, .5, 1);
+}
+
+html {
+  @include make-container($type: border-box, $display: inline, $overflow: hidden);
+  position: relative;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+
+  margin-top: 0;
+  margin-right: 0;
+  margin-bottom: 0;
+  margin-left: 0;
+
+  padding-top: 3vh;
+  padding-right: .5vw;
+  padding-bottom: 2vh;
+  padding-left: $vertical-offset;
+
+  height: 100%;
+  width: 100%;
+  background-image: linear-gradient( 290deg, $brown, transparent);
+
+  @media screen and (min-width: 768px) {
+    font-size: 75%;
+  }
+}
+
+body,
+html {
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+
+  * {
+    @include box-sizing($type: border-box);
+  }
+}
+
+body {
+  position: relative;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 100;
+
+  margin: 0;
+  padding: 0;
+
+  @include border-start-radius($border-radius-sm);
+  @include elevation(20);
+
+  text-align: left;
+  font-family: $main-font;
+  font-size: $font-size-base;
+  color: $body-text;
+
+}
+
+header {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: .75vw;
+  z-index: 600;
+
+  margin: 0;
+
+  height: 100vh;
+  width: 4vw;
+}
+
+main {
+  position: relative;
+  z-index: 200;
+  height: 100vh;
+  padding-top: .05vh;
+  padding-right: .02vw;
+  padding-bottom: .05vh;
+  padding-left: 9.75vw;
+  @include elevation(20);
+}
+
+article {
+  position: relative;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 300;
+
+  padding-top: .5vh;
+	padding-right: .5vw;
+	padding-bottom: .5vh;
+	padding-left: 1.5vw;
+
+  height: 100%;
+  width: 100%;
+
+  border: 2px solid white;
+  background-color: purple;
+}
+
+nav {
+  position: absolute;
+  top: 30vh;
+  bottom: 10vh;
+  left: 4.25vw;
+  z-index: 1000;
+
+  margin-left: 3vw;
+  margin-bottom: $horizontal-spacer;
+
+  width: 10vw;
+}
+
+footer {
+  position: fixed;
+  right: 1vw;
+  bottom: .25vh;
+  left: 10vw;
+  z-index: 500;
+
+  margin: 0;
+  padding: 0;
+}
+
+aside {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 400;
+
+  margin: 0;
+  padding: 0;
+
+  width: 8vw;
+}
+
+@import "global/div";
+@import "global/section";
+@import "global/span";
+
+@import "global/emphasis";
+@import "global/headings";
+@import "global/hr";
+@import "global/links";
+@import "global/lists";
+@import "global/quote";
+@import "global/table";
+@import "global/text-elements";
+
+@import "global/page";
+
+@import "global/body-classes";

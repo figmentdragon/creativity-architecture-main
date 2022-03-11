@@ -1,0 +1,65 @@
+$nav-perecentage: 8%;
+
+ul, ol {
+  font-family: $accent-font;
+  padding: 0;
+  li {
+  	line-height: 1.2;
+    margin-left: 1vw;
+  }
+}
+
+ul {
+  font-family: $accent-font;
+	list-style: none;
+  background-color: yellow;
+}
+ol {
+  font-family: 'Pompiere';
+	list-style: none;
+}
+
+ul ol,
+ol ul,
+ul li,
+ol li {
+	margin-bottom: 0;
+	margin-left: .03vw;
+}
+
+ul li >  ul,
+ol li >  ol,
+ul li >  ol,
+ol li >  ul{
+	margin-top: 0;
+	margin-bottom:0;
+}
+
+li {
+  font-family: $accent-font;
+	line-height: 1.2;
+  display: inline-flex;
+  flex-direction: row;
+  flex-flow: nowrap;
+  width: 100%;
+  background-color: green;
+
+  :before {
+    font-size: inherit;
+  }
+  a {
+    :hover{
+    }
+  }
+  > ul,
+  > ol {
+    margin-bottom: 0;
+  }
+}
+
+dt {
+    font-weight: 700;
+}
+dd {
+	margin: 0 1.5em 1.5em;
+}

@@ -1,0 +1,107 @@
+.custom-header {
+	clear: both;
+	position: relative;
+}
+.custom-header .post-thumbnail {
+	margin: 0;
+}
+#feature-slider-section .entry-container,
+.custom-header-content {
+  display: block;
+  margin: 0 auto;
+  position: relative;
+  max-width: 1500px;
+  width: 100%;
+  text-align: center;
+}
+.custom-header-content.content-align-left .custom-header-content-wrapper {
+	margin: 0 auto 0 0;
+}
+.custom-header-content.content-align-right .custom-header-content-wrapper {
+  margin: 0 0 0 auto;
+}
+.custom-header-content.text-align-left {
+	text-align: left;
+}
+.custom-header-content.text-align-right {
+	text-align: right;
+}
+.custom-header-content.text-align-center {
+	text-align: center;
+}
+.custom-header-content.text-align-left .site-header-logo,
+.custom-header-content.text-align-left .site-header-logo img {
+	margin: 0 auto 0 0;
+}
+.custom-header-content.text-align-center .site-header-logo,
+.custom-header-content.text-align-center .site-header-logo img {
+	margin: 0 auto;
+}
+.custom-header-content.text-align-right .site-header-logo,
+.custom-header-content.text-align-right .site-header-logo img {
+	margin: 0 0 0 auto;
+}
+.custom-header-content .site-header-text {
+	margin-top: 21px;
+	font-size: 19px;
+    font-size: 1.1875rem;
+	line-height: 1.59;
+	display: none;
+}
+.custom-header-content  .more-link{
+	margin-top: 21px;
+}
+
+body:not(.home) .custom-header-content.content-align-left .custom-header-content-wrapper,
+body:not(.home) .custom-header-content.content-align-right .custom-header-content-wrapper,
+body:not(.home) .custom-header-content .custom-header-content-wrapper {
+	margin: 0 auto;
+}
+body:not(.home) .custom-header .scroll-down {
+	display: none;
+}
+
+.home.admin-bar .custom-header {
+	height: calc( 100vh - 46px );
+}
+.home.custom-header {
+	height: 100vh;
+}
+
+body:not(.has-header-image):not(.has-header-video):not(.has-header-text)  .custom-header-media {
+	display: none;
+}
+.custom-header-overlay {
+    bottom: 0;
+    content: "";
+    height: 100%;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    width: 100%;
+    z-index: 1;
+}
+.custom-header .wrapper:before {
+    content: "";
+    display: block;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+}
+.custom-header-media .wp-custom-header-video-button { /* Specificity prevents .color-dark button overrides */
+	border-radius: 50%;
+	font-size: 18px;
+	font-size: 1.125rem;
+	opacity: 0;
+	overflow: hidden;
+	padding: 7px 13px;
+	position: absolute;
+	left: 49%;
+	bottom: 35px;
+	z-index: 100;
+	height: 44px;
+	width: 44px;
+}

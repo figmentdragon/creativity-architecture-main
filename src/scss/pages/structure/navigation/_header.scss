@@ -1,0 +1,61 @@
+/**
+ * 12.1 - Header
+ */
+
+.absolute-header .site-header {
+    position: absolute;
+    left: 0;
+    width: 100%;
+    top: 0;
+    z-index: 99;
+}
+
+.site-header-main .wrapper {
+	-webkit-align-items: flex-start;
+	-ms-flex-align: flex-start;
+	align-items: flex-start;
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-flex-wrap: wrap;
+	-ms-flex-wrap: wrap;
+	flex-wrap: wrap;
+	padding: 14px 30px;
+	position: relative;
+}
+.site-header-menu {
+	align-items: center;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-flex-wrap: wrap;
+	-ms-flex-wrap: wrap;
+	flex-wrap: wrap;
+	margin-right: -10px;
+	width: auto;
+	position: relative;
+}
+.site-header-menu .line {
+	width: 1px;
+	height: 100%;
+	background: #fff;
+}
+
+
+/* Hides div in Customizer preview when header images or videos change. */
+
+.header-media:hover .wp-custom-header-video-button {
+	opacity: 1;
+}
+
+.mobile-social-search .social-links-menu a {
+    border: 1px solid;
+    padding: 0;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    margin-right: 10px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}

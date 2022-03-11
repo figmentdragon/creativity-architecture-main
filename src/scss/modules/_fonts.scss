@@ -1,0 +1,142 @@
+/**
+ * modules/fonts
+ * ---
+ * Declare fonts here
+ */
+
+
+/*
+@font-face {
+  font-family: "Font-Name";
+  src: url("fonts/font-name.eot");
+  src: url("fonts/font-name.eot?#iefix") format("embedded-opentype"),
+    url("fonts/font-name.woff") format("woff"),
+    url("fonts/font-name.ttf") format("truetype"),
+    url("fonts/font-name.svg#font-name") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+*/
+
+/* @font-face kit by Fonts2u (https://fonts2u.com) */
+@font-face { font-family: "Avdira";
+  src: url('fonts/avdira/Avdira_R.woff') format("woff");
+  src: url('fonts/avdira/Avdira_R.svg') format("svg");
+  src: url('fonts/avdira/Avdira_R.ttf') format("ttf");
+  src: url('fonts/avdira/Avdira_R.eot') format("eot");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face { font-family: "Enjoy Writing";
+  font-style: normal;
+  font-weight: 400;
+  src: url('fonts/enjoy-writing/enjoywrting.woff') format("woff");
+}
+
+@font-face { font-family: "Glass Antiqua";
+  font-weight: 400;
+  font-style: normal;
+  src: url('fonts/glass-antiqua/glassantiqua.woff') format("woff");
+}
+
+@font-face { font-family: "Hand TypeWriter";
+  font-weight: 400;
+  font-style: normal;
+  src: url('fonts/hand-typewriter/handtypewriter.woff') format("woff");
+}
+
+/* latin-ext */
+@font-face { font-family: "Life Savers";
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/lifesavers/v13/ZXu_e1UftKKabUQMgxAal8HXOR5amcb4pA.woff2) format("woff2");
+  unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face { font-family: "Life Savers";
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/lifesavers/v13/ZXu_e1UftKKabUQMgxAal8HXOR5UmcY.woff2) format("woff2");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+@font-face { font-family: "Pompiere";
+  font-style: normal;
+  font-weight: 400;
+  src: local("Pompiere"), url("https://fonts.cdnfonts.com/s/12351/Pompiere-Regular.woff") format("woff");
+}
+
+@font-face { font-family: "Raleway";
+  font-style: normal;
+  src: url('fonts/raleway/Raleway-Thin.woff') format("woff");
+}
+
+@font-face { font-family: "Raleway-ExtraLight";
+  font-style: normal;
+  font-weight: 275;
+  src: url('fonts/raleway/Raleway-ExtraLight.woff') format("woff");
+}
+@font-face { font-family: "Raleway-Light";
+  font-style: normal;
+  font-weight: 300;
+  src: url('fonts/raleway/Raleway-Light.woff') format("woff");
+  }
+@font-face { font-family: "Raleway-Italic";
+  font-style: italic;
+  font-weight: 400;
+  src: url('fonts/raleway/Raleway-Italic.woff') format("woff");
+}
+@font-face { font-family: "Raleway";
+  font-style: normal;
+  font-weight: 500;
+  src: url('fonts/raleway/Raleway-Medium.woff') format("woff");
+}
+@font-face { font-family: "Raleway";
+  font-style: normal;
+  font-weight: 600;
+  src: url('fonts/raleway/Raleway-SemiBold.woff') format("woff");
+}
+@font-face { font-family: "Raleway-Bold";
+  font-style: normal;
+  font-weight: 700;
+  src: url('fonts/raleway/Raleway-Bold.woff') format("woff");
+}
+@font-face { font-family: "Raleway-ExtraBold";
+  font-style: normal;
+  font-weight: 800;
+  src: url('fonts/raleway/Raleway-ExtraBold.woff') format("woff");
+}
+@font-face { font-family: "Raleway-Black";
+  font-style: normal;
+  font-weight: 900;
+  src: url('fonts/raleway/Raleway-Black.woff') format("woff");
+}
+@font-face { font-family: "raleway-blackitalic";
+  font-style: italic;
+  font-weight: 900;
+  src: url('fonts/raleway/raleway-blackitalic.woff') format("woff");
+}
+
+@font-face { font-family: "Raylig";
+  font-style: normal;
+  font-weight: 600;
+  src: url("https://fonts.cdnfonts.com/s/70312/RayligSemibold-Wy9mE.woff") format("woff");
+}
+
+@font-face { font-family: "TELETYPE 1945-1985";
+  src: url('/fonts/teletype_1945_1985/TELETYPE1945-1985.woff') format("woff");
+    font-weight: normal;
+    font-style: normal;
+  src: url("//db.onlinewebfonts.com/t/83dc401685732778308fc7cdfe8af34e.eot?#iefix") format("embedded-opentype");
+  src: url("//db.onlinewebfonts.com/t/83dc401685732778308fc7cdfe8af34e.woff2") format("woff2");
+  src: url("//db.onlinewebfonts.com/t/83dc401685732778308fc7cdfe8af34e.ttf") format("truetype");
+  src: url("//db.onlinewebfonts.com/t/83dc401685732778308fc7cdfe8af34e.svg#TELETYPE 1945-1985") format("svg");
+}
+@font-face { font-family: "Wanda";
+  font-weight: 700;
+  font-style: normal;
+  src: url('fonts/fonts/wanda/wanda.woff') format("woff");
+}

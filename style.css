@@ -1,0 +1,7046 @@
+@charset "UTF-8";
+/* 1 */
+/*!
+ * Theme Name: The Creativity Architect
+ * Theme URI: http://thecreataivityarchitect.com
+ * Description: THEMENAME WordPress Starter Theme
+ * Version: 1.5.0
+ * Author: CJTermini
+ * Author URI: http://thecreataivityarchitect.com
+ * Tags: HTML5, CSS3, starter, framework
+ *
+ * License: MIT
+ * License URI: http://opensource.org/licenses/mit-license.php
+ */
+/**
+ * Default variables and helper mixins
+ */
+/* Grid Variables */
+/* Container offset */
+/* Grid Variables */
+/* Container offset */
+/* Grid containers */
+/* Define the maximum width of `.container` for different screen sizes. */
+/* Grid breakpoints */
+/* Define the minimum dimensions at which your layout will change, adapting to different screen sizes, for use in media queries. */
+/* ##Columns generator## */
+/* MIXIN: Grid Loop */
+/* Grid system */
+/* Generate semantic grid columns with these mixins. */
+/* Row columns*/
+/* Specify on a parent element(e.g., .row) to force immediate children into NN numberof columns. Supports wrapping to new lines, but does not do a Masonry style grid.*/
+.container,
+.container-fluid,
+.container-xxl,
+.container-xl,
+.container-lg,
+.container-md,
+.container-sm {
+  width: 100%;
+  max-width: 1368px;
+  padding-right: 20px;
+  padding-left: 20px;
+  margin: 0 auto;
+}
+
+@media (min-width: (min-width: 1) and (max-width:574px)) {
+  .container-sm {
+    max-width: 574px;
+  }
+}
+@media (min-width: (min-width: 575px) and (max-width: 768px)) {
+  .container-md, .container-sm {
+    max-width: 768px;
+  }
+}
+@media (min-width: (min-width: 769px) and (max-width: 992px)) {
+  .container-lg, .container-md, .container-sm {
+    max-width: 992px;
+  }
+}
+@media (min-width: (min-width: 993px) and (max-width: 1200px)) {
+  .container-xl, .container-lg, .container-md, .container-sm {
+    max-width: 1200px;
+  }
+}
+@media (min-width: (min-width: 1201px) and (max-width: 1400px)) {
+  .container-xxl, .container-xl, .container-lg, .container-md, .container-sm {
+    max-width: 1400px;
+  }
+}
+/**
+ * Grid scaffolding
+ */
+.container,
+.container-fluid,
+.container-xxl,
+.container-xl,
+.container-lg,
+.container-md,
+.container-sm {
+  width: 100%;
+  max-width: 1368px;
+  padding-right: 20px;
+  padding-left: 20px;
+  margin: 0 auto;
+}
+.container:before, .container:after,
+.container-fluid:before,
+.container-fluid:after,
+.container-xxl:before,
+.container-xxl:after,
+.container-xl:before,
+.container-xl:after,
+.container-lg:before,
+.container-lg:after,
+.container-md:before,
+.container-md:after,
+.container-sm:before,
+.container-sm:after {
+  content: " ";
+  display: table;
+}
+.container:after,
+.container-fluid:after,
+.container-xxl:after,
+.container-xl:after,
+.container-lg:after,
+.container-md:after,
+.container-sm:after {
+  clear: both;
+}
+
+@media (min-width: 576px) {
+  .container-sm, .container {
+    max-width: 540px;
+  }
+}
+@media (min-width: 768px) {
+  .container-md, .container-sm, .container {
+    max-width: 720px;
+  }
+}
+@media (min-width: 992px) {
+  .container-lg, .container-md, .container-sm, .container {
+    max-width: 960px;
+  }
+}
+@media (min-width: 1200px) {
+  .container-xl, .container-lg, .container-md, .container-sm, .container {
+    max-width: 1140px;
+  }
+}
+@media (min-width: 1400px) {
+  .container-xxl, .container-xl, .container-lg, .container-md, .container-sm, .container {
+    max-width: 1320px;
+  }
+}
+.row {
+  margin: 40px 16px;
+  list-style: none;
+  align-content: space-between;
+}
+.row:not(.row-flex):before, .row:not(.row-flex):after {
+  content: " ";
+  display: table;
+}
+.row:not(.row-flex):after {
+  clear: both;
+}
+.row.row--gutterless {
+  margin-left: 0;
+}
+.row.row-flex {
+  flex-wrap: wrap;
+  display: flex;
+}
+.row > * {
+  box-sizing: border-box;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  width: 100%;
+  max-width: 100%;
+  padding-right: 20px;
+  padding-left: 20px;
+  margin-top: 16px;
+}
+
+.col {
+  float: left;
+  padding-right: 0.75em;
+  box-sizing: border-box;
+  float: left;
+  padding-left: 16px;
+  -webkit-box-flex: 1;
+  -ms-flex: 1 0 0%;
+  flex: 1 0 0%;
+}
+.row--gutterless .col {
+  padding-left: 0;
+}
+
+.last-col {
+  float: right;
+  padding-right: 0 !important;
+}
+
+/* Columns generator */
+@media only screen and ((min-width: 1201px) and (max-width: 1400px)) {
+  .col-xxl-offset-1 {
+    margin-left: 1600%;
+  }
+
+  .col-xxl-2 {
+    width: divide(2, 16);
+  }
+  .row-flex .col-xxl-2 {
+    flex-basis: divide(16, 2);
+    max-width: divide(16, 2);
+    width: auto;
+    float: none;
+  }
+
+  .col-xxl-offset-2 {
+    margin-left: 1600%;
+  }
+
+  .col-xxl-3 {
+    width: divide(3, 16);
+  }
+  .row-flex .col-xxl-3 {
+    flex-basis: divide(16, 3);
+    max-width: divide(16, 3);
+    width: auto;
+    float: none;
+  }
+
+  .col-xxl-offset-3 {
+    margin-left: 1600%;
+  }
+
+  .col-xxl-4 {
+    width: divide(4, 16);
+  }
+  .row-flex .col-xxl-4 {
+    flex-basis: divide(16, 4);
+    max-width: divide(16, 4);
+    width: auto;
+    float: none;
+  }
+
+  .col-xxl-offset-4 {
+    margin-left: 1600%;
+  }
+
+  .col-xxl-5 {
+    width: divide(5, 16);
+  }
+  .row-flex .col-xxl-5 {
+    flex-basis: divide(16, 5);
+    max-width: divide(16, 5);
+    width: auto;
+    float: none;
+  }
+
+  .col-xxl-offset-5 {
+    margin-left: 1600%;
+  }
+
+  .col-xxl-6 {
+    width: divide(6, 16);
+  }
+  .row-flex .col-xxl-6 {
+    flex-basis: divide(16, 6);
+    max-width: divide(16, 6);
+    width: auto;
+    float: none;
+  }
+
+  .col-xxl-offset-6 {
+    margin-left: 1600%;
+  }
+
+  .col-xxl-7 {
+    width: divide(7, 16);
+  }
+  .row-flex .col-xxl-7 {
+    flex-basis: divide(16, 7);
+    max-width: divide(16, 7);
+    width: auto;
+    float: none;
+  }
+
+  .col-xxl-offset-7 {
+    margin-left: 1600%;
+  }
+
+  .col-xxl-8 {
+    width: divide(8, 16);
+  }
+  .row-flex .col-xxl-8 {
+    flex-basis: divide(16, 8);
+    max-width: divide(16, 8);
+    width: auto;
+    float: none;
+  }
+
+  .col-xxl-offset-8 {
+    margin-left: 1600%;
+  }
+
+  .col-xxl-9 {
+    width: divide(9, 16);
+  }
+  .row-flex .col-xxl-9 {
+    flex-basis: divide(16, 9);
+    max-width: divide(16, 9);
+    width: auto;
+    float: none;
+  }
+
+  .col-xxl-offset-9 {
+    margin-left: 1600%;
+  }
+
+  .col-xxl-10 {
+    width: divide(10, 16);
+  }
+  .row-flex .col-xxl-10 {
+    flex-basis: divide(16, 10);
+    max-width: divide(16, 10);
+    width: auto;
+    float: none;
+  }
+
+  .col-xxl-offset-10 {
+    margin-left: 1600%;
+  }
+
+  .col-xxl-11 {
+    width: divide(11, 16);
+  }
+  .row-flex .col-xxl-11 {
+    flex-basis: divide(16, 11);
+    max-width: divide(16, 11);
+    width: auto;
+    float: none;
+  }
+
+  .col-xxl-offset-11 {
+    margin-left: 1600%;
+  }
+
+  .col-xxl-12 {
+    width: divide(12, 16);
+  }
+  .row-flex .col-xxl-12 {
+    flex-basis: divide(16, 12);
+    max-width: divide(16, 12);
+    width: auto;
+    float: none;
+  }
+
+  .col-xxl-offset-12 {
+    margin-left: 1600%;
+  }
+
+  .col-xxl-13 {
+    width: divide(13, 16);
+  }
+  .row-flex .col-xxl-13 {
+    flex-basis: divide(16, 13);
+    max-width: divide(16, 13);
+    width: auto;
+    float: none;
+  }
+
+  .col-xxl-offset-13 {
+    margin-left: 1600%;
+  }
+
+  .col-xxl-14 {
+    width: divide(14, 16);
+  }
+  .row-flex .col-xxl-14 {
+    flex-basis: divide(16, 14);
+    max-width: divide(16, 14);
+    width: auto;
+    float: none;
+  }
+
+  .col-xxl-offset-14 {
+    margin-left: 1600%;
+  }
+
+  .col-xxl-15 {
+    width: divide(15, 16);
+  }
+  .row-flex .col-xxl-15 {
+    flex-basis: divide(16, 15);
+    max-width: divide(16, 15);
+    width: auto;
+    float: none;
+  }
+
+  .col-xxl-offset-15 {
+    margin-left: 1600%;
+  }
+
+  .col-xxl-16 {
+    width: divide(16, 16);
+  }
+  .row-flex .col-xxl-16 {
+    flex-basis: divide(16, 16);
+    max-width: divide(16, 16);
+    width: auto;
+    float: none;
+  }
+
+  .col-xxl-offset-16 {
+    margin-left: 1600%;
+  }
+}
+@media only screen and ((min-width: 993px) and (max-width: 1200px)) {
+  .col-xl-offset-1 {
+    margin-left: 1600%;
+  }
+
+  .col-xl-2 {
+    width: divide(2, 16);
+  }
+  .row-flex .col-xl-2 {
+    flex-basis: divide(16, 2);
+    max-width: divide(16, 2);
+    width: auto;
+    float: none;
+  }
+
+  .col-xl-offset-2 {
+    margin-left: 1600%;
+  }
+
+  .col-xl-3 {
+    width: divide(3, 16);
+  }
+  .row-flex .col-xl-3 {
+    flex-basis: divide(16, 3);
+    max-width: divide(16, 3);
+    width: auto;
+    float: none;
+  }
+
+  .col-xl-offset-3 {
+    margin-left: 1600%;
+  }
+
+  .col-xl-4 {
+    width: divide(4, 16);
+  }
+  .row-flex .col-xl-4 {
+    flex-basis: divide(16, 4);
+    max-width: divide(16, 4);
+    width: auto;
+    float: none;
+  }
+
+  .col-xl-offset-4 {
+    margin-left: 1600%;
+  }
+
+  .col-xl-5 {
+    width: divide(5, 16);
+  }
+  .row-flex .col-xl-5 {
+    flex-basis: divide(16, 5);
+    max-width: divide(16, 5);
+    width: auto;
+    float: none;
+  }
+
+  .col-xl-offset-5 {
+    margin-left: 1600%;
+  }
+
+  .col-xl-6 {
+    width: divide(6, 16);
+  }
+  .row-flex .col-xl-6 {
+    flex-basis: divide(16, 6);
+    max-width: divide(16, 6);
+    width: auto;
+    float: none;
+  }
+
+  .col-xl-offset-6 {
+    margin-left: 1600%;
+  }
+
+  .col-xl-7 {
+    width: divide(7, 16);
+  }
+  .row-flex .col-xl-7 {
+    flex-basis: divide(16, 7);
+    max-width: divide(16, 7);
+    width: auto;
+    float: none;
+  }
+
+  .col-xl-offset-7 {
+    margin-left: 1600%;
+  }
+
+  .col-xl-8 {
+    width: divide(8, 16);
+  }
+  .row-flex .col-xl-8 {
+    flex-basis: divide(16, 8);
+    max-width: divide(16, 8);
+    width: auto;
+    float: none;
+  }
+
+  .col-xl-offset-8 {
+    margin-left: 1600%;
+  }
+
+  .col-xl-9 {
+    width: divide(9, 16);
+  }
+  .row-flex .col-xl-9 {
+    flex-basis: divide(16, 9);
+    max-width: divide(16, 9);
+    width: auto;
+    float: none;
+  }
+
+  .col-xl-offset-9 {
+    margin-left: 1600%;
+  }
+
+  .col-xl-10 {
+    width: divide(10, 16);
+  }
+  .row-flex .col-xl-10 {
+    flex-basis: divide(16, 10);
+    max-width: divide(16, 10);
+    width: auto;
+    float: none;
+  }
+
+  .col-xl-offset-10 {
+    margin-left: 1600%;
+  }
+
+  .col-xl-11 {
+    width: divide(11, 16);
+  }
+  .row-flex .col-xl-11 {
+    flex-basis: divide(16, 11);
+    max-width: divide(16, 11);
+    width: auto;
+    float: none;
+  }
+
+  .col-xl-offset-11 {
+    margin-left: 1600%;
+  }
+
+  .col-xl-12 {
+    width: divide(12, 16);
+  }
+  .row-flex .col-xl-12 {
+    flex-basis: divide(16, 12);
+    max-width: divide(16, 12);
+    width: auto;
+    float: none;
+  }
+
+  .col-xl-offset-12 {
+    margin-left: 1600%;
+  }
+
+  .col-xl-13 {
+    width: divide(13, 16);
+  }
+  .row-flex .col-xl-13 {
+    flex-basis: divide(16, 13);
+    max-width: divide(16, 13);
+    width: auto;
+    float: none;
+  }
+
+  .col-xl-offset-13 {
+    margin-left: 1600%;
+  }
+
+  .col-xl-14 {
+    width: divide(14, 16);
+  }
+  .row-flex .col-xl-14 {
+    flex-basis: divide(16, 14);
+    max-width: divide(16, 14);
+    width: auto;
+    float: none;
+  }
+
+  .col-xl-offset-14 {
+    margin-left: 1600%;
+  }
+
+  .col-xl-15 {
+    width: divide(15, 16);
+  }
+  .row-flex .col-xl-15 {
+    flex-basis: divide(16, 15);
+    max-width: divide(16, 15);
+    width: auto;
+    float: none;
+  }
+
+  .col-xl-offset-15 {
+    margin-left: 1600%;
+  }
+
+  .col-xl-16 {
+    width: divide(16, 16);
+  }
+  .row-flex .col-xl-16 {
+    flex-basis: divide(16, 16);
+    max-width: divide(16, 16);
+    width: auto;
+    float: none;
+  }
+
+  .col-xl-offset-16 {
+    margin-left: 1600%;
+  }
+}
+@media only screen and ((min-width: 769px) and (max-width: 992px)) {
+  .col-lg-offset-1 {
+    margin-left: 1600%;
+  }
+
+  .col-lg-2 {
+    width: divide(2, 16);
+  }
+  .row-flex .col-lg-2 {
+    flex-basis: divide(16, 2);
+    max-width: divide(16, 2);
+    width: auto;
+    float: none;
+  }
+
+  .col-lg-offset-2 {
+    margin-left: 1600%;
+  }
+
+  .col-lg-3 {
+    width: divide(3, 16);
+  }
+  .row-flex .col-lg-3 {
+    flex-basis: divide(16, 3);
+    max-width: divide(16, 3);
+    width: auto;
+    float: none;
+  }
+
+  .col-lg-offset-3 {
+    margin-left: 1600%;
+  }
+
+  .col-lg-4 {
+    width: divide(4, 16);
+  }
+  .row-flex .col-lg-4 {
+    flex-basis: divide(16, 4);
+    max-width: divide(16, 4);
+    width: auto;
+    float: none;
+  }
+
+  .col-lg-offset-4 {
+    margin-left: 1600%;
+  }
+
+  .col-lg-5 {
+    width: divide(5, 16);
+  }
+  .row-flex .col-lg-5 {
+    flex-basis: divide(16, 5);
+    max-width: divide(16, 5);
+    width: auto;
+    float: none;
+  }
+
+  .col-lg-offset-5 {
+    margin-left: 1600%;
+  }
+
+  .col-lg-6 {
+    width: divide(6, 16);
+  }
+  .row-flex .col-lg-6 {
+    flex-basis: divide(16, 6);
+    max-width: divide(16, 6);
+    width: auto;
+    float: none;
+  }
+
+  .col-lg-offset-6 {
+    margin-left: 1600%;
+  }
+
+  .col-lg-7 {
+    width: divide(7, 16);
+  }
+  .row-flex .col-lg-7 {
+    flex-basis: divide(16, 7);
+    max-width: divide(16, 7);
+    width: auto;
+    float: none;
+  }
+
+  .col-lg-offset-7 {
+    margin-left: 1600%;
+  }
+
+  .col-lg-8 {
+    width: divide(8, 16);
+  }
+  .row-flex .col-lg-8 {
+    flex-basis: divide(16, 8);
+    max-width: divide(16, 8);
+    width: auto;
+    float: none;
+  }
+
+  .col-lg-offset-8 {
+    margin-left: 1600%;
+  }
+
+  .col-lg-9 {
+    width: divide(9, 16);
+  }
+  .row-flex .col-lg-9 {
+    flex-basis: divide(16, 9);
+    max-width: divide(16, 9);
+    width: auto;
+    float: none;
+  }
+
+  .col-lg-offset-9 {
+    margin-left: 1600%;
+  }
+
+  .col-lg-10 {
+    width: divide(10, 16);
+  }
+  .row-flex .col-lg-10 {
+    flex-basis: divide(16, 10);
+    max-width: divide(16, 10);
+    width: auto;
+    float: none;
+  }
+
+  .col-lg-offset-10 {
+    margin-left: 1600%;
+  }
+
+  .col-lg-11 {
+    width: divide(11, 16);
+  }
+  .row-flex .col-lg-11 {
+    flex-basis: divide(16, 11);
+    max-width: divide(16, 11);
+    width: auto;
+    float: none;
+  }
+
+  .col-lg-offset-11 {
+    margin-left: 1600%;
+  }
+
+  .col-lg-12 {
+    width: divide(12, 16);
+  }
+  .row-flex .col-lg-12 {
+    flex-basis: divide(16, 12);
+    max-width: divide(16, 12);
+    width: auto;
+    float: none;
+  }
+
+  .col-lg-offset-12 {
+    margin-left: 1600%;
+  }
+
+  .col-lg-13 {
+    width: divide(13, 16);
+  }
+  .row-flex .col-lg-13 {
+    flex-basis: divide(16, 13);
+    max-width: divide(16, 13);
+    width: auto;
+    float: none;
+  }
+
+  .col-lg-offset-13 {
+    margin-left: 1600%;
+  }
+
+  .col-lg-14 {
+    width: divide(14, 16);
+  }
+  .row-flex .col-lg-14 {
+    flex-basis: divide(16, 14);
+    max-width: divide(16, 14);
+    width: auto;
+    float: none;
+  }
+
+  .col-lg-offset-14 {
+    margin-left: 1600%;
+  }
+
+  .col-lg-15 {
+    width: divide(15, 16);
+  }
+  .row-flex .col-lg-15 {
+    flex-basis: divide(16, 15);
+    max-width: divide(16, 15);
+    width: auto;
+    float: none;
+  }
+
+  .col-lg-offset-15 {
+    margin-left: 1600%;
+  }
+
+  .col-lg-16 {
+    width: divide(16, 16);
+  }
+  .row-flex .col-lg-16 {
+    flex-basis: divide(16, 16);
+    max-width: divide(16, 16);
+    width: auto;
+    float: none;
+  }
+
+  .col-lg-offset-16 {
+    margin-left: 1600%;
+  }
+}
+@media only screen and ((min-width: 575px) and (max-width: 768px)) {
+  .col-md-offset-1 {
+    margin-left: 1600%;
+  }
+
+  .col-md-2 {
+    width: divide(2, 16);
+  }
+  .row-flex .col-md-2 {
+    flex-basis: divide(16, 2);
+    max-width: divide(16, 2);
+    width: auto;
+    float: none;
+  }
+
+  .col-md-offset-2 {
+    margin-left: 1600%;
+  }
+
+  .col-md-3 {
+    width: divide(3, 16);
+  }
+  .row-flex .col-md-3 {
+    flex-basis: divide(16, 3);
+    max-width: divide(16, 3);
+    width: auto;
+    float: none;
+  }
+
+  .col-md-offset-3 {
+    margin-left: 1600%;
+  }
+
+  .col-md-4 {
+    width: divide(4, 16);
+  }
+  .row-flex .col-md-4 {
+    flex-basis: divide(16, 4);
+    max-width: divide(16, 4);
+    width: auto;
+    float: none;
+  }
+
+  .col-md-offset-4 {
+    margin-left: 1600%;
+  }
+
+  .col-md-5 {
+    width: divide(5, 16);
+  }
+  .row-flex .col-md-5 {
+    flex-basis: divide(16, 5);
+    max-width: divide(16, 5);
+    width: auto;
+    float: none;
+  }
+
+  .col-md-offset-5 {
+    margin-left: 1600%;
+  }
+
+  .col-md-6 {
+    width: divide(6, 16);
+  }
+  .row-flex .col-md-6 {
+    flex-basis: divide(16, 6);
+    max-width: divide(16, 6);
+    width: auto;
+    float: none;
+  }
+
+  .col-md-offset-6 {
+    margin-left: 1600%;
+  }
+
+  .col-md-7 {
+    width: divide(7, 16);
+  }
+  .row-flex .col-md-7 {
+    flex-basis: divide(16, 7);
+    max-width: divide(16, 7);
+    width: auto;
+    float: none;
+  }
+
+  .col-md-offset-7 {
+    margin-left: 1600%;
+  }
+
+  .col-md-8 {
+    width: divide(8, 16);
+  }
+  .row-flex .col-md-8 {
+    flex-basis: divide(16, 8);
+    max-width: divide(16, 8);
+    width: auto;
+    float: none;
+  }
+
+  .col-md-offset-8 {
+    margin-left: 1600%;
+  }
+
+  .col-md-9 {
+    width: divide(9, 16);
+  }
+  .row-flex .col-md-9 {
+    flex-basis: divide(16, 9);
+    max-width: divide(16, 9);
+    width: auto;
+    float: none;
+  }
+
+  .col-md-offset-9 {
+    margin-left: 1600%;
+  }
+
+  .col-md-10 {
+    width: divide(10, 16);
+  }
+  .row-flex .col-md-10 {
+    flex-basis: divide(16, 10);
+    max-width: divide(16, 10);
+    width: auto;
+    float: none;
+  }
+
+  .col-md-offset-10 {
+    margin-left: 1600%;
+  }
+
+  .col-md-11 {
+    width: divide(11, 16);
+  }
+  .row-flex .col-md-11 {
+    flex-basis: divide(16, 11);
+    max-width: divide(16, 11);
+    width: auto;
+    float: none;
+  }
+
+  .col-md-offset-11 {
+    margin-left: 1600%;
+  }
+
+  .col-md-12 {
+    width: divide(12, 16);
+  }
+  .row-flex .col-md-12 {
+    flex-basis: divide(16, 12);
+    max-width: divide(16, 12);
+    width: auto;
+    float: none;
+  }
+
+  .col-md-offset-12 {
+    margin-left: 1600%;
+  }
+
+  .col-md-13 {
+    width: divide(13, 16);
+  }
+  .row-flex .col-md-13 {
+    flex-basis: divide(16, 13);
+    max-width: divide(16, 13);
+    width: auto;
+    float: none;
+  }
+
+  .col-md-offset-13 {
+    margin-left: 1600%;
+  }
+
+  .col-md-14 {
+    width: divide(14, 16);
+  }
+  .row-flex .col-md-14 {
+    flex-basis: divide(16, 14);
+    max-width: divide(16, 14);
+    width: auto;
+    float: none;
+  }
+
+  .col-md-offset-14 {
+    margin-left: 1600%;
+  }
+
+  .col-md-15 {
+    width: divide(15, 16);
+  }
+  .row-flex .col-md-15 {
+    flex-basis: divide(16, 15);
+    max-width: divide(16, 15);
+    width: auto;
+    float: none;
+  }
+
+  .col-md-offset-15 {
+    margin-left: 1600%;
+  }
+
+  .col-md-16 {
+    width: divide(16, 16);
+  }
+  .row-flex .col-md-16 {
+    flex-basis: divide(16, 16);
+    max-width: divide(16, 16);
+    width: auto;
+    float: none;
+  }
+
+  .col-md-offset-16 {
+    margin-left: 1600%;
+  }
+}
+@media only screen and ((min-width: 1) and (max-width:574px)) {
+  .col-sm-offset-1 {
+    margin-left: 1600%;
+  }
+
+  .col-sm-2 {
+    width: divide(2, 16);
+  }
+  .row-flex .col-sm-2 {
+    flex-basis: divide(16, 2);
+    max-width: divide(16, 2);
+    width: auto;
+    float: none;
+  }
+
+  .col-sm-offset-2 {
+    margin-left: 1600%;
+  }
+
+  .col-sm-3 {
+    width: divide(3, 16);
+  }
+  .row-flex .col-sm-3 {
+    flex-basis: divide(16, 3);
+    max-width: divide(16, 3);
+    width: auto;
+    float: none;
+  }
+
+  .col-sm-offset-3 {
+    margin-left: 1600%;
+  }
+
+  .col-sm-4 {
+    width: divide(4, 16);
+  }
+  .row-flex .col-sm-4 {
+    flex-basis: divide(16, 4);
+    max-width: divide(16, 4);
+    width: auto;
+    float: none;
+  }
+
+  .col-sm-offset-4 {
+    margin-left: 1600%;
+  }
+
+  .col-sm-5 {
+    width: divide(5, 16);
+  }
+  .row-flex .col-sm-5 {
+    flex-basis: divide(16, 5);
+    max-width: divide(16, 5);
+    width: auto;
+    float: none;
+  }
+
+  .col-sm-offset-5 {
+    margin-left: 1600%;
+  }
+
+  .col-sm-6 {
+    width: divide(6, 16);
+  }
+  .row-flex .col-sm-6 {
+    flex-basis: divide(16, 6);
+    max-width: divide(16, 6);
+    width: auto;
+    float: none;
+  }
+
+  .col-sm-offset-6 {
+    margin-left: 1600%;
+  }
+
+  .col-sm-7 {
+    width: divide(7, 16);
+  }
+  .row-flex .col-sm-7 {
+    flex-basis: divide(16, 7);
+    max-width: divide(16, 7);
+    width: auto;
+    float: none;
+  }
+
+  .col-sm-offset-7 {
+    margin-left: 1600%;
+  }
+
+  .col-sm-8 {
+    width: divide(8, 16);
+  }
+  .row-flex .col-sm-8 {
+    flex-basis: divide(16, 8);
+    max-width: divide(16, 8);
+    width: auto;
+    float: none;
+  }
+
+  .col-sm-offset-8 {
+    margin-left: 1600%;
+  }
+
+  .col-sm-9 {
+    width: divide(9, 16);
+  }
+  .row-flex .col-sm-9 {
+    flex-basis: divide(16, 9);
+    max-width: divide(16, 9);
+    width: auto;
+    float: none;
+  }
+
+  .col-sm-offset-9 {
+    margin-left: 1600%;
+  }
+
+  .col-sm-10 {
+    width: divide(10, 16);
+  }
+  .row-flex .col-sm-10 {
+    flex-basis: divide(16, 10);
+    max-width: divide(16, 10);
+    width: auto;
+    float: none;
+  }
+
+  .col-sm-offset-10 {
+    margin-left: 1600%;
+  }
+
+  .col-sm-11 {
+    width: divide(11, 16);
+  }
+  .row-flex .col-sm-11 {
+    flex-basis: divide(16, 11);
+    max-width: divide(16, 11);
+    width: auto;
+    float: none;
+  }
+
+  .col-sm-offset-11 {
+    margin-left: 1600%;
+  }
+
+  .col-sm-12 {
+    width: divide(12, 16);
+  }
+  .row-flex .col-sm-12 {
+    flex-basis: divide(16, 12);
+    max-width: divide(16, 12);
+    width: auto;
+    float: none;
+  }
+
+  .col-sm-offset-12 {
+    margin-left: 1600%;
+  }
+
+  .col-sm-13 {
+    width: divide(13, 16);
+  }
+  .row-flex .col-sm-13 {
+    flex-basis: divide(16, 13);
+    max-width: divide(16, 13);
+    width: auto;
+    float: none;
+  }
+
+  .col-sm-offset-13 {
+    margin-left: 1600%;
+  }
+
+  .col-sm-14 {
+    width: divide(14, 16);
+  }
+  .row-flex .col-sm-14 {
+    flex-basis: divide(16, 14);
+    max-width: divide(16, 14);
+    width: auto;
+    float: none;
+  }
+
+  .col-sm-offset-14 {
+    margin-left: 1600%;
+  }
+
+  .col-sm-15 {
+    width: divide(15, 16);
+  }
+  .row-flex .col-sm-15 {
+    flex-basis: divide(16, 15);
+    max-width: divide(16, 15);
+    width: auto;
+    float: none;
+  }
+
+  .col-sm-offset-15 {
+    margin-left: 1600%;
+  }
+
+  .col-sm-16 {
+    width: divide(16, 16);
+  }
+  .row-flex .col-sm-16 {
+    flex-basis: divide(16, 16);
+    max-width: divide(16, 16);
+    width: auto;
+    float: none;
+  }
+
+  .col-sm-offset-16 {
+    margin-left: 1600%;
+  }
+}
+@media only screen and ((max-width: 0)) {
+  .col-xs-offset-1 {
+    margin-left: 1600%;
+  }
+
+  .col-xs-2 {
+    width: divide(2, 16);
+  }
+  .row-flex .col-xs-2 {
+    flex-basis: divide(16, 2);
+    max-width: divide(16, 2);
+    width: auto;
+    float: none;
+  }
+
+  .col-xs-offset-2 {
+    margin-left: 1600%;
+  }
+
+  .col-xs-3 {
+    width: divide(3, 16);
+  }
+  .row-flex .col-xs-3 {
+    flex-basis: divide(16, 3);
+    max-width: divide(16, 3);
+    width: auto;
+    float: none;
+  }
+
+  .col-xs-offset-3 {
+    margin-left: 1600%;
+  }
+
+  .col-xs-4 {
+    width: divide(4, 16);
+  }
+  .row-flex .col-xs-4 {
+    flex-basis: divide(16, 4);
+    max-width: divide(16, 4);
+    width: auto;
+    float: none;
+  }
+
+  .col-xs-offset-4 {
+    margin-left: 1600%;
+  }
+
+  .col-xs-5 {
+    width: divide(5, 16);
+  }
+  .row-flex .col-xs-5 {
+    flex-basis: divide(16, 5);
+    max-width: divide(16, 5);
+    width: auto;
+    float: none;
+  }
+
+  .col-xs-offset-5 {
+    margin-left: 1600%;
+  }
+
+  .col-xs-6 {
+    width: divide(6, 16);
+  }
+  .row-flex .col-xs-6 {
+    flex-basis: divide(16, 6);
+    max-width: divide(16, 6);
+    width: auto;
+    float: none;
+  }
+
+  .col-xs-offset-6 {
+    margin-left: 1600%;
+  }
+
+  .col-xs-7 {
+    width: divide(7, 16);
+  }
+  .row-flex .col-xs-7 {
+    flex-basis: divide(16, 7);
+    max-width: divide(16, 7);
+    width: auto;
+    float: none;
+  }
+
+  .col-xs-offset-7 {
+    margin-left: 1600%;
+  }
+
+  .col-xs-8 {
+    width: divide(8, 16);
+  }
+  .row-flex .col-xs-8 {
+    flex-basis: divide(16, 8);
+    max-width: divide(16, 8);
+    width: auto;
+    float: none;
+  }
+
+  .col-xs-offset-8 {
+    margin-left: 1600%;
+  }
+
+  .col-xs-9 {
+    width: divide(9, 16);
+  }
+  .row-flex .col-xs-9 {
+    flex-basis: divide(16, 9);
+    max-width: divide(16, 9);
+    width: auto;
+    float: none;
+  }
+
+  .col-xs-offset-9 {
+    margin-left: 1600%;
+  }
+
+  .col-xs-10 {
+    width: divide(10, 16);
+  }
+  .row-flex .col-xs-10 {
+    flex-basis: divide(16, 10);
+    max-width: divide(16, 10);
+    width: auto;
+    float: none;
+  }
+
+  .col-xs-offset-10 {
+    margin-left: 1600%;
+  }
+
+  .col-xs-11 {
+    width: divide(11, 16);
+  }
+  .row-flex .col-xs-11 {
+    flex-basis: divide(16, 11);
+    max-width: divide(16, 11);
+    width: auto;
+    float: none;
+  }
+
+  .col-xs-offset-11 {
+    margin-left: 1600%;
+  }
+
+  .col-xs-12 {
+    width: divide(12, 16);
+  }
+  .row-flex .col-xs-12 {
+    flex-basis: divide(16, 12);
+    max-width: divide(16, 12);
+    width: auto;
+    float: none;
+  }
+
+  .col-xs-offset-12 {
+    margin-left: 1600%;
+  }
+
+  .col-xs-13 {
+    width: divide(13, 16);
+  }
+  .row-flex .col-xs-13 {
+    flex-basis: divide(16, 13);
+    max-width: divide(16, 13);
+    width: auto;
+    float: none;
+  }
+
+  .col-xs-offset-13 {
+    margin-left: 1600%;
+  }
+
+  .col-xs-14 {
+    width: divide(14, 16);
+  }
+  .row-flex .col-xs-14 {
+    flex-basis: divide(16, 14);
+    max-width: divide(16, 14);
+    width: auto;
+    float: none;
+  }
+
+  .col-xs-offset-14 {
+    margin-left: 1600%;
+  }
+
+  .col-xs-15 {
+    width: divide(15, 16);
+  }
+  .row-flex .col-xs-15 {
+    flex-basis: divide(16, 15);
+    max-width: divide(16, 15);
+    width: auto;
+    float: none;
+  }
+
+  .col-xs-offset-15 {
+    margin-left: 1600%;
+  }
+
+  .col-xs-16 {
+    width: divide(16, 16);
+  }
+  .row-flex .col-xs-16 {
+    flex-basis: divide(16, 16);
+    max-width: divide(16, 16);
+    width: auto;
+    float: none;
+  }
+
+  .col-xs-offset-16 {
+    margin-left: 1600%;
+  }
+}
+.row-cols-auto > * {
+  -webkit-box-flex: 0;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+  width: auto;
+}
+
+.row-cols-1 > * {
+  -webkit-box-flex: 0;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+  width: 100%;
+}
+
+.row-cols-2 > * {
+  -webkit-box-flex: 0;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+  width: 50%;
+}
+
+.row-cols-3 > * {
+  -webkit-box-flex: 0;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+  width: 33.3333333333%;
+}
+
+.row-cols-4 > * {
+  -webkit-box-flex: 0;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+  width: 25%;
+}
+
+.row-cols-5 > * {
+  -webkit-box-flex: 0;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+  width: 20%;
+}
+
+.row-cols-6 > * {
+  -webkit-box-flex: 0;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+  width: 16.6666666667%;
+}
+
+@media (min-width: 576px) {
+  .col-sm {
+    -webkit-box-flex: 1;
+    -ms-flex: 1 0 0%;
+    flex: 1 0 0%;
+  }
+
+  .row-cols-sm-auto > * {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 auto;
+    flex: 0 0 auto;
+    width: auto;
+  }
+
+  .row-cols-sm-1 > * {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 auto;
+    flex: 0 0 auto;
+    width: 100%;
+  }
+
+  .row-cols-sm-2 > * {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 auto;
+    flex: 0 0 auto;
+    width: 50%;
+  }
+
+  .row-cols-sm-3 > * {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 auto;
+    flex: 0 0 auto;
+    width: 33.3333333333%;
+  }
+
+  .row-cols-sm-4 > * {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 auto;
+    flex: 0 0 auto;
+    width: 25%;
+  }
+
+  .row-cols-sm-5 > * {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 auto;
+    flex: 0 0 auto;
+    width: 20%;
+  }
+
+  .row-cols-sm-6 > * {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 auto;
+    flex: 0 0 auto;
+    width: 16.6666666667%;
+  }
+}
+@media (min-width: 768px) {
+  .col-md {
+    -webkit-box-flex: 1;
+    -ms-flex: 1 0 0%;
+    flex: 1 0 0%;
+  }
+
+  .row-cols-md-auto > * {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 auto;
+    flex: 0 0 auto;
+    width: auto;
+  }
+
+  .row-cols-md-1 > * {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 auto;
+    flex: 0 0 auto;
+    width: 100%;
+  }
+
+  .row-cols-md-2 > * {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 auto;
+    flex: 0 0 auto;
+    width: 50%;
+  }
+
+  .row-cols-md-3 > * {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 auto;
+    flex: 0 0 auto;
+    width: 33.3333333333%;
+  }
+
+  .row-cols-md-4 > * {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 auto;
+    flex: 0 0 auto;
+    width: 25%;
+  }
+
+  .row-cols-md-5 > * {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 auto;
+    flex: 0 0 auto;
+    width: 20%;
+  }
+
+  .row-cols-md-6 > * {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 auto;
+    flex: 0 0 auto;
+    width: 16.6666666667%;
+  }
+}
+@media (min-width: 992px) {
+  .col-lg {
+    -webkit-box-flex: 1;
+    -ms-flex: 1 0 0%;
+    flex: 1 0 0%;
+  }
+
+  .row-cols-lg-auto > * {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 auto;
+    flex: 0 0 auto;
+    width: auto;
+  }
+
+  .row-cols-lg-1 > * {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 auto;
+    flex: 0 0 auto;
+    width: 100%;
+  }
+
+  .row-cols-lg-2 > * {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 auto;
+    flex: 0 0 auto;
+    width: 50%;
+  }
+
+  .row-cols-lg-3 > * {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 auto;
+    flex: 0 0 auto;
+    width: 33.3333333333%;
+  }
+
+  .row-cols-lg-4 > * {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 auto;
+    flex: 0 0 auto;
+    width: 25%;
+  }
+
+  .row-cols-lg-5 > * {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 auto;
+    flex: 0 0 auto;
+    width: 20%;
+  }
+
+  .row-cols-lg-6 > * {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 auto;
+    flex: 0 0 auto;
+    width: 16.6666666667%;
+  }
+}
+@media (min-width: 1200px) {
+  .col-xl {
+    -webkit-box-flex: 1;
+    -ms-flex: 1 0 0%;
+    flex: 1 0 0%;
+  }
+
+  .row-cols-xl-auto > * {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 auto;
+    flex: 0 0 auto;
+    width: auto;
+  }
+
+  .row-cols-xl-1 > * {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 auto;
+    flex: 0 0 auto;
+    width: 100%;
+  }
+
+  .row-cols-xl-2 > * {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 auto;
+    flex: 0 0 auto;
+    width: 50%;
+  }
+
+  .row-cols-xl-3 > * {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 auto;
+    flex: 0 0 auto;
+    width: 33.3333333333%;
+  }
+
+  .row-cols-xl-4 > * {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 auto;
+    flex: 0 0 auto;
+    width: 25%;
+  }
+
+  .row-cols-xl-5 > * {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 auto;
+    flex: 0 0 auto;
+    width: 20%;
+  }
+
+  .row-cols-xl-6 > * {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 auto;
+    flex: 0 0 auto;
+    width: 16.6666666667%;
+  }
+}
+@media (min-width: 1400px) {
+  .col-xxl {
+    -webkit-box-flex: 1;
+    -ms-flex: 1 0 0%;
+    flex: 1 0 0%;
+  }
+
+  .row-cols-xxl-auto > * {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 auto;
+    flex: 0 0 auto;
+    width: auto;
+  }
+
+  .row-cols-xxl-1 > * {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 auto;
+    flex: 0 0 auto;
+    width: 100%;
+  }
+
+  .row-cols-xxl-2 > * {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 auto;
+    flex: 0 0 auto;
+    width: 50%;
+  }
+
+  .row-cols-xxl-3 > * {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 auto;
+    flex: 0 0 auto;
+    width: 33.3333333333%;
+  }
+
+  .row-cols-xxl-4 > * {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 auto;
+    flex: 0 0 auto;
+    width: 25%;
+  }
+
+  .row-cols-xxl-5 > * {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 auto;
+    flex: 0 0 auto;
+    width: 20%;
+  }
+
+  .row-cols-xxl-6 > * {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 auto;
+    flex: 0 0 auto;
+    width: 16.6666666667%;
+  }
+}
+.offset-1 {
+  margin-left: 8.33333333%;
+}
+
+.offset-2 {
+  margin-left: 16.66666667%;
+}
+
+.offset-3 {
+  margin-left: 25%;
+}
+
+.offset-4 {
+  margin-left: 33.33333333%;
+}
+
+.offset-5 {
+  margin-left: 41.66666667%;
+}
+
+.offset-6 {
+  margin-left: 50%;
+}
+
+.offset-7 {
+  margin-left: 58.33333333%;
+}
+
+.offset-8 {
+  margin-left: 66.66666667%;
+}
+
+.offset-9 {
+  margin-left: 75%;
+}
+
+.offset-10 {
+  margin-left: 83.33333333%;
+}
+
+.offset-11 {
+  margin-left: 91.66666667%;
+}
+
+@media (min-width: 576px) {
+  .col-sm-auto {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 auto;
+    flex: 0 0 auto;
+    width: auto;
+  }
+
+  .col-sm-1 {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 auto;
+    flex: 0 0 auto;
+    width: 8.33333333%;
+  }
+
+  .col-sm-2 {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 auto;
+    flex: 0 0 auto;
+    width: 16.66666667%;
+  }
+
+  .col-sm-3 {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 auto;
+    flex: 0 0 auto;
+    width: 25%;
+  }
+
+  .col-sm-4 {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 auto;
+    flex: 0 0 auto;
+    width: 33.33333333%;
+  }
+
+  .col-sm-5 {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 auto;
+    flex: 0 0 auto;
+    width: 41.66666667%;
+  }
+
+  .col-sm-6 {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 auto;
+    flex: 0 0 auto;
+    width: 50%;
+  }
+
+  .col-sm-7 {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 auto;
+    flex: 0 0 auto;
+    width: 58.33333333%;
+  }
+
+  .col-sm-8 {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 auto;
+    flex: 0 0 auto;
+    width: 66.66666667%;
+  }
+
+  .col-sm-9 {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 auto;
+    flex: 0 0 auto;
+    width: 75%;
+  }
+
+  .col-sm-10 {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 auto;
+    flex: 0 0 auto;
+    width: 83.33333333%;
+  }
+
+  .col-sm-11 {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 auto;
+    flex: 0 0 auto;
+    width: 91.66666667%;
+  }
+
+  .col-sm-12 {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 auto;
+    flex: 0 0 auto;
+    width: 100%;
+  }
+
+  .offset-sm-0 {
+    margin-left: 0;
+  }
+
+  .offset-sm-1 {
+    margin-left: 8.33333333%;
+  }
+
+  .offset-sm-2 {
+    margin-left: 16.66666667%;
+  }
+
+  .offset-sm-3 {
+    margin-left: 25%;
+  }
+
+  .offset-sm-4 {
+    margin-left: 33.33333333%;
+  }
+
+  .offset-sm-5 {
+    margin-left: 41.66666667%;
+  }
+
+  .offset-sm-6 {
+    margin-left: 50%;
+  }
+
+  .offset-sm-7 {
+    margin-left: 58.33333333%;
+  }
+
+  .offset-sm-8 {
+    margin-left: 66.66666667%;
+  }
+
+  .offset-sm-9 {
+    margin-left: 75%;
+  }
+
+  .offset-sm-10 {
+    margin-left: 83.33333333%;
+  }
+
+  .offset-sm-11 {
+    margin-left: 91.66666667%;
+  }
+}
+@media (min-width: 768px) {
+  .col-md-auto {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 auto;
+    flex: 0 0 auto;
+    width: auto;
+  }
+
+  .col-md-1 {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 auto;
+    flex: 0 0 auto;
+    width: 8.33333333%;
+  }
+
+  .col-md-2 {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 auto;
+    flex: 0 0 auto;
+    width: 16.66666667%;
+  }
+
+  .col-md-3 {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 auto;
+    flex: 0 0 auto;
+    width: 25%;
+  }
+
+  .col-md-4 {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 auto;
+    flex: 0 0 auto;
+    width: 33.33333333%;
+  }
+
+  .col-md-5 {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 auto;
+    flex: 0 0 auto;
+    width: 41.66666667%;
+  }
+
+  .col-md-6 {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 auto;
+    flex: 0 0 auto;
+    width: 50%;
+  }
+
+  .col-md-7 {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 auto;
+    flex: 0 0 auto;
+    width: 58.33333333%;
+  }
+
+  .col-md-8 {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 auto;
+    flex: 0 0 auto;
+    width: 66.66666667%;
+  }
+
+  .col-md-9 {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 auto;
+    flex: 0 0 auto;
+    width: 75%;
+  }
+
+  .col-md-10 {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 auto;
+    flex: 0 0 auto;
+    width: 83.33333333%;
+  }
+
+  .col-md-11 {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 auto;
+    flex: 0 0 auto;
+    width: 91.66666667%;
+  }
+
+  .col-md-12 {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 auto;
+    flex: 0 0 auto;
+    width: 100%;
+  }
+
+  .offset-md-0 {
+    margin-left: 0;
+  }
+
+  .offset-md-1 {
+    margin-left: 8.33333333%;
+  }
+
+  .offset-md-2 {
+    margin-left: 16.66666667%;
+  }
+
+  .offset-md-3 {
+    margin-left: 25%;
+  }
+
+  .offset-md-4 {
+    margin-left: 33.33333333%;
+  }
+
+  .offset-md-5 {
+    margin-left: 41.66666667%;
+  }
+
+  .offset-md-6 {
+    margin-left: 50%;
+  }
+
+  .offset-md-7 {
+    margin-left: 58.33333333%;
+  }
+
+  .offset-md-8 {
+    margin-left: 66.66666667%;
+  }
+
+  .offset-md-9 {
+    margin-left: 75%;
+  }
+
+  .offset-md-10 {
+    margin-left: 83.33333333%;
+  }
+
+  .offset-md-11 {
+    margin-left: 91.66666667%;
+  }
+}
+@media (min-width: 992px) {
+  .col-lg-auto {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 auto;
+    flex: 0 0 auto;
+    width: auto;
+  }
+
+  .col-lg-1 {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 auto;
+    flex: 0 0 auto;
+    width: 8.33333333%;
+  }
+
+  .col-lg-2 {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 auto;
+    flex: 0 0 auto;
+    width: 16.66666667%;
+  }
+
+  .col-lg-3 {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 auto;
+    flex: 0 0 auto;
+    width: 25%;
+  }
+
+  .col-lg-4 {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 auto;
+    flex: 0 0 auto;
+    width: 33.33333333%;
+  }
+
+  .col-lg-5 {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 auto;
+    flex: 0 0 auto;
+    width: 41.66666667%;
+  }
+
+  .col-lg-6 {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 auto;
+    flex: 0 0 auto;
+    width: 50%;
+  }
+
+  .col-lg-7 {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 auto;
+    flex: 0 0 auto;
+    width: 58.33333333%;
+  }
+
+  .col-lg-8 {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 auto;
+    flex: 0 0 auto;
+    width: 66.66666667%;
+  }
+
+  .col-lg-9 {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 auto;
+    flex: 0 0 auto;
+    width: 75%;
+  }
+
+  .col-lg-10 {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 auto;
+    flex: 0 0 auto;
+    width: 83.33333333%;
+  }
+
+  .col-lg-11 {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 auto;
+    flex: 0 0 auto;
+    width: 91.66666667%;
+  }
+
+  .col-lg-12 {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 auto;
+    flex: 0 0 auto;
+    width: 100%;
+  }
+
+  .offset-lg-0 {
+    margin-left: 0;
+  }
+
+  .offset-lg-1 {
+    margin-left: 8.33333333%;
+  }
+
+  .offset-lg-2 {
+    margin-left: 16.66666667%;
+  }
+
+  .offset-lg-3 {
+    margin-left: 25%;
+  }
+
+  .offset-lg-4 {
+    margin-left: 33.33333333%;
+  }
+
+  .offset-lg-5 {
+    margin-left: 41.66666667%;
+  }
+
+  .offset-lg-6 {
+    margin-left: 50%;
+  }
+
+  .offset-lg-7 {
+    margin-left: 58.33333333%;
+  }
+
+  .offset-lg-8 {
+    margin-left: 66.66666667%;
+  }
+
+  .offset-lg-9 {
+    margin-left: 75%;
+  }
+
+  .offset-lg-10 {
+    margin-left: 83.33333333%;
+  }
+
+  .offset-lg-11 {
+    margin-left: 91.66666667%;
+  }
+}
+@media (min-width: 1200px) {
+  .col-xl-auto {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 auto;
+    flex: 0 0 auto;
+    width: auto;
+  }
+
+  .col-xl-1 {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 auto;
+    flex: 0 0 auto;
+    width: 8.33333333%;
+  }
+
+  .col-xl-2 {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 auto;
+    flex: 0 0 auto;
+    width: 16.66666667%;
+  }
+
+  .col-xl-3 {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 auto;
+    flex: 0 0 auto;
+    width: 25%;
+  }
+
+  .col-xl-4 {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 auto;
+    flex: 0 0 auto;
+    width: 33.33333333%;
+  }
+
+  .col-xl-5 {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 auto;
+    flex: 0 0 auto;
+    width: 41.66666667%;
+  }
+
+  .col-xl-6 {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 auto;
+    flex: 0 0 auto;
+    width: 50%;
+  }
+
+  .col-xl-7 {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 auto;
+    flex: 0 0 auto;
+    width: 58.33333333%;
+  }
+
+  .col-xl-8 {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 auto;
+    flex: 0 0 auto;
+    width: 66.66666667%;
+  }
+
+  .col-xl-9 {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 auto;
+    flex: 0 0 auto;
+    width: 75%;
+  }
+
+  .col-xl-10 {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 auto;
+    flex: 0 0 auto;
+    width: 83.33333333%;
+  }
+
+  .col-xl-11 {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 auto;
+    flex: 0 0 auto;
+    width: 91.66666667%;
+  }
+
+  .col-xl-12 {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 auto;
+    flex: 0 0 auto;
+    width: 100%;
+  }
+
+  .offset-xl-0 {
+    margin-left: 0;
+  }
+
+  .offset-xl-1 {
+    margin-left: 8.33333333%;
+  }
+
+  .offset-xl-2 {
+    margin-left: 16.66666667%;
+  }
+
+  .offset-xl-3 {
+    margin-left: 25%;
+  }
+
+  .offset-xl-4 {
+    margin-left: 33.33333333%;
+  }
+
+  .offset-xl-5 {
+    margin-left: 41.66666667%;
+  }
+
+  .offset-xl-6 {
+    margin-left: 50%;
+  }
+
+  .offset-xl-7 {
+    margin-left: 58.33333333%;
+  }
+
+  .offset-xl-8 {
+    margin-left: 66.66666667%;
+  }
+
+  .offset-xl-9 {
+    margin-left: 75%;
+  }
+
+  .offset-xl-10 {
+    margin-left: 83.33333333%;
+  }
+
+  .offset-xl-11 {
+    margin-left: 91.66666667%;
+  }
+}
+@media (min-width: 1400px) {
+  .col-xxl-auto {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 auto;
+    flex: 0 0 auto;
+    width: auto;
+  }
+
+  .col-xxl-1 {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 auto;
+    flex: 0 0 auto;
+    width: 8.33333333%;
+  }
+
+  .col-xxl-2 {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 auto;
+    flex: 0 0 auto;
+    width: 16.66666667%;
+  }
+
+  .col-xxl-3 {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 auto;
+    flex: 0 0 auto;
+    width: 25%;
+  }
+
+  .col-xxl-4 {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 auto;
+    flex: 0 0 auto;
+    width: 33.33333333%;
+  }
+
+  .col-xxl-5 {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 auto;
+    flex: 0 0 auto;
+    width: 41.66666667%;
+  }
+
+  .col-xxl-6 {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 auto;
+    flex: 0 0 auto;
+    width: 50%;
+  }
+
+  .col-xxl-7 {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 auto;
+    flex: 0 0 auto;
+    width: 58.33333333%;
+  }
+
+  .col-xxl-8 {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 auto;
+    flex: 0 0 auto;
+    width: 66.66666667%;
+  }
+
+  .col-xxl-9 {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 auto;
+    flex: 0 0 auto;
+    width: 75%;
+  }
+
+  .col-xxl-10 {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 auto;
+    flex: 0 0 auto;
+    width: 83.33333333%;
+  }
+
+  .col-xxl-11 {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 auto;
+    flex: 0 0 auto;
+    width: 91.66666667%;
+  }
+
+  .col-xxl-12 {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 auto;
+    flex: 0 0 auto;
+    width: 100%;
+  }
+
+  .offset-xxl-0 {
+    margin-left: 0;
+  }
+
+  .offset-xxl-1 {
+    margin-left: 8.33333333%;
+  }
+
+  .offset-xxl-2 {
+    margin-left: 16.66666667%;
+  }
+
+  .offset-xxl-3 {
+    margin-left: 25%;
+  }
+
+  .offset-xxl-4 {
+    margin-left: 33.33333333%;
+  }
+
+  .offset-xxl-5 {
+    margin-left: 41.66666667%;
+  }
+
+  .offset-xxl-6 {
+    margin-left: 50%;
+  }
+
+  .offset-xxl-7 {
+    margin-left: 58.33333333%;
+  }
+
+  .offset-xxl-8 {
+    margin-left: 66.66666667%;
+  }
+
+  .offset-xxl-9 {
+    margin-left: 75%;
+  }
+
+  .offset-xxl-10 {
+    margin-left: 83.33333333%;
+  }
+
+  .offset-xxl-11 {
+    margin-left: 91.66666667%;
+  }
+}
+/*
+Mobile Grid Styles
+These are the widths for the mobile grid.
+There are four types, but you can add or customize
+them however you see fit.
+*/
+@media (max-width: 767px) {
+  .m-all {
+    float: left;
+    padding-right: 0.75em;
+    width: 100%;
+    padding-right: 0;
+  }
+
+  .m-1of2 {
+    float: left;
+    padding-right: 0.75em;
+    width: 50%;
+  }
+
+  .m-1of3 {
+    float: left;
+    padding-right: 0.75em;
+    width: 33.33%;
+  }
+
+  .m-2of3 {
+    float: left;
+    padding-right: 0.75em;
+    width: 66.66%;
+  }
+
+  .m-1of4 {
+    float: left;
+    padding-right: 0.75em;
+    width: 25%;
+  }
+
+  .m-3of4 {
+    float: left;
+    padding-right: 0.75em;
+    width: 75%;
+  }
+}
+/* Portrait tablet to landscape */
+@media (min-width: 768px) and (max-width: 1029px) {
+  .t-all {
+    float: left;
+    padding-right: 0.75em;
+    width: 100%;
+    padding-right: 0;
+  }
+
+  .t-1of2 {
+    float: left;
+    padding-right: 0.75em;
+    width: 50%;
+  }
+
+  .t-1of3 {
+    float: left;
+    padding-right: 0.75em;
+    width: 33.33%;
+  }
+
+  .t-2of3 {
+    float: left;
+    padding-right: 0.75em;
+    width: 66.66%;
+  }
+
+  .t-1of4 {
+    float: left;
+    padding-right: 0.75em;
+    width: 25%;
+  }
+
+  .t-3of4 {
+    float: left;
+    padding-right: 0.75em;
+    width: 75%;
+  }
+
+  .t-1of5 {
+    float: left;
+    padding-right: 0.75em;
+    width: 20%;
+  }
+
+  .t-2of5 {
+    float: left;
+    padding-right: 0.75em;
+    width: 40%;
+  }
+
+  .t-3of5 {
+    float: left;
+    padding-right: 0.75em;
+    width: 60%;
+  }
+
+  .t-4of5 {
+    float: left;
+    padding-right: 0.75em;
+    width: 80%;
+  }
+}
+/* Landscape to small desktop */
+@media (min-width: 1030px) {
+  .d-all {
+    float: left;
+    padding-right: 0.75em;
+    width: 100%;
+    padding-right: 0;
+  }
+
+  .d-1of2 {
+    float: left;
+    padding-right: 0.75em;
+    width: 50%;
+  }
+
+  .d-1of3 {
+    float: left;
+    padding-right: 0.75em;
+    width: 33.33%;
+  }
+
+  .d-2of3 {
+    float: left;
+    padding-right: 0.75em;
+    width: 66.66%;
+  }
+
+  .d-1of4 {
+    float: left;
+    padding-right: 0.75em;
+    width: 25%;
+  }
+
+  .d-3of4 {
+    float: left;
+    padding-right: 0.75em;
+    width: 75%;
+  }
+
+  .d-1of5 {
+    float: left;
+    padding-right: 0.75em;
+    width: 20%;
+  }
+
+  .d-2of5 {
+    float: left;
+    padding-right: 0.75em;
+    width: 40%;
+  }
+
+  .d-3of5 {
+    float: left;
+    padding-right: 0.75em;
+    width: 60%;
+  }
+
+  .d-4of5 {
+    float: left;
+    padding-right: 0.75em;
+    width: 80%;
+  }
+
+  .d-1of6 {
+    float: left;
+    padding-right: 0.75em;
+    width: 16.6666666667%;
+  }
+
+  .d-1of7 {
+    float: left;
+    padding-right: 0.75em;
+    width: 14.2857142857%;
+  }
+
+  .d-2of7 {
+    float: left;
+    padding-right: 0.75em;
+    width: 28.5714286%;
+  }
+
+  .d-3of7 {
+    float: left;
+    padding-right: 0.75em;
+    width: 42.8571429%;
+  }
+
+  .d-4of7 {
+    float: left;
+    padding-right: 0.75em;
+    width: 57.1428572%;
+  }
+
+  .d-5of7 {
+    float: left;
+    padding-right: 0.75em;
+    width: 71.4285715%;
+  }
+
+  .d-6of7 {
+    float: left;
+    padding-right: 0.75em;
+    width: 85.7142857%;
+  }
+
+  .d-1of8 {
+    float: left;
+    padding-right: 0.75em;
+    width: 12.5%;
+  }
+
+  .d-1of9 {
+    float: left;
+    padding-right: 0.75em;
+    width: 11.1111111111%;
+  }
+
+  .d-1of10 {
+    float: left;
+    padding-right: 0.75em;
+    width: 10%;
+  }
+
+  .d-1of11 {
+    float: left;
+    padding-right: 0.75em;
+    width: 9.0909090909%;
+  }
+
+  .d-1of12 {
+    float: left;
+    padding-right: 0.75em;
+    width: 8.33%;
+  }
+}
+/* 2.0 Tools */
+/* 2.0 Functions */
+/*********************
+COLOR FUNCTIONS
+These are helpful when you're working
+with shadows and such things. It's essentially
+a quicker way to write RGBA.
+
+Example:
+box-shadow: 0 0 4px black(0.3);
+compiles to:
+box-shadow: 0 0 4px rgba(0,0,0,0.3);
+*********************/
+/*! _______________________________________________________ CHANGEpercentage */
+/* __________________________________ FEATURES */
+/* Global Styling */
+/*! Quickly modify global styling by enabling or disabling optional features. */
+/* Variable Prefix  */
+/* for ':root' CSS variables */
+/* _____________________________________ ESCAPED CHARACTERS */
+/**
+ * 1.3 - Transition
+ */
+/* _____________________________________ POSITIONING */
+/* Position Values Map */
+/* Aspect Ratios Map */
+/* 2.0 Qualities */
+/**! 1px = 1/96 inch;
+ * 1cm = 37.8px, 25.2/64";
+ * 1mm = 3.78px, 1/10cm;
+ * 1in = 96px, 2.54cm;
+ * 1px = 1.3333px, 1/72";
+ * 1pc = 16px, 1/6";
+ *
+ * em = inherit font-size from parent;
+ *   ex: parent { font-size: 16px;}
+ *       parent child { font-size: 1em; }
+ *       parent child grandchild { font-size: 3em; }
+ *       parent child2 { font-size: 2em; }
+ *
+ *       parent { font-size: 16px; }
+ *       parent child { font-size: 16px } (16 * 1)
+ *       parent child grandchild { font-size: 48px;} (16 * 3)
+ *       parent child2 { font-size: 36px; } (16 * 2)
+ * *if em used with width or height, calculate using size of target element
+ *
+ * rem = based on root of document; typically html (16px); change html root to change;
+ *   ex: p { font-size: 1.25rem; } (16 * 1.25)
+ *
+ * % = percent relative to parent size;
+ *
+ * 1vh = 1% of viewable-height;
+ * 1vw = 1% if viewable-width;
+ *
+ * vmin & vmax = viewport minimum & viewport maximum;
+ *   1vmin = 1% of viewport smallest dimension
+ *   1vmax = 1% of viewport largest dimension
+ *
+ * RARELY USED:
+ * ex = size of "x" (lowercase); 1/2 height of 1em;
+ * ch (character-unit) = width of 0 (zero, or U+0030) of the font;
+ */
+/* Base Size */
+/* Map */
+/* _____________________________________ spacer */
+/* Base Number */
+/* Map */
+/* ____________________________________ PADDING */
+/* 56px */
+/* .76 */
+/* 1.10px */
+/* 1.56 */
+/* 2.25 */
+/* 3.06px */
+/* ____________________________________ BORDERS */
+/* Border Width */
+/* 1.75 */
+/* Border Radius */
+/**
+ * ## Z-Index
+ =========================*/
+/* 1.0 Variables */
+/* 1.1 Colors */
+/* 1.2 Typography */
+/******************************************************************
+Site Name:
+Author:
+
+Stylesheet: Typography
+
+Need to import a font or set of icons for your site? Drop them in
+here or just use this to establish your typographical grid. Or not.
+Do whatever you want to...GOSH!
+
+Helpful Articles:
+http://trentwalton.com/2012/06/19/fluid-type/
+http://ia.net/blog/responsive-typography-the-basics/
+http://alistapart.com/column/responsive-typography-is-a-physical-discipline
+
+******************************************************************/
+/*********************
+FONT FACE (IN YOUR FACE)
+*********************/
+/**
+ * modules/fonts
+ * --
+ * Declare fonts here
+ */
+/*
+@font-face {
+  font-family: "Font-Name";
+  src: url("fonts/font-name.eot");
+  src: url("fonts/font-name.eot?#iefix") format("embedded-opentype"),
+    url("fonts/font-name.woff") format("woff"),
+    url("fonts/font-name.ttf") format("truetype"),
+    url("fonts/font-name.svg#font-name") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+*/
+/* ________________________________________________ @FONTFACE (IN YOUR FACE) */
+@font-face {
+  font-family: "Avdira";
+  src: local("<?php echo get_template_directory(); ?>/src/typography/fonts/avdira/Avdira_R.woff") format("woff");
+  src: local("<?php echo get_template_directory(); ?>/src/typography/fonts/avdira/Avdira_R.svg");
+  format: "svg";
+  src: local("<?php echo get_template_directory(); ?>/src/typography/fonts/avdira/Avdira_R.ttf");
+  format: "ttf";
+  src: local("<?php echo get_template_directory(); ?>/src/typography/fonts/avdira/avdira.eot");
+  format: "eot";
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Enjoy Writing";
+  src: local("<?php echo get_template_directory(); ?>/src/typography/fonts/enjoy-writing/enjoywrting.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Euphorigenic";
+  font-style: normal;
+  font-weight: 400;
+  src: local("<?php echo get_template_directory(); ?>/src/typography/fonts/euphorigenic/EuphorigenicW00Regular.woof") format("woff");
+  src: local("<?php echo get_template_directory(); ?>/src/typography/fonts/euphorigenic/euphorigenic.woff") format("woff");
+  src: local("<?php echo get_template_directory(); ?>/src/typography/fonts/euphorigenic/euphorigenic.eot") format("eot");
+  src: local("<?php echo get_template_directory(); ?>/src/typography/fonts/euphorigenic/euphorigenic.svg") format("svg");
+}
+@font-face {
+  font-family: "Glass Antiqua";
+  src: local("./fonts/glass-antqiua/glassantiqua.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  src: url("//db.onlinewebfonts.com/t/9d7b0fb304409fabceb9c59a1de12720.eot");
+  src: url("//db.onlinewebfonts.com/t/9d7b0fb304409fabceb9c59a1de12720.eot?#iefix") format("embedded-opentype"), url("//db.onlinewebfonts.com/t/9d7b0fb304409fabceb9c59a1de12720.woff2") format("woff2"), url("//db.onlinewebfonts.com/t/9d7b0fb304409fabceb9c59a1de12720.woff") format("woff"), url("//db.onlinewebfonts.com/t/9d7b0fb304409fabceb9c59a1de12720.ttf") format("truetype"), url("//db.onlinewebfonts.com/t/9d7b0fb304409fabceb9c59a1de12720.svg#Glass Antiqua") format("svg");
+}
+@font-face {
+  font-family: "Hand TypeWriter";
+  src: local("./fonts/hand-typerwriter/handtypewriter.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  src: url("//db.onlinewebfonts.com/t/59b5808e3dd8a15eb3774dbe8d4f686f.eot");
+  src: url("//db.onlinewebfonts.com/t/59b5808e3dd8a15eb3774dbe8d4f686f.eot?#iefix") format("embedded-opentype"), url("//db.onlinewebfonts.com/t/59b5808e3dd8a15eb3774dbe8d4f686f.woff2") format("woff2"), url("//db.onlinewebfonts.com/t/59b5808e3dd8a15eb3774dbe8d4f686f.woff") format("woff"), url("//db.onlinewebfonts.com/t/59b5808e3dd8a15eb3774dbe8d4f686f.ttf") format("truetype"), url("//db.onlinewebfonts.com/t/59b5808e3dd8a15eb3774dbe8d4f686f.svg#Hand TypeWriter") format("svg");
+}
+@font-face {
+  font-family: "Life Savers";
+  src: local("./fonts/lifesavers.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  src: url("//db.onlinewebfonts.com/t/a0dca3ed6f9e5098522a6bab3efbce65.eot");
+  src: url("//db.onlinewebfonts.com/t/a0dca3ed6f9e5098522a6bab3efbce65.eot?#iefix") format("embedded-opentype"), url("//db.onlinewebfonts.com/t/a0dca3ed6f9e5098522a6bab3efbce65.woff2") format("woff2"), url("//db.onlinewebfonts.com/t/a0dca3ed6f9e5098522a6bab3efbce65.woff") format("woff"), url("//db.onlinewebfonts.com/t/a0dca3ed6f9e5098522a6bab3efbce65.ttf") format("truetype"), url("//db.onlinewebfonts.com/t/a0dca3ed6f9e5098522a6bab3efbce65.svg#Life Savers") format("svg");
+}
+@font-face {
+  font-family: "Raleway";
+  src: local("./fonts/raleway/raleway.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  src: local("./fonts/hand-typerwriter/handtypewriter.woff2") format("woff2");
+  font-weight: normal;
+  font-style: normal;
+  src: url("//db.onlinewebfonts.com/t/8b452e2cb91e248f5beff9174a1327dc.eot");
+  src: url("//db.onlinewebfonts.com/t/8b452e2cb91e248f5beff9174a1327dc.eot?#iefix") format("embedded-opentype"), url("//db.onlinewebfonts.com/t/8b452e2cb91e248f5beff9174a1327dc.woff2") format("woff2"), url("./fonts/raleway/Raleway.woff") format("woff"), url("//db.onlinewebfonts.com/t/8b452e2cb91e248f5beff9174a1327dc.ttf") format("truetype"), url("//db.onlinewebfonts.com/t/8b452e2cb91e248f5beff9174a1327dc.svg#Raleway") format("svg");
+}
+@font-face {
+  font-family: "Raylig";
+  font-style: normal;
+  font-weight: 600;
+  src: url("https://fonts.cdnfonts.com/s/70312/RayligSemibold-Wy9mE.woff") format("woff");
+}
+@font-face {
+  font-family: "TELETYPE 1945-1985";
+  src: local("./assets/fonts/teletype_1945_1985/TELETYPE1945-1985.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  src: url("//db.onlinewebfonts.com/t/83dc401685732778308fc7cdfe8af34e.eot");
+  src: url("//db.onlinewebfonts.com/t/83dc401685732778308fc7cdfe8af34e.eot?#iefix") format("embedded-opentype"), url("//db.onlinewebfonts.com/t/83dc401685732778308fc7cdfe8af34e.woff2") format("woff2"), url("//db.onlinewebfonts.com/t/83dc401685732778308fc7cdfe8af34e.ttf") format("truetype"), url("//db.onlinewebfonts.com/t/83dc401685732778308fc7cdfe8af34e.svg#TELETYPE 1945-1985") format("svg");
+}
+/*
+The following is based of Typebase:
+https://github.com/devinhunt/typebase.css
+I've edited it a bit, but it's a nice starting point.
+*/
+/* Enable keyword, short hand for callig font Stack. */
+/*
+some nice typographical defaults
+more here: http://www.newnet-soft.com/blog/csstypography
+*/
+p {
+  -ms-word-wrap: break-word;
+  word-break: break-word;
+  word-wrap: break-word;
+  -webkit-hyphens: auto;
+  -moz-hyphens: auto;
+  hyphens: auto;
+  -webkit-hyphenate-before: 2;
+  -webkit-hyphenate-after: 3;
+  hyphenate-lines: 3;
+  -webkit-font-feature-settings: "liga", "dlig";
+  -moz-font-feature-settings: "liga=1, dlig=1";
+  -ms-font-feature-settings: "liga", "dlig";
+  -o-font-feature-settings: "liga", "dlig";
+  font-feature-settings: "liga", "dlig";
+}
+
+.drop-cap:first-letter {
+  float: left;
+  font-size: 92px;
+  font-size: 5.75rem;
+  font-weight: bold;
+  line-height: 0.6;
+  margin: 14px 16px 4px -3px;
+}
+
+@media (max-width: 500px) {
+  body {
+    font-size: 80%;
+  }
+
+  img {
+    max-width: 100% !important;
+    height: auto !important;
+    float: none !important;
+  }
+}
+/* 2.0 Properties */
+/* 2.0 Utilities */
+@media only screen and (min-width: 1201px) and (max-width: 1400px) {
+  .visible-xxl {
+    display: block !important;
+  }
+}
+
+@media only screen and (min-width: 1201px) and (max-width: 1400px) {
+  .hidden-xxl {
+    display: none !important;
+  }
+}
+
+@media only screen and (min-width: 993px) and (max-width: 1200px) {
+  .visible-xl {
+    display: block !important;
+  }
+}
+
+@media only screen and (min-width: 993px) and (max-width: 1200px) {
+  .hidden-xl {
+    display: none !important;
+  }
+}
+
+@media only screen and (min-width: 769px) and (max-width: 992px) {
+  .visible-lg {
+    display: block !important;
+  }
+}
+
+@media only screen and (min-width: 769px) and (max-width: 992px) {
+  .hidden-lg {
+    display: none !important;
+  }
+}
+
+@media only screen and (min-width: 575px) and (max-width: 768px) {
+  .visible-md {
+    display: block !important;
+  }
+}
+
+@media only screen and (min-width: 575px) and (max-width: 768px) {
+  .hidden-md {
+    display: none !important;
+  }
+}
+
+@media only screen and (min-width: 1) and (max-width:574px) {
+  .visible-sm {
+    display: block !important;
+  }
+}
+
+@media only screen and (min-width: 1) and (max-width:574px) {
+  .hidden-sm {
+    display: none !important;
+  }
+}
+
+@media only screen and (max-width: 0) {
+  .visible-xs {
+    display: block !important;
+  }
+}
+
+@media only screen and (max-width: 0) {
+  .hidden-xs {
+    display: none !important;
+  }
+}
+
+@media (min-width: (min-width: 1) and (max-width:574px)) {
+  .hidden-sm-up {
+    display: none !important;
+  }
+}
+
+@media (max-width: 541.98px) {
+  .hidden-sm-down {
+    display: none !important;
+  }
+}
+
+@media (min-width: (min-width: 575px) and (max-width: 768px)) {
+  .hidden-md-up {
+    display: none !important;
+  }
+}
+
+@media (max-width: 735.98px) {
+  .hidden-md-down {
+    display: none !important;
+  }
+}
+
+@media (min-width: (min-width: 769px) and (max-width: 992px)) {
+  .hidden-lg-up {
+    display: none !important;
+  }
+}
+
+@media (max-width: 959.98px) {
+  .hidden-lg-down {
+    display: none !important;
+  }
+}
+
+@media (min-width: (min-width: 993px) and (max-width: 1200px)) {
+  .hidden-xl-up {
+    display: none !important;
+  }
+}
+
+@media (max-width: 1167.98px) {
+  .hidden-xl-down {
+    display: none !important;
+  }
+}
+
+@media (min-width: (min-width: 1201px) and (max-width: 1400px)) {
+  .hidden-xxl-up {
+    display: none !important;
+  }
+}
+
+@media (max-width: 1367.98px) {
+  .hidden-xxl-down {
+    display: none !important;
+  }
+}
+
+/* RFS rescaling */
+@media (min-width: 1200px) {
+  /* Loop over each utility property */
+  /* The utility can be disabled with `false`, thus check if the utility is a map first */
+  /* Only proceed if responsive media queries are enabled or if it's the base media query */
+  /* The utility can be disabled with `false`, thus check if the utility is a map first */
+  /* Only proceed if responsive media queries are enabled or if it's the base media query */
+  /* The utility can be disabled with `false`, thus check if the utility is a map first */
+  /* Only proceed if responsive media queries are enabled or if it's the base media query */
+  /* The utility can be disabled with `false`, thus check if the utility is a map first */
+  /* Only proceed if responsive media queries are enabled or if it's the base media query */
+  /* The utility can be disabled with `false`, thus check if the utility is a map first */
+  /* Only proceed if responsive media queries are enabled or if it's the base media query */
+  /* The utility can be disabled with `false`, thus check if the utility is a map first */
+  /* Only proceed if responsive media queries are enabled or if it's the base media query */
+  /* The utility can be disabled with `false`, thus check if the utility is a map first */
+  /* Only proceed if responsive media queries are enabled or if it's the base media query */
+  /* The utility can be disabled with `false`, thus check if the utility is a map first */
+  /* Only proceed if responsive media queries are enabled or if it's the base media query */
+  /* The utility can be disabled with `false`, thus check if the utility is a map first */
+  /* Only proceed if responsive media queries are enabled or if it's the base media query */
+  /* The utility can be disabled with `false`, thus check if the utility is a map first */
+  /* Only proceed if responsive media queries are enabled or if it's the base media query */
+  /* The utility can be disabled with `false`, thus check if the utility is a map first */
+  /* Only proceed if responsive media queries are enabled or if it's the base media query */
+  /* The utility can be disabled with `false`, thus check if the utility is a map first */
+  /* Only proceed if responsive media queries are enabled or if it's the base media query */
+  /* The utility can be disabled with `false`, thus check if the utility is a map first */
+  /* Only proceed if responsive media queries are enabled or if it's the base media query */
+  /* The utility can be disabled with `false`, thus check if the utility is a map first */
+  /* Only proceed if responsive media queries are enabled or if it's the base media query */
+  /* The utility can be disabled with `false`, thus check if the utility is a map first */
+  /* Only proceed if responsive media queries are enabled or if it's the base media query */
+  /* The utility can be disabled with `false`, thus check if the utility is a map first */
+  /* Only proceed if responsive media queries are enabled or if it's the base media query */
+  /* The utility can be disabled with `false`, thus check if the utility is a map first */
+  /* Only proceed if responsive media queries are enabled or if it's the base media query */
+  /* The utility can be disabled with `false`, thus check if the utility is a map first */
+  /* Only proceed if responsive media queries are enabled or if it's the base media query */
+  /* The utility can be disabled with `false`, thus check if the utility is a map first */
+  /* Only proceed if responsive media queries are enabled or if it's the base media query */
+  /* The utility can be disabled with `false`, thus check if the utility is a map first */
+  /* Only proceed if responsive media queries are enabled or if it's the base media query */
+  /* The utility can be disabled with `false`, thus check if the utility is a map first */
+  /* Only proceed if responsive media queries are enabled or if it's the base media query */
+  /* The utility can be disabled with `false`, thus check if the utility is a map first */
+  /* Only proceed if responsive media queries are enabled or if it's the base media query */
+  /* The utility can be disabled with `false`, thus check if the utility is a map first */
+  /* Only proceed if responsive media queries are enabled or if it's the base media query */
+  /* The utility can be disabled with `false`, thus check if the utility is a map first */
+  /* Only proceed if responsive media queries are enabled or if it's the base media query */
+  /* The utility can be disabled with `false`, thus check if the utility is a map first */
+  /* Only proceed if responsive media queries are enabled or if it's the base media query */
+  /* The utility can be disabled with `false`, thus check if the utility is a map first */
+  /* Only proceed if responsive media queries are enabled or if it's the base media query */
+  /* The utility can be disabled with `false`, thus check if the utility is a map first */
+  /* Only proceed if responsive media queries are enabled or if it's the base media query */
+  /* The utility can be disabled with `false`, thus check if the utility is a map first */
+  /* Only proceed if responsive media queries are enabled or if it's the base media query */
+  /* The utility can be disabled with `false`, thus check if the utility is a map first */
+  /* Only proceed if responsive media queries are enabled or if it's the base media query */
+  /* The utility can be disabled with `false`, thus check if the utility is a map first */
+  /* Only proceed if responsive media queries are enabled or if it's the base media query */
+  /* The utility can be disabled with `false`, thus check if the utility is a map first */
+  /* Only proceed if responsive media queries are enabled or if it's the base media query */
+  /* The utility can be disabled with `false`, thus check if the utility is a map first */
+  /* Only proceed if responsive media queries are enabled or if it's the base media query */
+  /* The utility can be disabled with `false`, thus check if the utility is a map first */
+  /* Only proceed if responsive media queries are enabled or if it's the base media query */
+  /* The utility can be disabled with `false`, thus check if the utility is a map first */
+  /* Only proceed if responsive media queries are enabled or if it's the base media query */
+  /* The utility can be disabled with `false`, thus check if the utility is a map first */
+  /* Only proceed if responsive media queries are enabled or if it's the base media query */
+  /* The utility can be disabled with `false`, thus check if the utility is a map first */
+  /* Only proceed if responsive media queries are enabled or if it's the base media query */
+  /* The utility can be disabled with `false`, thus check if the utility is a map first */
+  /* Only proceed if responsive media queries are enabled or if it's the base media query */
+  /* The utility can be disabled with `false`, thus check if the utility is a map first */
+  /* Only proceed if responsive media queries are enabled or if it's the base media query */
+  /* The utility can be disabled with `false`, thus check if the utility is a map first */
+  /* Only proceed if responsive media queries are enabled or if it's the base media query */
+  /* The utility can be disabled with `false`, thus check if the utility is a map first */
+  /* Only proceed if responsive media queries are enabled or if it's the base media query */
+  /* The utility can be disabled with `false`, thus check if the utility is a map first */
+  /* Only proceed if responsive media queries are enabled or if it's the base media query */
+  /* The utility can be disabled with `false`, thus check if the utility is a map first */
+  /* Only proceed if responsive media queries are enabled or if it's the base media query */
+  /* The utility can be disabled with `false`, thus check if the utility is a map first */
+  /* Only proceed if responsive media queries are enabled or if it's the base media query */
+  /* The utility can be disabled with `false`, thus check if the utility is a map first */
+  /* Only proceed if responsive media queries are enabled or if it's the base media query */
+  /* The utility can be disabled with `false`, thus check if the utility is a map first */
+  /* Only proceed if responsive media queries are enabled or if it's the base media query */
+  /* The utility can be disabled with `false`, thus check if the utility is a map first */
+  /* Only proceed if responsive media queries are enabled or if it's the base media query */
+  /* The utility can be disabled with `false`, thus check if the utility is a map first */
+  /* Only proceed if responsive media queries are enabled or if it's the base media query */
+  /* The utility can be disabled with `false`, thus check if the utility is a map first */
+  /* Only proceed if responsive media queries are enabled or if it's the base media query */
+  /* The utility can be disabled with `false`, thus check if the utility is a map first */
+  /* Only proceed if responsive media queries are enabled or if it's the base media query */
+  /* The utility can be disabled with `false`, thus check if the utility is a map first */
+  /* Only proceed if responsive media queries are enabled or if it's the base media query */
+  /* The utility can be disabled with `false`, thus check if the utility is a map first */
+  /* Only proceed if responsive media queries are enabled or if it's the base media query */
+  /* The utility can be disabled with `false`, thus check if the utility is a map first */
+  /* Only proceed if responsive media queries are enabled or if it's the base media query */
+  /* The utility can be disabled with `false`, thus check if the utility is a map first */
+  /* Only proceed if responsive media queries are enabled or if it's the base media query */
+  /* The utility can be disabled with `false`, thus check if the utility is a map first */
+  /* Only proceed if responsive media queries are enabled or if it's the base media query */
+  /* The utility can be disabled with `false`, thus check if the utility is a map first */
+  /* Only proceed if responsive media queries are enabled or if it's the base media query */
+  /* The utility can be disabled with `false`, thus check if the utility is a map first */
+  /* Only proceed if responsive media queries are enabled or if it's the base media query */
+  /* The utility can be disabled with `false`, thus check if the utility is a map first */
+  /* Only proceed if responsive media queries are enabled or if it's the base media query */
+  /* Loop over each utility property */
+  /* The utility can be disabled with `false`, thus check if the utility is a map first */
+  /* Only proceed if responsive media queries are enabled or if it's the base media query */
+  /* The utility can be disabled with `false`, thus check if the utility is a map first */
+  /* Only proceed if responsive media queries are enabled or if it's the base media query */
+  /* The utility can be disabled with `false`, thus check if the utility is a map first */
+  /* Only proceed if responsive media queries are enabled or if it's the base media query */
+  /* The utility can be disabled with `false`, thus check if the utility is a map first */
+  /* Only proceed if responsive media queries are enabled or if it's the base media query */
+  /* The utility can be disabled with `false`, thus check if the utility is a map first */
+  /* Only proceed if responsive media queries are enabled or if it's the base media query */
+  /* The utility can be disabled with `false`, thus check if the utility is a map first */
+  /* Only proceed if responsive media queries are enabled or if it's the base media query */
+  /* The utility can be disabled with `false`, thus check if the utility is a map first */
+  /* Only proceed if responsive media queries are enabled or if it's the base media query */
+  /* The utility can be disabled with `false`, thus check if the utility is a map first */
+  /* Only proceed if responsive media queries are enabled or if it's the base media query */
+  /* The utility can be disabled with `false`, thus check if the utility is a map first */
+  /* Only proceed if responsive media queries are enabled or if it's the base media query */
+  /* The utility can be disabled with `false`, thus check if the utility is a map first */
+  /* Only proceed if responsive media queries are enabled or if it's the base media query */
+  /* The utility can be disabled with `false`, thus check if the utility is a map first */
+  /* Only proceed if responsive media queries are enabled or if it's the base media query */
+  /* The utility can be disabled with `false`, thus check if the utility is a map first */
+  /* Only proceed if responsive media queries are enabled or if it's the base media query */
+  /* The utility can be disabled with `false`, thus check if the utility is a map first */
+  /* Only proceed if responsive media queries are enabled or if it's the base media query */
+  /* The utility can be disabled with `false`, thus check if the utility is a map first */
+  /* Only proceed if responsive media queries are enabled or if it's the base media query */
+  /* The utility can be disabled with `false`, thus check if the utility is a map first */
+  /* Only proceed if responsive media queries are enabled or if it's the base media query */
+  /* The utility can be disabled with `false`, thus check if the utility is a map first */
+  /* Only proceed if responsive media queries are enabled or if it's the base media query */
+  /* The utility can be disabled with `false`, thus check if the utility is a map first */
+  /* Only proceed if responsive media queries are enabled or if it's the base media query */
+  /* The utility can be disabled with `false`, thus check if the utility is a map first */
+  /* Only proceed if responsive media queries are enabled or if it's the base media query */
+  /* The utility can be disabled with `false`, thus check if the utility is a map first */
+  /* Only proceed if responsive media queries are enabled or if it's the base media query */
+  /* The utility can be disabled with `false`, thus check if the utility is a map first */
+  /* Only proceed if responsive media queries are enabled or if it's the base media query */
+  /* The utility can be disabled with `false`, thus check if the utility is a map first */
+  /* Only proceed if responsive media queries are enabled or if it's the base media query */
+  /* The utility can be disabled with `false`, thus check if the utility is a map first */
+  /* Only proceed if responsive media queries are enabled or if it's the base media query */
+  /* The utility can be disabled with `false`, thus check if the utility is a map first */
+  /* Only proceed if responsive media queries are enabled or if it's the base media query */
+  /* The utility can be disabled with `false`, thus check if the utility is a map first */
+  /* Only proceed if responsive media queries are enabled or if it's the base media query */
+  /* The utility can be disabled with `false`, thus check if the utility is a map first */
+  /* Only proceed if responsive media queries are enabled or if it's the base media query */
+  /* The utility can be disabled with `false`, thus check if the utility is a map first */
+  /* Only proceed if responsive media queries are enabled or if it's the base media query */
+  /* The utility can be disabled with `false`, thus check if the utility is a map first */
+  /* Only proceed if responsive media queries are enabled or if it's the base media query */
+  /* The utility can be disabled with `false`, thus check if the utility is a map first */
+  /* Only proceed if responsive media queries are enabled or if it's the base media query */
+  /* The utility can be disabled with `false`, thus check if the utility is a map first */
+  /* Only proceed if responsive media queries are enabled or if it's the base media query */
+  /* The utility can be disabled with `false`, thus check if the utility is a map first */
+  /* Only proceed if responsive media queries are enabled or if it's the base media query */
+  /* The utility can be disabled with `false`, thus check if the utility is a map first */
+  /* Only proceed if responsive media queries are enabled or if it's the base media query */
+  /* The utility can be disabled with `false`, thus check if the utility is a map first */
+  /* Only proceed if responsive media queries are enabled or if it's the base media query */
+  /* The utility can be disabled with `false`, thus check if the utility is a map first */
+  /* Only proceed if responsive media queries are enabled or if it's the base media query */
+  /* The utility can be disabled with `false`, thus check if the utility is a map first */
+  /* Only proceed if responsive media queries are enabled or if it's the base media query */
+  /* The utility can be disabled with `false`, thus check if the utility is a map first */
+  /* Only proceed if responsive media queries are enabled or if it's the base media query */
+  /* The utility can be disabled with `false`, thus check if the utility is a map first */
+  /* Only proceed if responsive media queries are enabled or if it's the base media query */
+  /* The utility can be disabled with `false`, thus check if the utility is a map first */
+  /* Only proceed if responsive media queries are enabled or if it's the base media query */
+  /* The utility can be disabled with `false`, thus check if the utility is a map first */
+  /* Only proceed if responsive media queries are enabled or if it's the base media query */
+  /* The utility can be disabled with `false`, thus check if the utility is a map first */
+  /* Only proceed if responsive media queries are enabled or if it's the base media query */
+  /* The utility can be disabled with `false`, thus check if the utility is a map first */
+  /* Only proceed if responsive media queries are enabled or if it's the base media query */
+  /* The utility can be disabled with `false`, thus check if the utility is a map first */
+  /* Only proceed if responsive media queries are enabled or if it's the base media query */
+  /* The utility can be disabled with `false`, thus check if the utility is a map first */
+  /* Only proceed if responsive media queries are enabled or if it's the base media query */
+  /* The utility can be disabled with `false`, thus check if the utility is a map first */
+  /* Only proceed if responsive media queries are enabled or if it's the base media query */
+  /* The utility can be disabled with `false`, thus check if the utility is a map first */
+  /* Only proceed if responsive media queries are enabled or if it's the base media query */
+  /* The utility can be disabled with `false`, thus check if the utility is a map first */
+  /* Only proceed if responsive media queries are enabled or if it's the base media query */
+  /* The utility can be disabled with `false`, thus check if the utility is a map first */
+  /* Only proceed if responsive media queries are enabled or if it's the base media query */
+  /* The utility can be disabled with `false`, thus check if the utility is a map first */
+  /* Only proceed if responsive media queries are enabled or if it's the base media query */
+  /* The utility can be disabled with `false`, thus check if the utility is a map first */
+  /* Only proceed if responsive media queries are enabled or if it's the base media query */
+  /* The utility can be disabled with `false`, thus check if the utility is a map first */
+  /* Only proceed if responsive media queries are enabled or if it's the base media query */
+  /* The utility can be disabled with `false`, thus check if the utility is a map first */
+  /* Only proceed if responsive media queries are enabled or if it's the base media query */
+  /* The utility can be disabled with `false`, thus check if the utility is a map first */
+  /* Only proceed if responsive media queries are enabled or if it's the base media query */
+  /* The utility can be disabled with `false`, thus check if the utility is a map first */
+  /* Only proceed if responsive media queries are enabled or if it's the base media query */
+  /* The utility can be disabled with `false`, thus check if the utility is a map first */
+  /* Only proceed if responsive media queries are enabled or if it's the base media query */
+  /* The utility can be disabled with `false`, thus check if the utility is a map first */
+  /* Only proceed if responsive media queries are enabled or if it's the base media query */
+  /* The utility can be disabled with `false`, thus check if the utility is a map first */
+  /* Only proceed if responsive media queries are enabled or if it's the base media query */
+  /* The utility can be disabled with `false`, thus check if the utility is a map first */
+  /* Only proceed if responsive media queries are enabled or if it's the base media query */
+  /* The utility can be disabled with `false`, thus check if the utility is a map first */
+  /* Only proceed if responsive media queries are enabled or if it's the base media query */
+  /* Loop over each utility property */
+  /* The utility can be disabled with `false`, thus check if the utility is a map first */
+  /* Only proceed if responsive media queries are enabled or if it's the base media query */
+  /* The utility can be disabled with `false`, thus check if the utility is a map first */
+  /* Only proceed if responsive media queries are enabled or if it's the base media query */
+  /* The utility can be disabled with `false`, thus check if the utility is a map first */
+  /* Only proceed if responsive media queries are enabled or if it's the base media query */
+  /* The utility can be disabled with `false`, thus check if the utility is a map first */
+  /* Only proceed if responsive media queries are enabled or if it's the base media query */
+  /* The utility can be disabled with `false`, thus check if the utility is a map first */
+  /* Only proceed if responsive media queries are enabled or if it's the base media query */
+  /* The utility can be disabled with `false`, thus check if the utility is a map first */
+  /* Only proceed if responsive media queries are enabled or if it's the base media query */
+  /* The utility can be disabled with `false`, thus check if the utility is a map first */
+  /* Only proceed if responsive media queries are enabled or if it's the base media query */
+  /* The utility can be disabled with `false`, thus check if the utility is a map first */
+  /* Only proceed if responsive media queries are enabled or if it's the base media query */
+  /* The utility can be disabled with `false`, thus check if the utility is a map first */
+  /* Only proceed if responsive media queries are enabled or if it's the base media query */
+  /* The utility can be disabled with `false`, thus check if the utility is a map first */
+  /* Only proceed if responsive media queries are enabled or if it's the base media query */
+  /* The utility can be disabled with `false`, thus check if the utility is a map first */
+  /* Only proceed if responsive media queries are enabled or if it's the base media query */
+  /* The utility can be disabled with `false`, thus check if the utility is a map first */
+  /* Only proceed if responsive media queries are enabled or if it's the base media query */
+  /* The utility can be disabled with `false`, thus check if the utility is a map first */
+  /* Only proceed if responsive media queries are enabled or if it's the base media query */
+  /* The utility can be disabled with `false`, thus check if the utility is a map first */
+  /* Only proceed if responsive media queries are enabled or if it's the base media query */
+  /* The utility can be disabled with `false`, thus check if the utility is a map first */
+  /* Only proceed if responsive media queries are enabled or if it's the base media query */
+  /* The utility can be disabled with `false`, thus check if the utility is a map first */
+  /* Only proceed if responsive media queries are enabled or if it's the base media query */
+  /* The utility can be disabled with `false`, thus check if the utility is a map first */
+  /* Only proceed if responsive media queries are enabled or if it's the base media query */
+  /* The utility can be disabled with `false`, thus check if the utility is a map first */
+  /* Only proceed if responsive media queries are enabled or if it's the base media query */
+  /* The utility can be disabled with `false`, thus check if the utility is a map first */
+  /* Only proceed if responsive media queries are enabled or if it's the base media query */
+  /* The utility can be disabled with `false`, thus check if the utility is a map first */
+  /* Only proceed if responsive media queries are enabled or if it's the base media query */
+  /* The utility can be disabled with `false`, thus check if the utility is a map first */
+  /* Only proceed if responsive media queries are enabled or if it's the base media query */
+  /* The utility can be disabled with `false`, thus check if the utility is a map first */
+  /* Only proceed if responsive media queries are enabled or if it's the base media query */
+  /* The utility can be disabled with `false`, thus check if the utility is a map first */
+  /* Only proceed if responsive media queries are enabled or if it's the base media query */
+  /* The utility can be disabled with `false`, thus check if the utility is a map first */
+  /* Only proceed if responsive media queries are enabled or if it's the base media query */
+  /* The utility can be disabled with `false`, thus check if the utility is a map first */
+  /* Only proceed if responsive media queries are enabled or if it's the base media query */
+  /* The utility can be disabled with `false`, thus check if the utility is a map first */
+  /* Only proceed if responsive media queries are enabled or if it's the base media query */
+  /* The utility can be disabled with `false`, thus check if the utility is a map first */
+  /* Only proceed if responsive media queries are enabled or if it's the base media query */
+  /* The utility can be disabled with `false`, thus check if the utility is a map first */
+  /* Only proceed if responsive media queries are enabled or if it's the base media query */
+  /* The utility can be disabled with `false`, thus check if the utility is a map first */
+  /* Only proceed if responsive media queries are enabled or if it's the base media query */
+  /* The utility can be disabled with `false`, thus check if the utility is a map first */
+  /* Only proceed if responsive media queries are enabled or if it's the base media query */
+  /* The utility can be disabled with `false`, thus check if the utility is a map first */
+  /* Only proceed if responsive media queries are enabled or if it's the base media query */
+  /* The utility can be disabled with `false`, thus check if the utility is a map first */
+  /* Only proceed if responsive media queries are enabled or if it's the base media query */
+  /* The utility can be disabled with `false`, thus check if the utility is a map first */
+  /* Only proceed if responsive media queries are enabled or if it's the base media query */
+  /* The utility can be disabled with `false`, thus check if the utility is a map first */
+  /* Only proceed if responsive media queries are enabled or if it's the base media query */
+  /* The utility can be disabled with `false`, thus check if the utility is a map first */
+  /* Only proceed if responsive media queries are enabled or if it's the base media query */
+  /* The utility can be disabled with `false`, thus check if the utility is a map first */
+  /* Only proceed if responsive media queries are enabled or if it's the base media query */
+  /* The utility can be disabled with `false`, thus check if the utility is a map first */
+  /* Only proceed if responsive media queries are enabled or if it's the base media query */
+  /* The utility can be disabled with `false`, thus check if the utility is a map first */
+  /* Only proceed if responsive media queries are enabled or if it's the base media query */
+  /* The utility can be disabled with `false`, thus check if the utility is a map first */
+  /* Only proceed if responsive media queries are enabled or if it's the base media query */
+  /* The utility can be disabled with `false`, thus check if the utility is a map first */
+  /* Only proceed if responsive media queries are enabled or if it's the base media query */
+  /* The utility can be disabled with `false`, thus check if the utility is a map first */
+  /* Only proceed if responsive media queries are enabled or if it's the base media query */
+  /* The utility can be disabled with `false`, thus check if the utility is a map first */
+  /* Only proceed if responsive media queries are enabled or if it's the base media query */
+  /* The utility can be disabled with `false`, thus check if the utility is a map first */
+  /* Only proceed if responsive media queries are enabled or if it's the base media query */
+  /* The utility can be disabled with `false`, thus check if the utility is a map first */
+  /* Only proceed if responsive media queries are enabled or if it's the base media query */
+  /* The utility can be disabled with `false`, thus check if the utility is a map first */
+  /* Only proceed if responsive media queries are enabled or if it's the base media query */
+  /* The utility can be disabled with `false`, thus check if the utility is a map first */
+  /* Only proceed if responsive media queries are enabled or if it's the base media query */
+  /* The utility can be disabled with `false`, thus check if the utility is a map first */
+  /* Only proceed if responsive media queries are enabled or if it's the base media query */
+  /* The utility can be disabled with `false`, thus check if the utility is a map first */
+  /* Only proceed if responsive media queries are enabled or if it's the base media query */
+  /* The utility can be disabled with `false`, thus check if the utility is a map first */
+  /* Only proceed if responsive media queries are enabled or if it's the base media query */
+  /* The utility can be disabled with `false`, thus check if the utility is a map first */
+  /* Only proceed if responsive media queries are enabled or if it's the base media query */
+  /* The utility can be disabled with `false`, thus check if the utility is a map first */
+  /* Only proceed if responsive media queries are enabled or if it's the base media query */
+  /* The utility can be disabled with `false`, thus check if the utility is a map first */
+  /* Only proceed if responsive media queries are enabled or if it's the base media query */
+  /* The utility can be disabled with `false`, thus check if the utility is a map first */
+  /* Only proceed if responsive media queries are enabled or if it's the base media query */
+  /* The utility can be disabled with `false`, thus check if the utility is a map first */
+  /* Only proceed if responsive media queries are enabled or if it's the base media query */
+  /* The utility can be disabled with `false`, thus check if the utility is a map first */
+  /* Only proceed if responsive media queries are enabled or if it's the base media query */
+  /* The utility can be disabled with `false`, thus check if the utility is a map first */
+  /* Only proceed if responsive media queries are enabled or if it's the base media query */
+  /* The utility can be disabled with `false`, thus check if the utility is a map first */
+  /* Only proceed if responsive media queries are enabled or if it's the base media query */
+  /* Loop over each utility property */
+  /* The utility can be disabled with `false`, thus check if the utility is a map first */
+  /* Only proceed if responsive media queries are enabled or if it's the base media query */
+  /* The utility can be disabled with `false`, thus check if the utility is a map first */
+  /* Only proceed if responsive media queries are enabled or if it's the base media query */
+  /* The utility can be disabled with `false`, thus check if the utility is a map first */
+  /* Only proceed if responsive media queries are enabled or if it's the base media query */
+  /* The utility can be disabled with `false`, thus check if the utility is a map first */
+  /* Only proceed if responsive media queries are enabled or if it's the base media query */
+  /* The utility can be disabled with `false`, thus check if the utility is a map first */
+  /* Only proceed if responsive media queries are enabled or if it's the base media query */
+  /* The utility can be disabled with `false`, thus check if the utility is a map first */
+  /* Only proceed if responsive media queries are enabled or if it's the base media query */
+  /* The utility can be disabled with `false`, thus check if the utility is a map first */
+  /* Only proceed if responsive media queries are enabled or if it's the base media query */
+  /* The utility can be disabled with `false`, thus check if the utility is a map first */
+  /* Only proceed if responsive media queries are enabled or if it's the base media query */
+  /* The utility can be disabled with `false`, thus check if the utility is a map first */
+  /* Only proceed if responsive media queries are enabled or if it's the base media query */
+  /* The utility can be disabled with `false`, thus check if the utility is a map first */
+  /* Only proceed if responsive media queries are enabled or if it's the base media query */
+  /* The utility can be disabled with `false`, thus check if the utility is a map first */
+  /* Only proceed if responsive media queries are enabled or if it's the base media query */
+  /* The utility can be disabled with `false`, thus check if the utility is a map first */
+  /* Only proceed if responsive media queries are enabled or if it's the base media query */
+  /* The utility can be disabled with `false`, thus check if the utility is a map first */
+  /* Only proceed if responsive media queries are enabled or if it's the base media query */
+  /* The utility can be disabled with `false`, thus check if the utility is a map first */
+  /* Only proceed if responsive media queries are enabled or if it's the base media query */
+  /* The utility can be disabled with `false`, thus check if the utility is a map first */
+  /* Only proceed if responsive media queries are enabled or if it's the base media query */
+  /* The utility can be disabled with `false`, thus check if the utility is a map first */
+  /* Only proceed if responsive media queries are enabled or if it's the base media query */
+  /* The utility can be disabled with `false`, thus check if the utility is a map first */
+  /* Only proceed if responsive media queries are enabled or if it's the base media query */
+  /* The utility can be disabled with `false`, thus check if the utility is a map first */
+  /* Only proceed if responsive media queries are enabled or if it's the base media query */
+  /* The utility can be disabled with `false`, thus check if the utility is a map first */
+  /* Only proceed if responsive media queries are enabled or if it's the base media query */
+  /* The utility can be disabled with `false`, thus check if the utility is a map first */
+  /* Only proceed if responsive media queries are enabled or if it's the base media query */
+  /* The utility can be disabled with `false`, thus check if the utility is a map first */
+  /* Only proceed if responsive media queries are enabled or if it's the base media query */
+  /* The utility can be disabled with `false`, thus check if the utility is a map first */
+  /* Only proceed if responsive media queries are enabled or if it's the base media query */
+  /* The utility can be disabled with `false`, thus check if the utility is a map first */
+  /* Only proceed if responsive media queries are enabled or if it's the base media query */
+  /* The utility can be disabled with `false`, thus check if the utility is a map first */
+  /* Only proceed if responsive media queries are enabled or if it's the base media query */
+  /* The utility can be disabled with `false`, thus check if the utility is a map first */
+  /* Only proceed if responsive media queries are enabled or if it's the base media query */
+  /* The utility can be disabled with `false`, thus check if the utility is a map first */
+  /* Only proceed if responsive media queries are enabled or if it's the base media query */
+  /* The utility can be disabled with `false`, thus check if the utility is a map first */
+  /* Only proceed if responsive media queries are enabled or if it's the base media query */
+  /* The utility can be disabled with `false`, thus check if the utility is a map first */
+  /* Only proceed if responsive media queries are enabled or if it's the base media query */
+  /* The utility can be disabled with `false`, thus check if the utility is a map first */
+  /* Only proceed if responsive media queries are enabled or if it's the base media query */
+  /* The utility can be disabled with `false`, thus check if the utility is a map first */
+  /* Only proceed if responsive media queries are enabled or if it's the base media query */
+  /* The utility can be disabled with `false`, thus check if the utility is a map first */
+  /* Only proceed if responsive media queries are enabled or if it's the base media query */
+  /* The utility can be disabled with `false`, thus check if the utility is a map first */
+  /* Only proceed if responsive media queries are enabled or if it's the base media query */
+  /* The utility can be disabled with `false`, thus check if the utility is a map first */
+  /* Only proceed if responsive media queries are enabled or if it's the base media query */
+  /* The utility can be disabled with `false`, thus check if the utility is a map first */
+  /* Only proceed if responsive media queries are enabled or if it's the base media query */
+  /* The utility can be disabled with `false`, thus check if the utility is a map first */
+  /* Only proceed if responsive media queries are enabled or if it's the base media query */
+  /* The utility can be disabled with `false`, thus check if the utility is a map first */
+  /* Only proceed if responsive media queries are enabled or if it's the base media query */
+  /* The utility can be disabled with `false`, thus check if the utility is a map first */
+  /* Only proceed if responsive media queries are enabled or if it's the base media query */
+  /* The utility can be disabled with `false`, thus check if the utility is a map first */
+  /* Only proceed if responsive media queries are enabled or if it's the base media query */
+  /* The utility can be disabled with `false`, thus check if the utility is a map first */
+  /* Only proceed if responsive media queries are enabled or if it's the base media query */
+  /* The utility can be disabled with `false`, thus check if the utility is a map first */
+  /* Only proceed if responsive media queries are enabled or if it's the base media query */
+  /* The utility can be disabled with `false`, thus check if the utility is a map first */
+  /* Only proceed if responsive media queries are enabled or if it's the base media query */
+  /* The utility can be disabled with `false`, thus check if the utility is a map first */
+  /* Only proceed if responsive media queries are enabled or if it's the base media query */
+  /* The utility can be disabled with `false`, thus check if the utility is a map first */
+  /* Only proceed if responsive media queries are enabled or if it's the base media query */
+  /* The utility can be disabled with `false`, thus check if the utility is a map first */
+  /* Only proceed if responsive media queries are enabled or if it's the base media query */
+  /* The utility can be disabled with `false`, thus check if the utility is a map first */
+  /* Only proceed if responsive media queries are enabled or if it's the base media query */
+  /* The utility can be disabled with `false`, thus check if the utility is a map first */
+  /* Only proceed if responsive media queries are enabled or if it's the base media query */
+  /* The utility can be disabled with `false`, thus check if the utility is a map first */
+  /* Only proceed if responsive media queries are enabled or if it's the base media query */
+  /* The utility can be disabled with `false`, thus check if the utility is a map first */
+  /* Only proceed if responsive media queries are enabled or if it's the base media query */
+  /* The utility can be disabled with `false`, thus check if the utility is a map first */
+  /* Only proceed if responsive media queries are enabled or if it's the base media query */
+  /* The utility can be disabled with `false`, thus check if the utility is a map first */
+  /* Only proceed if responsive media queries are enabled or if it's the base media query */
+  /* The utility can be disabled with `false`, thus check if the utility is a map first */
+  /* Only proceed if responsive media queries are enabled or if it's the base media query */
+  /* The utility can be disabled with `false`, thus check if the utility is a map first */
+  /* Only proceed if responsive media queries are enabled or if it's the base media query */
+  /* The utility can be disabled with `false`, thus check if the utility is a map first */
+  /* Only proceed if responsive media queries are enabled or if it's the base media query */
+  /* The utility can be disabled with `false`, thus check if the utility is a map first */
+  /* Only proceed if responsive media queries are enabled or if it's the base media query */
+  /* The utility can be disabled with `false`, thus check if the utility is a map first */
+  /* Only proceed if responsive media queries are enabled or if it's the base media query */
+  /* The utility can be disabled with `false`, thus check if the utility is a map first */
+  /* Only proceed if responsive media queries are enabled or if it's the base media query */
+  /* The utility can be disabled with `false`, thus check if the utility is a map first */
+  /* Only proceed if responsive media queries are enabled or if it's the base media query */
+}
+/* Print utilities */
+@media print {
+  /* The utility can be disabled with `false`, thus check if the utility is a map first */
+  /* Then check if the utility needs print styles */
+  /* The utility can be disabled with `false`, thus check if the utility is a map first */
+  /* Then check if the utility needs print styles */
+  /* The utility can be disabled with `false`, thus check if the utility is a map first */
+  /* Then check if the utility needs print styles */
+  /* The utility can be disabled with `false`, thus check if the utility is a map first */
+  /* Then check if the utility needs print styles */
+  .d-print-inline {
+    display: inline !important;
+  }
+
+  .d-print-inline-block {
+    display: inline-block !important;
+  }
+
+  .d-print-block {
+    display: block !important;
+  }
+
+  .d-print-grid {
+    display: grid !important;
+  }
+
+  .d-print-table {
+    display: table !important;
+  }
+
+  .d-print-table-row {
+    display: table-row !important;
+  }
+
+  .d-print-table-cell {
+    display: table-cell !important;
+  }
+
+  .d-print-flex {
+    display: flex !important;
+  }
+
+  .d-print-inline-flex {
+    display: inline-flex !important;
+  }
+
+  .d-print-none {
+    display: none !important;
+  }
+
+  /* The utility can be disabled with `false`, thus check if the utility is a map first */
+  /* Then check if the utility needs print styles */
+  /* The utility can be disabled with `false`, thus check if the utility is a map first */
+  /* Then check if the utility needs print styles */
+  /* The utility can be disabled with `false`, thus check if the utility is a map first */
+  /* Then check if the utility needs print styles */
+  /* The utility can be disabled with `false`, thus check if the utility is a map first */
+  /* Then check if the utility needs print styles */
+  /* The utility can be disabled with `false`, thus check if the utility is a map first */
+  /* Then check if the utility needs print styles */
+  /* The utility can be disabled with `false`, thus check if the utility is a map first */
+  /* Then check if the utility needs print styles */
+  /* The utility can be disabled with `false`, thus check if the utility is a map first */
+  /* Then check if the utility needs print styles */
+  /* The utility can be disabled with `false`, thus check if the utility is a map first */
+  /* Then check if the utility needs print styles */
+  /* The utility can be disabled with `false`, thus check if the utility is a map first */
+  /* Then check if the utility needs print styles */
+  /* The utility can be disabled with `false`, thus check if the utility is a map first */
+  /* Then check if the utility needs print styles */
+  /* The utility can be disabled with `false`, thus check if the utility is a map first */
+  /* Then check if the utility needs print styles */
+  /* The utility can be disabled with `false`, thus check if the utility is a map first */
+  /* Then check if the utility needs print styles */
+  /* The utility can be disabled with `false`, thus check if the utility is a map first */
+  /* Then check if the utility needs print styles */
+  /* The utility can be disabled with `false`, thus check if the utility is a map first */
+  /* Then check if the utility needs print styles */
+  /* The utility can be disabled with `false`, thus check if the utility is a map first */
+  /* Then check if the utility needs print styles */
+  /* The utility can be disabled with `false`, thus check if the utility is a map first */
+  /* Then check if the utility needs print styles */
+  /* The utility can be disabled with `false`, thus check if the utility is a map first */
+  /* Then check if the utility needs print styles */
+  /* The utility can be disabled with `false`, thus check if the utility is a map first */
+  /* Then check if the utility needs print styles */
+  /* The utility can be disabled with `false`, thus check if the utility is a map first */
+  /* Then check if the utility needs print styles */
+  /* The utility can be disabled with `false`, thus check if the utility is a map first */
+  /* Then check if the utility needs print styles */
+  /* The utility can be disabled with `false`, thus check if the utility is a map first */
+  /* Then check if the utility needs print styles */
+  /* The utility can be disabled with `false`, thus check if the utility is a map first */
+  /* Then check if the utility needs print styles */
+  /* The utility can be disabled with `false`, thus check if the utility is a map first */
+  /* Then check if the utility needs print styles */
+  /* The utility can be disabled with `false`, thus check if the utility is a map first */
+  /* Then check if the utility needs print styles */
+  /* The utility can be disabled with `false`, thus check if the utility is a map first */
+  /* Then check if the utility needs print styles */
+  /* The utility can be disabled with `false`, thus check if the utility is a map first */
+  /* Then check if the utility needs print styles */
+  /* The utility can be disabled with `false`, thus check if the utility is a map first */
+  /* Then check if the utility needs print styles */
+  /* The utility can be disabled with `false`, thus check if the utility is a map first */
+  /* Then check if the utility needs print styles */
+  /* The utility can be disabled with `false`, thus check if the utility is a map first */
+  /* Then check if the utility needs print styles */
+  /* The utility can be disabled with `false`, thus check if the utility is a map first */
+  /* Then check if the utility needs print styles */
+  /* The utility can be disabled with `false`, thus check if the utility is a map first */
+  /* Then check if the utility needs print styles */
+  /* The utility can be disabled with `false`, thus check if the utility is a map first */
+  /* Then check if the utility needs print styles */
+  /* The utility can be disabled with `false`, thus check if the utility is a map first */
+  /* Then check if the utility needs print styles */
+  /* The utility can be disabled with `false`, thus check if the utility is a map first */
+  /* Then check if the utility needs print styles */
+  /* The utility can be disabled with `false`, thus check if the utility is a map first */
+  /* Then check if the utility needs print styles */
+  /* The utility can be disabled with `false`, thus check if the utility is a map first */
+  /* Then check if the utility needs print styles */
+  /* The utility can be disabled with `false`, thus check if the utility is a map first */
+  /* Then check if the utility needs print styles */
+  /* The utility can be disabled with `false`, thus check if the utility is a map first */
+  /* Then check if the utility needs print styles */
+  /* The utility can be disabled with `false`, thus check if the utility is a map first */
+  /* Then check if the utility needs print styles */
+  /* The utility can be disabled with `false`, thus check if the utility is a map first */
+  /* Then check if the utility needs print styles */
+  /* The utility can be disabled with `false`, thus check if the utility is a map first */
+  /* Then check if the utility needs print styles */
+  /* The utility can be disabled with `false`, thus check if the utility is a map first */
+  /* Then check if the utility needs print styles */
+  /* The utility can be disabled with `false`, thus check if the utility is a map first */
+  /* Then check if the utility needs print styles */
+  /* The utility can be disabled with `false`, thus check if the utility is a map first */
+  /* Then check if the utility needs print styles */
+  /* The utility can be disabled with `false`, thus check if the utility is a map first */
+  /* Then check if the utility needs print styles */
+  /* The utility can be disabled with `false`, thus check if the utility is a map first */
+  /* Then check if the utility needs print styles */
+  /* The utility can be disabled with `false`, thus check if the utility is a map first */
+  /* Then check if the utility needs print styles */
+  /* The utility can be disabled with `false`, thus check if the utility is a map first */
+  /* Then check if the utility needs print styles */
+  /* The utility can be disabled with `false`, thus check if the utility is a map first */
+  /* Then check if the utility needs print styles */
+  /* The utility can be disabled with `false`, thus check if the utility is a map first */
+  /* Then check if the utility needs print styles */
+  /* The utility can be disabled with `false`, thus check if the utility is a map first */
+  /* Then check if the utility needs print styles */
+  /* The utility can be disabled with `false`, thus check if the utility is a map first */
+  /* Then check if the utility needs print styles */
+  /* The utility can be disabled with `false`, thus check if the utility is a map first */
+  /* Then check if the utility needs print styles */
+}
+/* 3.0 Global*/
+/* 3.0 Patterns*/
+/* ______________________________________________________ BACKGROUNDS */
+/* Theme BG Colors */
+/* Background */
+/* Utilities */
+/* UTILITIES */
+/* GLOBAL */
+/* THEME */
+.footer-gradient {
+  position: absolute;
+  width: 100%;
+  z-index: 599;
+  background-image: linear-gradient(to right, transparent, rgba(228, 237, 244, 0.1) 5%, rgba(228, 237, 244, 0.2) 15%, rgba(228, 237, 244, 0.3) 25%, rgba(10, 186, 181, 0.4) 35%, rgba(10, 186, 181, 0.5) 45%, rgba(10, 186, 181, 0.6) 55%, rgba(10, 186, 181, 0.7) 65%, rgba(10, 186, 181, 0.8) 75%, rgba(10, 186, 181, 0.9) 85%);
+}
+
+/* 2.0 Mixins */
+/******************************************************************
+Site Name: The Creativity Architect
+Author: CJM Termini
+
+Stylesheet: Responsive  Stylesheet
+
+******************************************************************/
+/**
+ * Required Variables
+ */
+/*
+ * Media query to respond to a minimum size (mobile first)
+ */
+/*
+ * Media query to respond to a maximum size
+ */
+.elevation-1 {
+  box-shadow: 0 2px 1px -1px rgba(0, 0, 0, 0.76), 0 1px 1px 0 rgba(10, 186, 181, 0.55), 0 1px 3px 0 rgba(63, 0, 15, 0.68);
+}
+
+.elevation-2 {
+  box-shadow: 0 3px 1px -2px rgba(0, 0, 0, 0.76), 0 2px 2px 0 rgba(10, 186, 181, 0.55), 0 1px 5px 0 rgba(63, 0, 15, 0.68);
+}
+
+.elevation-3 {
+  box-shadow: 0 3px 3px -2px rgba(0, 0, 0, 0.76), 0 3px 4px 0 rgba(10, 186, 181, 0.55), 0 1px 8px 0 rgba(63, 0, 15, 0.68);
+}
+
+.elevation-4 {
+  box-shadow: 0 2px 4px -1px rgba(0, 0, 0, 0.76), 0 4px 5px 0 rgba(10, 186, 181, 0.55), 0 1px 10px 0 rgba(63, 0, 15, 0.68);
+}
+
+.elevation-5 {
+  box-shadow: 0 3px 5px -1px rgba(0, 0, 0, 0.76), 0 5px 8px 0 rgba(10, 186, 181, 0.55), 0 1px 14px 0 rgba(63, 0, 15, 0.68);
+}
+
+.elevation-6 {
+  box-shadow: 0 3px 5px -1px rgba(0, 0, 0, 0.76), 0 6px 10px 0 rgba(10, 186, 181, 0.55), 0 1px 18px 0 rgba(63, 0, 15, 0.68);
+}
+
+.elevation-7 {
+  box-shadow: 0 4px 5px -2px rgba(0, 0, 0, 0.76), 0 7px 10px 1px rgba(10, 186, 181, 0.55), 0 2px 16px 1px rgba(63, 0, 15, 0.68);
+}
+
+.elevation-8 {
+  box-shadow: 0 5px 5px -3px rgba(0, 0, 0, 0.76), 0 8px 10px 1px rgba(10, 186, 181, 0.55), 0 3px 14px 2px rgba(63, 0, 15, 0.68);
+}
+
+.elevation-9 {
+  box-shadow: 0 5px 6px -3px rgba(0, 0, 0, 0.76), 0 9px 12px 1px rgba(10, 186, 181, 0.55), 0 3px 16px 2px rgba(63, 0, 15, 0.68);
+}
+
+.elevation-10 {
+  box-shadow: 0 6px 6px -3px rgba(0, 0, 0, 0.76), 0 10px 14px 1px rgba(10, 186, 181, 0.55), 0 4px 18px 3px rgba(63, 0, 15, 0.68);
+}
+
+.elevation-11 {
+  box-shadow: 0 6px 7px -4px rgba(0, 0, 0, 0.76), 0 11px 15px 1px rgba(10, 186, 181, 0.55), 0 4px 20px 3px rgba(63, 0, 15, 0.68);
+}
+
+.elevation-12 {
+  box-shadow: 0 0 0 0 transparent, 0 0 0 0 transparent;
+}
+
+.elevation-13 {
+  box-shadow: 0 0 0 0 transparent, 0 0 0 0 transparent;
+}
+
+.elevation-14 {
+  box-shadow: 0 7px 9px -4px rgba(0, 0, 0, 0.76), 0 14px 21px 2px rgba(10, 186, 181, 0.55), 0 5px 26px 4px rgba(63, 0, 15, 0.68);
+}
+
+.elevation-15 {
+  box-shadow: 0 8px 9px -5px rgba(0, 0, 0, 0.76), 0 15px 22px 2px rgba(10, 186, 181, 0.55), 0 6px 28px 5px rgba(63, 0, 15, 0.68);
+}
+
+.elevation-16 {
+  box-shadow: 0 8px 10px -5px rgba(0, 0, 0, 0.76), 0 16px 24px 2px rgba(10, 186, 181, 0.55), 0 6px 30px 5px rgba(63, 0, 15, 0.68);
+}
+
+.elevation-17 {
+  box-shadow: 0 8px 11px -5px rgba(0, 0, 0, 0.76), 0 17px 26px 2px rgba(10, 186, 181, 0.55), 0 6px 32px 5px rgba(63, 0, 15, 0.68);
+}
+
+.elevation-18 {
+  box-shadow: 0 9px 11px -5px rgba(0, 0, 0, 0.76), 0 18px 28px 2px rgba(10, 186, 181, 0.55), 0 7px 34px 6px rgba(63, 0, 15, 0.68);
+}
+
+.elevation-19 {
+  box-shadow: 0 9px 12px -6px rgba(0, 0, 0, 0.76), 0 19px 29px 2px rgba(10, 186, 181, 0.55), 0 7px 36px 6px rgba(63, 0, 15, 0.68);
+}
+
+.elevation-20 {
+  box-shadow: 0 10px 13px -6px rgba(0, 0, 0, 0.76), 0 20px 31px 3px rgba(10, 186, 181, 0.55), 0 8px 38px 7px rgba(63, 0, 15, 0.68);
+}
+
+.elevation-21 {
+  box-shadow: 0 10px 13px -6px rgba(0, 0, 0, 0.76), 0 21px 33px 3px rgba(10, 186, 181, 0.55), 0 8px 40px 7px rgba(63, 0, 15, 0.68);
+}
+
+.elevation-22 {
+  box-shadow: 0 10px 14px -6px rgba(0, 0, 0, 0.76), 0 22px 35px 3px rgba(10, 186, 181, 0.55), 0 8px 42px 7px rgba(63, 0, 15, 0.68);
+}
+
+.elevation-23 {
+  box-shadow: 0 11px 14px -7px rgba(0, 0, 0, 0.76), 0 23px 36px 3px rgba(10, 186, 181, 0.55), 0 9px 55px 8px rgba(63, 0, 15, 0.68);
+}
+
+.elevation-24 {
+  box-shadow: 0 11px 15px -7px rgba(0, 0, 0, 0.76), 0 24px 38px 3px rgba(10, 186, 181, 0.55), 0 9px 46px 8px rgba(63, 0, 15, 0.68);
+}
+
+/*
+ * Output font size in px/rem
+ */
+/******************************************************************
+Site Name: The Creativity Architect
+Author: CJM Termini
+
+Stylesheet: Left to Right  Stylesheet
+
+******************************************************************/
+/******************************************************************
+Site Name: The Creativity Architect
+Author: CJM Termini
+
+Stylesheet: Navigation Mixin Stylesheet
+
+******************************************************************/
+/*
+ * Placeholder mixin for <input>
+ */
+/* You can also use a <br class="clear" /> to clear columns */
+.clear {
+  display: block;
+  visibility: hidden;
+  clear: both;
+  overflow: hidden;
+  width: 0;
+  height: 0;
+}
+
+/* 2.0 Helpers */
+/* Assistive Tech –––––––––––––––––––––––––––––––––––––––––––––––––– */
+/**
+ * Text meant only for screen readers. It's hidden due to the clip property, but
+ * visible in the page source. If you take a look back in the template files at
+ * the mark-up for our main menu and other navigation areas, you'll notice that
+ * we have headers such as "Menu" and "Site Navigation" wrapped in an
+ * <code>h1</code> tag with a class of "assistive-text". Screen readers will
+ * read this text aloud, making it easier for users to locate structural
+ * sections in your theme.
+ */
+.assistive-text,
+.screen-reader-text,
+.sr-only {
+  position: absolute !important;
+  overflow: hidden;
+  clip: rect(1px, 1px, 1px, 1px);
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  word-wrap: normal !important;
+  border: 0;
+  -webkit-clip-path: inset(50%);
+  clip-path: inset(50%);
+}
+.assistive-text:focus,
+.screen-reader-text:focus,
+.sr-only:focus {
+  font-size: 0.875rem;
+  font-weight: 700;
+  line-height: normal;
+  z-index: 100000;
+  top: 5px;
+  left: 5px;
+  display: block;
+  clip: auto !important;
+  width: auto;
+  height: auto;
+  padding: 15px 23px 14px;
+  text-decoration: none;
+  color: rgba(0, 0, 0, 0.6);
+  border-radius: var(--border-radius-sm);
+  background-color: #f1f1f1;
+  box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.6);
+  -webkit-clip-path: none;
+  clip-path: none;
+}
+
+.skip-link:focus {
+  font-size: 0.875rem;
+  font-weight: 700;
+  line-height: normal;
+  z-index: 100000;
+  top: 5px;
+  left: 5px;
+  display: block;
+  clip: auto !important;
+  width: auto;
+  height: auto;
+  padding: 15px 23px 14px;
+  text-decoration: none;
+  color: #21759b;
+  border-radius: 3px;
+  background-color: #f1f1f1;
+  box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.6);
+  -webkit-clip-path: none;
+  clip-path: none;
+}
+
+.assistive-text {
+  position: absolute !important;
+  clip: rect(1px 1px 1px 1px);
+  clip: rect(1px, 1px, 1px, 1px);
+}
+
+#primary[tabindex="-1"]:focus {
+  outline: 0;
+}
+
+.says,
+.screen-reader-text {
+  clip: rect(1px, 1px, 1px, 1px);
+  height: 1px;
+  overflow: hidden;
+  position: absolute !important;
+  width: 1px;
+  /* many screen reader and browser combinations announce broken words as they would appear visually */
+  word-wrap: normal !important;
+}
+
+/* must have higher specificity than alternative color schemes inline styles */
+.site .skip-link {
+  background-color: #f1f1f1;
+  box-shadow: 0 0 1px 1px rgba(0, 0, 0, 0.2);
+  color: #21759b;
+  display: block;
+  font-size: 14px;
+  font-weight: 700;
+  left: -9999em;
+  outline: none;
+  padding: 15px 23px 14px;
+  text-decoration: none;
+  text-transform: none;
+  top: -9999em;
+}
+
+.logged-in .site .skip-link {
+  box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.2);
+}
+
+.site .skip-link:focus {
+  clip: auto;
+  height: auto;
+  left: 6px;
+  top: 7px;
+  width: auto;
+  z-index: 100000;
+}
+
+@media (prefers-reduced-motion) {
+  * {
+    transition-delay: 0s !important;
+    transition-duration: 0s !important;
+  }
+}
+.align-text-left,
+.text-aligned-left .entry-container {
+  text-align: center;
+}
+@media only screen and (min-width: 41.688em) {
+  .align-text-left,
+.text-aligned-left .entry-container {
+    text-align: left;
+  }
+}
+
+.align-text-right,
+.text-aligned-right .entry-container {
+  text-align: right;
+}
+@media only screen and (min-width: 41.688em) {
+  .align-text-right,
+.text-aligned-right .entry-container {
+    text-align: right;
+  }
+}
+
+.align-text-center,
+.text-aligned-center .entry-container {
+  text-align: center;
+}
+
+.flex-fill {
+  flex: 1 1 auto !important;
+}
+
+.flex-row {
+  flex-direction: row !important;
+}
+
+.flex-column {
+  flex-direction: column !important;
+}
+
+.flex-row-reverse {
+  flex-direction: row-reverse !important;
+}
+
+.flex-column-reverse {
+  flex-direction: column-reverse !important;
+}
+
+.flex-grow-0 {
+  flex-grow: 0 !important;
+}
+
+.flex-grow-1 {
+  flex-grow: 1 !important;
+}
+
+.flex-shrink-0 {
+  flex-shrink: 0 !important;
+}
+
+.flex-shrink-1 {
+  flex-shrink: 1 !important;
+}
+
+.flex-wrap {
+  flex-wrap: wrap !important;
+}
+
+.flex-nowrap {
+  flex-wrap: nowrap !important;
+}
+
+.flex-wrap-reverse {
+  flex-wrap: wrap-reverse !important;
+}
+
+@media only screen and (min-width: 41.688em) {
+  .alignleft,
+.float-left {
+    display: inline;
+    float: left;
+    margin-right: 1.5em;
+    margin-bottom: 1em;
+  }
+  img .alignleft,
+img .float-left {
+    margin-right: spacer;
+  }
+}
+
+@media only screen and (min-width: 41.688em) {
+  .alignright,
+.float-right {
+    display: inline;
+    float: right;
+    margin-left: 1.5em;
+    margin-bottom: 1em;
+  }
+  img .alignright,
+img .float-right {
+    margin-left: 18.144;
+  }
+}
+
+.aligncenter,
+.float-center {
+  clear: both;
+  display: block;
+  margin-top: 1.5em;
+  margin-right: auto;
+  margin-bottom: 1.5em;
+  margin-left: auto;
+}
+img .aligncenter,
+img .float-center {
+  margin-bottom: spacer;
+}
+
+.clearfix .row,
+.clearfix .clearfix {
+  zoom: 1;
+}
+.clearfix .row .clearfix:before,
+.clearfix .row .clearfix:after,
+.clearfix .row .row:before,
+.clearfix .row .row:after,
+.clearfix .clearfix .clearfix:before,
+.clearfix .clearfix .clearfix:after,
+.clearfix .clearfix .row:before,
+.clearfix .clearfix .row:after {
+  display: block;
+  visibility: hidden;
+  clear: both;
+  overflow: hidden;
+  width: 0;
+  height: 0;
+  table-layout: fixed;
+  content: " ";
+}
+.clearfix .row .clearfix::after,
+.clearfix .row .row::after,
+.clearfix .clearfix .clearfix::after,
+.clearfix .clearfix .row::after {
+  display: block;
+  clear: both;
+  content: "";
+}
+
+/**
+* Text aligments
+*/
+.fixed-top {
+  position: fixed;
+  z-index: 1030;
+  top: 0;
+  right: 0;
+  left: 0;
+}
+
+.fixed-bottom {
+  position: fixed;
+  z-index: 1030;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+.left {
+  text-align: left;
+}
+
+.right {
+  text-align: right;
+}
+
+.center {
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.justify {
+  text-align: justify;
+}
+
+.hidden-sm {
+  display: none;
+}
+
+.custom-header-content.content-aligned-right .entry-container {
+  margin-left: auto;
+}
+
+.no-header-media-image .custom-header-content.content-aligned-left {
+  margin-left: 0;
+}
+
+.no-header-media-image .custom-header-content.content-aligned-right {
+  margin-right: 0;
+}
+
+.custom-header-content.content-aligned-center .entry-container {
+  margin: 0 auto;
+}
+
+.custom-header-content.text-aligned-right .entry-header-image img {
+  margin-left: auto;
+}
+
+.custom-header-content.text-aligned-center .entry-header-image img {
+  margin: 0 auto;
+}
+
+.slider-content-wrapper.content-aligned-right .entry-container-wrap,
+.hero-content-wrapper.section.content-aligned-right .hentry .entry-container.full-width {
+  margin-left: auto;
+  margin-right: 0;
+}
+
+.slider-content-wrapper.content-aligned-center .entry-container-wrap,
+.hero-content-wrapper.section.content-aligned-center .hentry .entry-container.full-width {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.slider-content-wrapper.content-aligned-right.text-aligned-right .entry-container-wrap {
+  text-align: center;
+}
+@media only screen and (min-width: 41.688em) {
+  .slider-content-wrapper.content-aligned-right.text-aligned-right .entry-container-wrap {
+    text-align: right;
+  }
+}
+
+.slider-content-wrapper.content-aligned-right.text-aligned-left .entry-container-wrap {
+  text-align: center;
+}
+@media only screen and (min-width: 41.688em) {
+  .slider-content-wrapper.content-aligned-right.text-aligned-left .entry-container-wrap {
+    text-align: left;
+  }
+}
+
+.slider-content-wrapper.content-aligned-left.text-aligned-right .entry-container-wrap {
+  text-align: center;
+}
+@media only screen and (min-width: 41.688em) {
+  .slider-content-wrapper.content-aligned-left.text-aligned-right .entry-container-wrap {
+    text-align: right;
+  }
+}
+
+.slider-content-wrapper.content-aligned-left.text-aligned-left .entry-container-wrap {
+  text-align: center;
+}
+@media only screen and (min-width: 41.688em) {
+  .slider-content-wrapper.content-aligned-left.text-aligned-left .entry-container-wrap {
+    text-align: left;
+  }
+}
+
+.slider-content-wrapper .entry-container,
+.hero-content-wrapper.section.text-aligned-center .hentry .entry-container {
+  padding-left: 30px;
+  padding-right: 30px;
+  text-align: center;
+}
+@media only screen and (min-width: 41.688em) {
+  .slider-content-wrapper .entry-container,
+.hero-content-wrapper.section.text-aligned-center .hentry .entry-container {
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+}
+@media only screen and (min-width: 85.375em) {
+  .slider-content-wrapper .entry-container,
+.hero-content-wrapper.section.text-aligned-center .hentry .entry-container {
+    padding-left: 60px;
+    padding-right: 60px;
+  }
+}
+
+.hero-content-wrapper.section.content-aligned-left .section-content-wrap .hentry .entry-container {
+  float: left;
+}
+@media only screen and (min-width: 41.688em) {
+  .hero-content-wrapper.section.content-aligned-left .section-content-wrap .hentry .entry-container {
+    padding-left: 0;
+    padding-right: 60px;
+  }
+}
+@media only screen and (min-width: 85.375em) {
+  .hero-content-wrapper.section.content-aligned-left .section-content-wrap .hentry .entry-container {
+    padding-left: 0;
+    padding-right: 120px;
+  }
+}
+
+.hero-content-wrapper.section.content-aligned-left.text-aligned-right .hentry .entry-container,
+.hero-content-wrapper.section.content-aligned-left.text-aligned-left .hentry .entry-container {
+  float: left;
+}
+
+.hero-content-wrapper.section.content-aligned-left .wrapper .hentry .featured-content-image {
+  right: 0;
+  left: auto;
+}
+
+.slider-content-wrapper.content-aligned-right .section-heading-wrapper {
+  order: 1;
+}
+@media only screen and (min-width: 41.688em) {
+  .slider-content-wrapper.content-aligned-right .section-heading-wrapper {
+    order: 2;
+  }
+}
+
+.rtl .slider-content-wrapper.content-aligned-left .hentry {
+  flex-direction: row-reverse;
+}
+
+.rtl .slider-content-wrapper.content-aligned-right .hentry {
+  flex-direction: row;
+}
+
+.slider-content-wrapper.content-aligned-right .hentry {
+  flex-direction: row-reverse;
+}
+
+.promotion-headline-wrapper.section.content-aligned-center .entry-container .inner-container {
+  margin: 0 auto;
+}
+.promotion-headline-wrapper.section.content-aligned-center .entry-container .inner-container .more-button {
+  margin-top: 35px;
+  position: relative;
+}
+
+.promotion-headline-wrapper.section.content-aligned-left .entry-container .inner-container {
+  margin: 0 auto;
+}
+@media only screen and (min-width: 64em) {
+  .promotion-headline-wrapper.section.content-aligned-left .entry-container .inner-container {
+    margin-right: auto;
+    margin-left: 0;
+  }
+}
+
+.promotion-headline-wrapper.section.content-aligned-right .entry-container .inner-container {
+  margin: 0 auto;
+}
+@media only screen and (min-width: 64em) {
+  .promotion-headline-wrapper.section.content-aligned-right .entry-container .inner-container {
+    margin-left: auto;
+    margin-right: 0;
+  }
+}
+.promotion-headline-wrapper.section.content-aligned-right .entry-container .inner-container .more-button {
+  margin-top: 35px;
+  position: relative;
+}
+@media only screen and (min-width: 64em) {
+  .promotion-headline-wrapper.section.content-aligned-right .entry-container .inner-container .more-button {
+    left: 0;
+    margin-top: 0;
+    position: absolute;
+    right: auto;
+  }
+}
+
+.promotion-headline-wrapper.section.content-aligned-left .entry-container .inner-container .more-button {
+  position: relative;
+}
+@media only screen and (min-width: 64em) {
+  .promotion-headline-wrapper.section.content-aligned-left .entry-container .inner-container .more-button {
+    left: auto;
+    position: absolute;
+    right: 0;
+  }
+}
+
+.promotion-headline-wrapper.section.content-aligned-right.text-aligned-left .entry-container {
+  text-align: center;
+}
+@media only screen and (min-width: 64em) {
+  .promotion-headline-wrapper.section.content-aligned-right.text-aligned-left .entry-container {
+    text-align: left;
+  }
+}
+
+.promotion-headline-wrapper.section.content-aligned-right.text-aligned-right .entry-container {
+  text-align: center;
+}
+@media only screen and (min-width: 64em) {
+  .promotion-headline-wrapper.section.content-aligned-right.text-aligned-right .entry-container {
+    text-align: right;
+  }
+}
+
+.promotion-headline-wrapper.section.content-aligned-left.text-aligned-left .entry-container {
+  text-align: center;
+}
+@media only screen and (min-width: 64em) {
+  .promotion-headline-wrapper.section.content-aligned-left.text-aligned-left .entry-container {
+    text-align: left;
+  }
+}
+
+.promotion-headline-wrapper.section.content-aligned-left.text-aligned-right .entry-container {
+  text-align: center;
+}
+@media only screen and (min-width: 64em) {
+  .promotion-headline-wrapper.section.content-aligned-left.text-aligned-right .entry-container {
+    text-align: right;
+  }
+}
+
+.text-align-right .entry-content {
+  text-align: right;
+}
+
+.rounded-circle {
+  border-radius: 50% !important;
+}
+
+.clearfix .row,
+.clearfix .clearfix {
+  zoom: 1;
+}
+.clearfix .row .clearfix:before,
+.clearfix .row .clearfix:after,
+.clearfix .row .row:before,
+.clearfix .row .row:after,
+.clearfix .clearfix .clearfix:before,
+.clearfix .clearfix .clearfix:after,
+.clearfix .clearfix .row:before,
+.clearfix .clearfix .row:after {
+  display: block;
+  visibility: hidden;
+  clear: both;
+  overflow: hidden;
+  width: 0;
+  height: 0;
+  table-layout: fixed;
+  content: " ";
+}
+.clearfix .row .clearfix::after,
+.clearfix .row .row::after,
+.clearfix .clearfix .clearfix::after,
+.clearfix .clearfix .row::after {
+  display: block;
+  clear: both;
+  content: "";
+}
+
+.list-unstyled {
+  padding-left: 0;
+  list-style: none;
+}
+
+.list-inline {
+  padding-left: 0;
+  list-style: none;
+}
+
+.list-inline-item {
+  display: inline-block;
+}
+.list-inline-item:not(:last-child) {
+  margin-right: 16.8rem;
+}
+
+.list--unstyled {
+  margin-left: 0;
+  list-style: none;
+}
+
+.dl-horizontal {
+  margin-right: -16px;
+  margin-left: -16px;
+}
+.dl-horizontal .row,
+.dl-horizontal .clearfix {
+  zoom: 1;
+}
+.dl-horizontal .row .clearfix:before,
+.dl-horizontal .row .clearfix:after,
+.dl-horizontal .row .row:before,
+.dl-horizontal .row .row:after,
+.dl-horizontal .clearfix .clearfix:before,
+.dl-horizontal .clearfix .clearfix:after,
+.dl-horizontal .clearfix .row:before,
+.dl-horizontal .clearfix .row:after {
+  display: block;
+  visibility: hidden;
+  clear: both;
+  overflow: hidden;
+  width: 0;
+  height: 0;
+  table-layout: fixed;
+  content: " ";
+}
+.dl-horizontal .row .clearfix::after,
+.dl-horizontal .row .row::after,
+.dl-horizontal .clearfix .clearfix::after,
+.dl-horizontal .clearfix .row::after {
+  display: block;
+  clear: both;
+  content: "";
+}
+
+.initialism {
+  font-size: 90%;
+  text-transform: uppercase;
+}
+
+.normal {
+  font-weight: normal;
+}
+
+.quiet {
+  color: #affbf9;
+}
+
+.pull-left {
+  float: left;
+  margin: 0.5em 2em 1em 0;
+}
+
+.pull-right {
+  float: right;
+  margin: 0.5em 0 1em 2em;
+}
+
+.image-replacement,
+.ir {
+  text-indent: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.ratio {
+  position: relative;
+  width: 100%;
+}
+.ratio::before {
+  display: block;
+  padding-top: var(--ca-aspect-ratio);
+  content: "";
+}
+.ratio > * {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.ratio-1x1 {
+  --ca-aspect-ratio: 100%;
+}
+
+.ratio-4x3 {
+  --ca-aspect-ratio: 75%;
+}
+
+.ratio-16x9 {
+  --ca-aspect-ratio: 56.25%;
+}
+
+.ratio-21x9 {
+  --ca-aspect-ratio: 42.8571428571%;
+}
+
+.container .span.col1 {
+  flex: 0 0;
+  width: 6.25%;
+}
+
+.container .span.col2 {
+  flex: 0 0;
+  width: 12.5%;
+}
+
+.container .span.col3 {
+  flex: 0 0;
+  width: 18.75%;
+}
+
+.container .span.col4 {
+  flex: 0 0;
+  width: 25%;
+}
+
+.container .span.col5 {
+  flex: 0 0;
+  width: 31.25%;
+}
+
+.container .span.col6 {
+  flex: 0 0;
+  width: 37.5%;
+}
+
+.container .span.col7 {
+  flex: 0 0;
+  width: 43.75%;
+}
+
+.container .span.col8 {
+  flex: 0 0;
+  width: 50%;
+}
+
+.container .span.col9 {
+  flex: 0 0;
+  width: 56.25%;
+}
+
+.container .span.col10 {
+  flex: 0 0;
+  width: 62.5%;
+}
+
+.container .span.col11 {
+  flex: 0 0;
+  width: 68.75%;
+}
+
+.container .span.col12 {
+  flex: 0 0;
+  width: 75%;
+}
+
+.container .span.col13 {
+  flex: 0 0;
+  width: 81.25%;
+}
+
+.container .span.col14 {
+  flex: 0 0;
+  width: 87.5%;
+}
+
+.container .span.col15 {
+  flex: 0 0;
+  width: 93.75%;
+}
+
+.container .span.col16 {
+  flex: 0 0;
+  width: 100%;
+}
+
+.container .span.col-auto {
+  flex: 0 0 auto;
+  width: auto;
+}
+
+.container .span.row1 {
+  flex: 0 0;
+  height: 6.25%;
+}
+
+.container .span.row2 {
+  flex: 0 0;
+  height: 12.5%;
+}
+
+.container .span.row3 {
+  flex: 0 0;
+  height: 18.75%;
+}
+
+.container .span.row4 {
+  flex: 0 0;
+  height: 25%;
+}
+
+.container .span.row5 {
+  flex: 0 0;
+  height: 31.25%;
+}
+
+.container .span.row6 {
+  flex: 0 0;
+  height: 37.5%;
+}
+
+.container .span.row7 {
+  flex: 0 0;
+  height: 43.75%;
+}
+
+.container .span.row8 {
+  flex: 0 0;
+  height: 50%;
+}
+
+.container .span.row9 {
+  flex: 0 0;
+  height: 56.25%;
+}
+
+.container .span.row10 {
+  flex: 0 0;
+  height: 62.5%;
+}
+
+.container .span.row11 {
+  flex: 0 0;
+  height: 68.75%;
+}
+
+.container .span.row12 {
+  flex: 0 0;
+  height: 75%;
+}
+
+.container .span.row13 {
+  flex: 0 0;
+  height: 81.25%;
+}
+
+.container .span.row14 {
+  flex: 0 0;
+  height: 87.5%;
+}
+
+.container .span.row15 {
+  flex: 0 0;
+  height: 93.75%;
+}
+
+.container .span.row16 {
+  flex: 0 0;
+  height: 100%;
+}
+
+.container .span.row-fluid {
+  flex: 0 0 auto;
+  height: auto;
+}
+
+.hstack {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  align-self: stretch;
+}
+
+.vstack {
+  display: flex;
+  flex: 1 1 auto;
+  flex-direction: column;
+  align-self: stretch;
+}
+
+.stretched-link::after {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 1;
+  content: "";
+}
+
+.text-truncate {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+/* TEXT SELECTORS ___ */
+.vertical {
+  writing-mode: vertical-lr;
+  rotate: 90deg;
+}
+
+/**
+ * Elements visibility
+ */
+.visible-on-mobile {
+  display: none !important;
+}
+@media screen and (max-width: 574px) {
+  .visible-on-mobile {
+    display: block !important;
+  }
+}
+
+.visible-on-tablet {
+  display: none !important;
+}
+@media screen and (max-width: 768px) {
+  .visible-on-tablet {
+    display: block !important;
+  }
+}
+@media screen and (max-width: 574px) {
+  .visible-on-tablet {
+    display: none !important;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .visible-on-desktop {
+    display: none !important;
+  }
+}
+
+/* Visually hidden */
+.visually-hidden {
+  position: absolute !important;
+  width: 1px !important;
+  height: 1px !important;
+  padding: 0 !important;
+  margin: -1px !important;
+  overflow: hidden !important;
+  clip: rect(0, 0, 0, 0) !important;
+  white-space: nowrap !important;
+  border: 0 !important;
+}
+.visually-hidden:not(:focus):not(:focus-within) {
+  position: absolute !important;
+  width: 1px !important;
+  height: 1px !important;
+  padding: 0 !important;
+  margin: -1px !important;
+  overflow: hidden !important;
+  clip: rect(0, 0, 0, 0) !important;
+  white-space: nowrap !important;
+  border: 0 !important;
+}
+
+.vr {
+  display: inline-block;
+  align-self: stretch;
+  width: 1px;
+  min-height: 1em;
+  background-color: currentColor;
+  opacity: 0.25;
+}
+
+/* 3.0 Base*/
+:root {
+  --ca-blue: #0dcaf0;
+  --ca-indigo: #6600ff;
+  --ca-purple: #510bda;
+  --ca-pink: #ff6699;
+  --ca-red: #ff555a;
+  --ca-orange: #ffd080;
+  --ca-yellow: #ffcc33;
+  --ca-green: #cdffff;
+  --ca-teal: #b5ede4;
+  --ca-cyan: #0abab5;
+  --ca-gray: #3e3e3e;
+  --ca-gray-100: #c0c0c0;
+  --ca-gray-200: #9a9a9a;
+  --ca-gray-300: #7b7b7b;
+  --ca-gray-400: #626262;
+  --ca-gray-500: #4e4e4e;
+  --ca-gray-600: #3e3e3e;
+  --ca-gray-700: #323232;
+  --ca-gray-800: #282828;
+  --ca-gray-900: #1a1a1a;
+  --ca-primary-rgb-rgb: #0abab5;
+  --ca-secondary-rgb-rgb: #ffe41e;
+  --ca-accent-rgb-rgb: #a8a9ad;
+  --ca-valid-rgb-rgb: #48c78e;
+  --ca-attention-rgb-rgb: #ff470f;
+  --ca-invalid-rgb-rgb: #f14668;
+  --ca-info-rgb-rgb: #485fc7;
+  --ca-light-rgb-rgb: silver;
+  --ca-dark-rgb-rgb: #1a1a1a;
+  --ca-white-rgb: 228, 237, 244;
+  --ca-black-rgb: 0, 1, 0;
+  --ca-body-text-rgb: 22, 189, 185;
+  --ca-body-bg-rgb: 30, 192, 187;
+  --ca-font-sans-serif: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  --ca-font-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+  --ca-gradient: linear-gradient(-120deg, rgba(10, 186, 181, 0.95), rgba(255, 204, 51, 0.65), rgba(192, 192, 192, 0.45), transparent, 95%);
+  --ca-body-font-family: ca- Helvetica Neue, Helvetica, Arial, sans-serif;
+  --ca-body-font-size: 1rem;
+  --ca-body-font-weight: 400;
+  --ca-body-line-height: 1.5;
+  --ca-body-text: #16bdb9;
+  --ca-body-bg: #1ec0bb;
+}
+
+/**
+ * Required Variables
+ */
+/**
+ * Root Media Query Variables
+ */
+/**
+ * Root Media Query Variables
+ */
+/**
+ * Extends
+ */
+.default-max-width {
+  max-width: calc(100vw - 33vh);
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.wide-max-width {
+  max-width: calc(100vw - 4vh);
+  margin-right: auto;
+  margin-left: auto;
+}
+
+@media only screen and (min-width: 576px) {
+  .full-max-width {
+    width: auto;
+    max-width: 100%;
+    margin-right: auto;
+    margin-left: auto;
+  }
+}
+/**
+ * partials/reset
+ * ---
+ * Reset file
+ * NOTE: also `normalize.css` is used
+ */
+*,
+*:after,
+*:before {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+body {
+  font-family: ca- "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 1rem;
+  line-height: 1.5;
+  color: #16bdb9;
+}
+
+img {
+  max-width: 100%;
+  vertical-align: middle;
+}
+
+a {
+  color: #16bdb9;
+  text-decoration: none;
+}
+a:focus, a:hover {
+  text-decoration: underline;
+}
+input[type=text],
+input[type=search] {
+  font-size: inherit;
+  line-height: inherit;
+}
+
+::selection {
+  background-color: #04A4CC;
+  color: #16bdb9;
+  text-shadow: none;
+}
+
+/* normalize.css 2012-07-07T09:50 UTC - http://github.com/necolas/normalize.css */
+/* ==========================================================================
+   HTML5 display definitions
+   ========================================================================== */
+/**
+ * Correct `block` display not defined in IE 8/9.
+ */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+main,
+nav,
+section,
+summary {
+  display: block;
+}
+
+/**
+ * Correct `inline-block` display not defined in IE 8/9.
+ */
+audio,
+canvas,
+video {
+  display: inline-block;
+}
+
+/**
+ * Prevent modern browsers from displaying `audio` without controls.
+ * Remove excess height in iOS 5 devices.
+ */
+audio:not([controls]) {
+  display: none;
+  height: 0;
+}
+
+/**
+ * Address `[hidden]` styling not present in IE 8/9.
+ * Hide the `template` element in IE, Safari, and Firefox < 22.
+ */
+[hidden],
+template {
+  display: none;
+}
+
+/* ==========================================================================
+   Base
+   ========================================================================== */
+/**
+ * 1. Set default font family to sans-serif.
+ * 2. Prevent iOS text size adjust after orientation change, without disabling
+ *    user zoom.
+ */
+html {
+  font-family: sans-serif;
+  /* 1 */
+  -ms-text-size-adjust: 100%;
+  /* 2 */
+  -webkit-text-size-adjust: 100%;
+  /* 2 */
+}
+
+/**
+ * Remove default margin.
+ */
+body {
+  margin: 0;
+}
+
+/* ==========================================================================
+   Links
+   ========================================================================== */
+/**
+ * Remove the gray background color from active links in IE 10.
+ */
+a {
+  background: transparent;
+}
+
+/**
+ * Address `outline` inconsistency between Chrome and other browsers.
+ */
+a:focus {
+  outline: thin dotted;
+}
+
+/**
+ * Improve readability when focused and also mouse hovered in all browsers.
+ */
+a:active,
+a:hover {
+  outline: 0;
+}
+
+/* ==========================================================================
+   Typography
+   ========================================================================== */
+/**
+ * Address variable `h1` font-size and margin within `section` and `article`
+ * contexts in Firefox 4+, Safari 5, and Chrome.
+ */
+h1 {
+  font-size: 2em;
+  margin: 0.67em 0;
+}
+
+/**
+ * Address styling not present in IE 8/9, Safari 5, and Chrome.
+ */
+abbr[title] {
+  border-bottom: 1px dotted;
+}
+
+/**
+ * Address style set to `bolder` in Firefox 4+, Safari 5, and Chrome.
+ */
+b,
+strong,
+.strong {
+  font-weight: bold;
+}
+
+/**
+ * Address styling not present in Safari 5 and Chrome.
+ */
+dfn,
+em,
+.em {
+  font-style: italic;
+}
+
+/**
+ * Address differences between Firefox and other browsers.
+ */
+hr {
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+  height: 0;
+}
+
+/*
+ * proper formatting (http://blog.fontdeck.com/post/9037028497/hyphens)
+*/
+p {
+  -webkit-hyphens: auto;
+  -epub-hyphens: auto;
+  -moz-hyphens: auto;
+  hyphens: auto;
+}
+
+/*
+ * Addresses margins set differently in IE6/7.
+ */
+pre {
+  margin: 0;
+}
+
+/**
+ * Correct font family set oddly in Safari 5 and Chrome.
+ */
+code,
+kbd,
+pre,
+samp {
+  font-family: monospace, serif;
+  font-size: 1em;
+}
+
+/**
+ * Improve readability of pre-formatted text in all browsers.
+ */
+pre {
+  white-space: pre-wrap;
+}
+
+/**
+ * Set consistent quote types.
+ */
+q {
+  quotes: "“" "”" "‘" "’";
+}
+
+/**
+ * Address inconsistent and variable font size in all browsers.
+ */
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+
+small, .small {
+  font-size: 75%;
+}
+
+/**
+ * Prevent `sub` and `sup` affecting `line-height` in all browsers.
+ */
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+sup {
+  top: -0.5em;
+}
+
+sub {
+  bottom: -0.25em;
+}
+
+/* ==========================================================================
+  Lists
+========================================================================== */
+/*
+ * Addresses margins set differently in IE6/7.
+ */
+dl,
+menu,
+ol,
+ul {
+  margin: 1em 0;
+}
+
+dd {
+  margin: 0;
+}
+
+/*
+ * Addresses paddings set differently in IE6/7.
+ */
+menu {
+  padding: 0 0 0 40px;
+}
+
+ol,
+ul {
+  padding: 0;
+  list-style-type: none;
+}
+
+/*
+ * Corrects list images handled incorrectly in IE7.
+ */
+nav ul,
+nav ol {
+  list-style: none;
+  list-style-image: none;
+}
+
+/* ==========================================================================
+  Embedded content
+========================================================================== */
+/**
+ * Remove border when inside `a` element in IE 8/9.
+ */
+img {
+  border: 0;
+}
+
+/**
+ * Correct overflow displayed oddly in IE 9.
+ */
+svg:not(:root) {
+  overflow: hidden;
+}
+
+/* ==========================================================================
+   Figures
+   ========================================================================== */
+/**
+ * Address margin not present in IE 8/9 and Safari 5.
+ */
+figure {
+  margin: 0;
+}
+
+/* ==========================================================================
+   Forms
+   ========================================================================== */
+/**
+ * Define consistent border, margin, and padding.
+ */
+fieldset {
+  border: 1px solid #c0c0c0;
+  margin: 0 2px;
+  padding: 0.35em 0.625em 0.75em;
+}
+
+/**
+ * 1. Correct `color` not being inherited in IE 8/9.
+ * 2. Remove padding so people aren't caught out if they zero out fieldsets.
+ */
+legend {
+  border: 0;
+  /* 1 */
+  padding: 0;
+  /* 2 */
+}
+
+/**
+ * 1. Correct font family not being inherited in all browsers.
+ * 2. Correct font size not being inherited in all browsers.
+ * 3. Address margins set differently in Firefox 4+, Safari 5, and Chrome.
+ */
+button,
+input,
+select,
+textarea {
+  font-family: inherit;
+  /* 1 */
+  font-size: 100%;
+  /* 2 */
+  margin: 0;
+  /* 3 */
+}
+
+/**
+ * Address Firefox 4+ setting `line-height` on `input` using `!important` in
+ * the UA stylesheet.
+ */
+button,
+input {
+  line-height: normal;
+}
+
+/**
+ * Address inconsistent `text-transform` inheritance for `button` and `select`.
+ * All other form control elements do not inherit `text-transform` values.
+ * Correct `button` style inheritance in Chrome, Safari 5+, and IE 8+.
+ * Correct `select` style inheritance in Firefox 4+ and Opera.
+ */
+button,
+select {
+  text-transform: none;
+}
+
+/**
+ * 1. Avoid the WebKit bug in Android 4.0.* where (2) destroys native `audio`
+ *    and `video` controls.
+ * 2. Correct inability to style clickable `input` types in iOS.
+ * 3. Improve usability and consistency of cursor style between image-type
+ *    `input` and others.
+ */
+button,
+html input[type=button],
+input[type=reset],
+input[type=submit] {
+  -webkit-appearance: button;
+  /* 2 */
+  cursor: pointer;
+  /* 3 */
+}
+
+/**
+ * Re-set default cursor for disabled elements.
+ */
+button[disabled],
+html input[disabled] {
+  cursor: default;
+}
+
+/**
+ * 1. Address box sizing set to `content-box` in IE 8/9/10.
+ * 2. Remove excess padding in IE 8/9/10.
+ */
+input[type=checkbox],
+input[type=radio] {
+  box-sizing: border-box;
+  /* 1 */
+  padding: 0;
+  /* 2 */
+}
+
+/**
+ * 1. Address `appearance` set to `searchfield` in Safari 5 and Chrome.
+ * 2. Address `box-sizing` set to `border-box` in Safari 5 and Chrome
+ *    (include `-moz` to future-proof).
+ */
+input[type=search] {
+  -webkit-appearance: textfield;
+  /* 1 */
+  -moz-box-sizing: content-box;
+  -webkit-box-sizing: content-box;
+  /* 2 */
+  box-sizing: content-box;
+}
+
+/**
+ * Remove inner padding and search cancel button in Safari 5 and Chrome
+ * on OS X.
+ */
+input[type=search]::-webkit-search-cancel-button,
+input[type=search]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+
+/**
+ * Remove inner padding and border in Firefox 4+.
+ */
+button::-moz-focus-inner,
+input::-moz-focus-inner {
+  border: 0;
+  padding: 0;
+}
+
+/**
+ * 1. Remove default vertical scrollbar in IE 8/9.
+ * 2. Improve readability and alignment in all browsers.
+ */
+textarea {
+  overflow: auto;
+  /* 1 */
+  vertical-align: top;
+  /* 2 */
+}
+
+/* ==========================================================================
+   Tables
+   ========================================================================== */
+/**
+ * Remove most spacing between table cells.
+ */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.image-replacement,
+.ir {
+  text-indent: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.clearfix, .cf {
+  zoom: 1;
+}
+.clearfix:before, .clearfix:after, .cf:before, .cf:after {
+  content: "";
+  display: table;
+}
+.clearfix:after, .cf:after {
+  clear: both;
+}
+
+/*
+use the best ampersand
+http://simplebits.com/notebook/2008/08/14/ampersands-2/
+*/
+span.amp {
+  font-family: Baskerville, "Goudy Old Style", Palatino, "Book Antiqua", serif !important;
+  font-style: italic;
+}
+
+/*--------------------------------------------------------------
+# Sections HTML Element
+--------------------------------------------------------------*/
+section {
+  padding: 0.8 16.632;
+  overflow: hidden;
+}
+
+div {
+  display: flex;
+  float: left;
+  justify-content: space-evenly;
+}
+
+/* 4.0 Bare Elements*/
+/* 4.0 HTML*/
+*,
+*::after,
+*::before,
+*:after,
+*:before,
+*:fullscreen {
+  text-rendering: geometricPrecision;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-box-sizing: inherit;
+  -moz-box-sizing: inherit;
+  box-sizing: inherit;
+  transition: all 0.3s cubic-bezier(0.5, 0, 0.5, 1);
+}
+
+html {
+  box-sizing: border-box;
+  background-image: linear-gradient(120deg, #3F000F, #e4edf4);
+  background-size: cover;
+  height: 100vh;
+  padding: 0.05vh 0.05vw;
+  height: 100%;
+  width: 100%;
+  outline: 4px solid yellow;
+}
+html .row,
+html .clearfix {
+  zoom: 1;
+}
+html .row .clearfix:before,
+html .row .clearfix:after,
+html .row .row:before,
+html .row .row:after,
+html .clearfix .clearfix:before,
+html .clearfix .clearfix:after,
+html .clearfix .row:before,
+html .clearfix .row:after {
+  display: block;
+  visibility: hidden;
+  clear: both;
+  overflow: hidden;
+  width: 0;
+  height: 0;
+  table-layout: fixed;
+  content: " ";
+}
+html .row .clearfix::after,
+html .row .row::after,
+html .clearfix .clearfix::after,
+html .clearfix .row::after {
+  display: block;
+  clear: both;
+  content: "";
+}
+@media screen and (min-width: 768px) {
+  html {
+    font-size: 75%;
+  }
+}
+
+body,
+html {
+  font-size: 100%;
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+}
+body *,
+html * {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+body {
+  outline: 2px solid orange;
+  z-index: 35;
+  position: relative;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: 0 auto 0 auto;
+  height: 100%;
+  padding: 2vh 1vw;
+}
+
+header {
+  position: relative;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  padding-top: 2vh;
+  padding-bottom: 2vh;
+  width: 2vw;
+  background-image: radial-gradient(circle at top left, transparent 5%, rgba(228, 237, 244, 0.2) 15%, rgba(192, 192, 192, 0.3) 25%, rgba(255, 204, 51, 0.4) 35%, rgba(255, 204, 51, 0.5) 45%, rgba(255, 204, 51, 0.6) 55%, rgba(10, 186, 181, 0.7) 65%, rgba(10, 186, 181, 0.8) 75%, rgba(10, 186, 181, 0.9) 85%, #0abab5 95%);
+  height: 100vh;
+  background-size: cover;
+}
+
+hgroup {
+  position: relative;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 510;
+  width: 100%;
+  max-width: 3vw;
+  height: 100%;
+}
+
+@media (max-width: 1199px) {
+  #header {
+    left: -300px;
+  }
+
+  #main {
+    margin-left: 0;
+  }
+}
+nav.nav {
+  position: fixed;
+  top: 10vh;
+  right: 85vw;
+  bottom: 2vh;
+  left: 6vw;
+  margin-right: 5vw;
+  margin-left: 0vw;
+  padding-top: 4vh;
+  padding-bottom: 4vh;
+  overflow: visible;
+  text-align: left;
+}
+nav.nav ul.primary-menu {
+  margin-left: 0;
+  align-items: center;
+  display: inline;
+  margin-right: 5px;
+}
+nav.nav ul.primary-menu li.menu-item {
+  float: left;
+  margin: 5px 10px 0 0;
+}
+nav.nav ul.primary-menu li.menu-item a {
+  color: #3ec8c5;
+  font-family: "Raylig";
+  font-size: 1.25vw;
+  font-weight: bolder;
+  text-transform: capitalize;
+  line-height: 0.5rem;
+}
+nav.nav ul.primary-menu li.menu-item a :hover {
+  color: #7cdad8;
+  box-shadow: 0 6px 6px -3px rgba(0, 0, 0, 0.76), 0 10px 14px 1px rgba(10, 186, 181, 0.55), 0 4px 18px 3px rgba(63, 0, 15, 0.68);
+  background: white;
+  -webkit-text-stroke-color: #3F000F;
+}
+nav.nav ul.social-links-menu {
+  margin-top: 15vh;
+  margin-bottom: 0;
+  margin-left: 1vw;
+  overflow: visible;
+  writing-mode: vertical-rl;
+  justify-content: flex-end;
+  display: inline-flex;
+  align-items: flex-end;
+}
+nav.nav ul.social-links-menu li.social-icons {
+  list-style: none;
+  margin: 0;
+  margin-left: 0.75vw;
+  justify-content: center;
+  padding: 0;
+  height: 3rem;
+  width: 3rem;
+  border-radius: 100rem;
+}
+nav.nav ul.social-links-menu li.social-icons:last-child {
+  margin-right: 0;
+}
+nav.nav ul.social-links-menu li.social-icons a {
+  font-size: 2rem;
+  line-height: 0.25;
+  transition: 0.3s;
+}
+nav.nav ul.social-links-menu li.social-icons a:hover {
+  opacity: 1;
+  background: #ffd043;
+  color: #7cdad8;
+  text-decoration: none;
+}
+nav.nav ul.social-links-menu li.social-icons:last-child a {
+  margin-right: 0;
+}
+
+@media (min-width: (min-width: 769px) and (max-width: 992px)) {
+  .social-icons {
+    position: absolute;
+    height: 100%;
+    top: 0;
+    right: 2.5rem;
+    width: auto;
+  }
+}
+main {
+  margin-top: 0;
+  margin-right: 0;
+  margin-bottom: 0;
+  margin-left: 0;
+  padding-top: 4vh;
+  padding-bottom: 0;
+  width: 100%;
+  height: 100%;
+  background: #c0c0c0;
+}
+main h4.page-title,
+main h4.site-description,
+main h4.tag {
+  margin-top: -1vh;
+  margin-right: 6vw;
+  margin-left: 50vh;
+  font-family: "Hand Typewriter", ca- "Helvetica Neue", Helvetica, Arial, sans-serif;
+  text-alignt: right;
+  outline: 2px solid yellow;
+}
+
+.main {
+  overflow: hidden;
+  transition: background-color 0.7s;
+  *zoom: 1;
+}
+.main :before,
+.main :after {
+  display: table;
+  content: "";
+  line-height: 0;
+}
+.main :after {
+  clear: both;
+}
+
+.site-description {
+  font-family: "Hand Typewriter", ca- "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+article {
+  background: blue;
+  width: 98vw;
+  padding-top: 0.5vh;
+  padding-right: 0.5vw;
+  padding-bottom: 0.5vh;
+  padding-left: 1.5vw;
+  height: 100%;
+}
+article:hover {
+  box-shadow: 0 8px 9px -5px rgba(0, 0, 0, 0.76), 0 15px 22px 2px rgba(10, 186, 181, 0.55), 0 6px 28px 5px rgba(63, 0, 15, 0.68);
+}
+article > figure, article > img {
+  max-width: 100%;
+}
+
+.content {
+  width: 100%;
+  float: left;
+  margin: 0;
+  padding: 0;
+  margin-top: 120px;
+  opacity: 0;
+}
+
+aside {
+  border-left: 4px solid #000;
+  padding-left: 1em;
+}
+
+/* 4.0 Bare Type*/
+.blockquote {
+  font-family: "GlassAntiqua-Regular", ca- "Helvetica Neue", Helvetica, Arial, sans-serif;
+  padding: 1 41.58vw;
+  margin-bottom: 0.9523809524;
+  font-size: 1.25rem;
+  border-left: 0.25 solid #0d726f;
+}
+.blockquote p:last-child {
+  padding-bottom: 0;
+}
+.blockquote cite {
+  display: block;
+  font-size: 1rem;
+  color: #50cecb;
+}
+.blockquote cite :before {
+  content: "— ";
+}
+.blockquote cite a,
+.blockquote cite a:visited {
+  color: #6ac4c1;
+}
+
+.blockquote-footer {
+  font-family: "GlassAntiqua-Regular", ca- "Helvetica Neue", Helvetica, Arial, sans-serif;
+  display: block;
+  font-size: 15.12rem;
+  line-height: 1.5;
+  color: #3e3e3e;
+}
+.blockquote-footer::before {
+  content: "— ";
+}
+
+.blockquote-reverse {
+  font-family: "GlassAntiqua-Regular", ca- "Helvetica Neue", Helvetica, Arial, sans-serif;
+  padding-right: 41.58vw;
+  padding-left: 0;
+  text-align: right;
+  border-right: 0.25 solid #0d726f;
+  border-left: 0;
+}
+
+.blockquote-reverse .blockquote-footer::before {
+  content: "";
+}
+.blockquote-reverse .blockquote-footer::after {
+  content: " —";
+}
+
+body {
+  text-align: left;
+  font-family: "Avdira", ca- "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 1rem;
+  color: #16bdb9;
+  line-height: 1.5;
+}
+
+.display-1 {
+  font-size: 5rem;
+  font-weight: 900;
+}
+
+.display-2 {
+  font-size: 4.5rem;
+  font-weight: 700;
+}
+
+.display-3 {
+  font-size: 4rem;
+  font-weight: 500;
+}
+
+.display-4 {
+  font-size: 3.5rem;
+  font-weight: 300;
+}
+
+.displaynone {
+  display: none;
+}
+
+.displayblock {
+  display: block;
+}
+
+/* 7 */
+b, strong, time, cite, dfn, em, i, sub, sup, small, big {
+  font-family: "GlassAntiqua-Regular", ca- "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+b, strong, time, cite, dfn, em, i {
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+b, strong, time, cite, small, big {
+  font-weight: 600;
+}
+
+b,
+strong,
+time {
+  font-size: 1rem;
+  font-weight: 600;
+  font-family: "GlassAntiqua-Regular", ca- "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+cite,
+dfn,
+em,
+i {
+  font-style: italic;
+}
+
+sub,
+sup {
+  font-size: 12.96rem;
+  height: 0;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+sup {
+  bottom: 1ex;
+  top: -0.5em;
+}
+
+sub {
+  vertical-align: bottom;
+  top: 0.5ex;
+  bottom: -0.25em;
+}
+
+small,
+.small {
+  font-family: "GlassAntiqua-Regular", ca- "Helvetica Neue", Helvetica, Arial, sans-serif;
+  line-height: 1.25;
+  text-transform: capitalize;
+  text-align: right;
+  color: black;
+  text-shadow: 0 1px 0.5px #3F000F, 1px 0 0.5px #000100;
+  display: inline-block;
+}
+
+big,
+.big {
+  font-size: 21.6rem;
+}
+
+figure {
+  border: 1px solid #767676;
+  display: inline-block;
+  padding: 1rem;
+  width: 100%;
+  margin: 1em 40px;
+}
+
+figure img {
+  margin: 0 auto;
+}
+
+figure figcaption {
+  font-size: 15.12rem;
+  margin-top: 0.5rem;
+  text-align: center;
+}
+
+caption {
+  border-width: 1px 1px 0 1px;
+  font-weight: 700;
+  text-align: center;
+}
+
+h1, h2, h3, h4, h5, h6,
+.h1, .h2, .h3, .h4, .h5, .h6 {
+  margin-bottom: 8.4rem;
+  font-weight: bolder;
+  line-height: 1.2;
+}
+h1 .row,
+h1 .clearfix, h2 .row,
+h2 .clearfix, h3 .row,
+h3 .clearfix, h4 .row,
+h4 .clearfix, h5 .row,
+h5 .clearfix, h6 .row,
+h6 .clearfix,
+.h1 .row,
+.h1 .clearfix, .h2 .row,
+.h2 .clearfix, .h3 .row,
+.h3 .clearfix, .h4 .row,
+.h4 .clearfix, .h5 .row,
+.h5 .clearfix, .h6 .row,
+.h6 .clearfix {
+  zoom: 1;
+}
+h1 .row .clearfix:before,
+h1 .row .clearfix:after,
+h1 .row .row:before,
+h1 .row .row:after,
+h1 .clearfix .clearfix:before,
+h1 .clearfix .clearfix:after,
+h1 .clearfix .row:before,
+h1 .clearfix .row:after, h2 .row .clearfix:before,
+h2 .row .clearfix:after,
+h2 .row .row:before,
+h2 .row .row:after,
+h2 .clearfix .clearfix:before,
+h2 .clearfix .clearfix:after,
+h2 .clearfix .row:before,
+h2 .clearfix .row:after, h3 .row .clearfix:before,
+h3 .row .clearfix:after,
+h3 .row .row:before,
+h3 .row .row:after,
+h3 .clearfix .clearfix:before,
+h3 .clearfix .clearfix:after,
+h3 .clearfix .row:before,
+h3 .clearfix .row:after, h4 .row .clearfix:before,
+h4 .row .clearfix:after,
+h4 .row .row:before,
+h4 .row .row:after,
+h4 .clearfix .clearfix:before,
+h4 .clearfix .clearfix:after,
+h4 .clearfix .row:before,
+h4 .clearfix .row:after, h5 .row .clearfix:before,
+h5 .row .clearfix:after,
+h5 .row .row:before,
+h5 .row .row:after,
+h5 .clearfix .clearfix:before,
+h5 .clearfix .clearfix:after,
+h5 .clearfix .row:before,
+h5 .clearfix .row:after, h6 .row .clearfix:before,
+h6 .row .clearfix:after,
+h6 .row .row:before,
+h6 .row .row:after,
+h6 .clearfix .clearfix:before,
+h6 .clearfix .clearfix:after,
+h6 .clearfix .row:before,
+h6 .clearfix .row:after,
+.h1 .row .clearfix:before,
+.h1 .row .clearfix:after,
+.h1 .row .row:before,
+.h1 .row .row:after,
+.h1 .clearfix .clearfix:before,
+.h1 .clearfix .clearfix:after,
+.h1 .clearfix .row:before,
+.h1 .clearfix .row:after, .h2 .row .clearfix:before,
+.h2 .row .clearfix:after,
+.h2 .row .row:before,
+.h2 .row .row:after,
+.h2 .clearfix .clearfix:before,
+.h2 .clearfix .clearfix:after,
+.h2 .clearfix .row:before,
+.h2 .clearfix .row:after, .h3 .row .clearfix:before,
+.h3 .row .clearfix:after,
+.h3 .row .row:before,
+.h3 .row .row:after,
+.h3 .clearfix .clearfix:before,
+.h3 .clearfix .clearfix:after,
+.h3 .clearfix .row:before,
+.h3 .clearfix .row:after, .h4 .row .clearfix:before,
+.h4 .row .clearfix:after,
+.h4 .row .row:before,
+.h4 .row .row:after,
+.h4 .clearfix .clearfix:before,
+.h4 .clearfix .clearfix:after,
+.h4 .clearfix .row:before,
+.h4 .clearfix .row:after, .h5 .row .clearfix:before,
+.h5 .row .clearfix:after,
+.h5 .row .row:before,
+.h5 .row .row:after,
+.h5 .clearfix .clearfix:before,
+.h5 .clearfix .clearfix:after,
+.h5 .clearfix .row:before,
+.h5 .clearfix .row:after, .h6 .row .clearfix:before,
+.h6 .row .clearfix:after,
+.h6 .row .row:before,
+.h6 .row .row:after,
+.h6 .clearfix .clearfix:before,
+.h6 .clearfix .clearfix:after,
+.h6 .clearfix .row:before,
+.h6 .clearfix .row:after {
+  display: block;
+  visibility: hidden;
+  clear: both;
+  overflow: hidden;
+  width: 0;
+  height: 0;
+  table-layout: fixed;
+  content: " ";
+}
+h1 .row .clearfix::after,
+h1 .row .row::after,
+h1 .clearfix .clearfix::after,
+h1 .clearfix .row::after, h2 .row .clearfix::after,
+h2 .row .row::after,
+h2 .clearfix .clearfix::after,
+h2 .clearfix .row::after, h3 .row .clearfix::after,
+h3 .row .row::after,
+h3 .clearfix .clearfix::after,
+h3 .clearfix .row::after, h4 .row .clearfix::after,
+h4 .row .row::after,
+h4 .clearfix .clearfix::after,
+h4 .clearfix .row::after, h5 .row .clearfix::after,
+h5 .row .row::after,
+h5 .clearfix .clearfix::after,
+h5 .clearfix .row::after, h6 .row .clearfix::after,
+h6 .row .row::after,
+h6 .clearfix .clearfix::after,
+h6 .clearfix .row::after,
+.h1 .row .clearfix::after,
+.h1 .row .row::after,
+.h1 .clearfix .clearfix::after,
+.h1 .clearfix .row::after, .h2 .row .clearfix::after,
+.h2 .row .row::after,
+.h2 .clearfix .clearfix::after,
+.h2 .clearfix .row::after, .h3 .row .clearfix::after,
+.h3 .row .row::after,
+.h3 .clearfix .clearfix::after,
+.h3 .clearfix .row::after, .h4 .row .clearfix::after,
+.h4 .row .row::after,
+.h4 .clearfix .clearfix::after,
+.h4 .clearfix .row::after, .h5 .row .clearfix::after,
+.h5 .row .row::after,
+.h5 .clearfix .clearfix::after,
+.h5 .clearfix .row::after, .h6 .row .clearfix::after,
+.h6 .row .row::after,
+.h6 .clearfix .clearfix::after,
+.h6 .clearfix .row::after {
+  display: block;
+  clear: both;
+  content: "";
+}
+h1:first-child, h2:first-child, h3:first-child, h4:first-child, h5:first-child, h6:first-child,
+.h1:first-child, .h2:first-child, .h3:first-child, .h4:first-child, .h5:first-child, .h6:first-child {
+  margin-top: 0;
+}
+
+h1 a, h2 a, h3 a, h4 a, h5 a, h6 a,
+a.h1, a.h2, a.h3, a.h4, a.h5, a.h6 {
+  color: inherit;
+  text-decoration: none;
+}
+h1 a:hover, h2 a:hover, h3 a:hover, h4 a:hover, h5 a:hover, h6 a:hover,
+a.h1:hover, a.h2:hover, a.h3:hover, a.h4:hover, a.h5:hover, a.h6:hover {
+  text-decoration: none;
+}
+h1 a:visited, h2 a:visited, h3 a:visited, h4 a:visited, h5 a:visited, h6 a:visited,
+a.h1:visited, a.h2:visited, a.h3:visited, a.h4:visited, a.h5:visited, a.h6:visited {
+  text-decoration: none;
+}
+
+.subheader {
+  color: #47cbc8;
+}
+
+h1, .h1,
+h1.site-title {
+  font-family: "Euphorigenic";
+  text-transform: capitalize;
+  font-variant: small-caps;
+  font-weight: bolder;
+  line-height: 1rem;
+  margin: 1.4285714286 0 0.4761904762;
+}
+h1 a, .h1 a,
+h1.site-title a {
+  outline: none;
+}
+h1 a:active, h1 a.active, .h1 a:active, .h1 a.active,
+h1.site-title a:active,
+h1.site-title a.active {
+  text-decoration: none;
+}
+h1 a:active:visited, h1 a.active:visited, .h1 a:active:visited, .h1 a.active:visited,
+h1.site-title a:active:visited,
+h1.site-title a.active:visited {
+  text-decoration: none;
+}
+h2, .h2,
+h2.page-title {
+  font-family: "Hand Typewriter", ca- "Helvetica Neue", Helvetica, Arial, sans-serif;
+  color: #82dcd9;
+  font-weight: bolder;
+  margin: 0.9523809524 0 0.4761904762;
+}
+h2 a, .h2 a,
+h2.page-title a {
+  outline: none;
+}
+h2 a:active, h2 a.active, .h2 a:active, .h2 a.active,
+h2.page-title a:active,
+h2.page-title a.active {
+  text-decoration: none;
+}
+h2 a:active:visited, h2 a.active:visited, .h2 a:active:visited, .h2 a.active:visited,
+h2.page-title a:active:visited,
+h2.page-title a.active:visited {
+  text-decoration: none;
+}
+h3, .h3,
+h3.post-title {
+  font-family: "Enjoy Writing", ca- "Helvetica Neue", Helvetica, Arial, sans-serif;
+  color: #6ed6d3;
+  font-weight: 700;
+}
+h3 a, .h3 a,
+h3.post-title a {
+  outline: none;
+}
+h3 a:active, h3 a.active, .h3 a:active, .h3 a.active,
+h3.post-title a:active,
+h3.post-title a.active {
+  text-decoration: none;
+}
+h3 a:active:visited, h3 a.active:visited, .h3 a:active:visited, .h3 a.active:visited,
+h3.post-title a:active:visited,
+h3.post-title a.active:visited {
+  text-decoration: none;
+}
+h4, .h4,
+h4.site-description,
+h4.tagline,
+h4.page-title {
+  font-family: "Raleway", ca- "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 1.75vw;
+  text-transform: lowercase;
+  text-align: right;
+  color: #a1a1a1;
+  margin: 1 0 0.1904761905;
+}
+h4 a, .h4 a,
+h4.site-description a,
+h4.tagline a,
+h4.page-title a {
+  outline: none;
+}
+h4 a:active, h4 a.active, .h4 a:active, .h4 a.active,
+h4.site-description a:active,
+h4.site-description a.active,
+h4.tagline a:active,
+h4.tagline a.active,
+h4.page-title a:active,
+h4.page-title a.active {
+  text-decoration: none;
+}
+h4 a:active:visited, h4 a.active:visited, .h4 a:active:visited, .h4 a.active:visited,
+h4.site-description a:active:visited,
+h4.site-description a.active:visited,
+h4.tagline a:active:visited,
+h4.tagline a.active:visited,
+h4.page-title a:active:visited,
+h4.page-title a.active:visited {
+  text-decoration: none;
+}
+h5, .h5,
+h5.heading {
+  font-family: "Raleway", ca- "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: 400;
+  color: #3bc8c4;
+  margin: 0.9523809524 0 0.9523809524;
+}
+h5 a, .h5 a,
+h5.heading a {
+  outline: none;
+}
+h5 a:active, h5 a.active, .h5 a:active, .h5 a.active,
+h5.heading a:active,
+h5.heading a.active {
+  text-decoration: none;
+}
+h5 a:active:visited, h5 a.active:visited, .h5 a:active:visited, .h5 a.active:visited,
+h5.heading a:active:visited,
+h5.heading a.active:visited {
+  text-decoration: none;
+}
+h6, .h6,
+h6.lead {
+  font-family: "Raylig", ca- "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: 300;
+  font-size: 21.6rem;
+  color: #47cbc8;
+  margin: 0.9523809524 0 0.9523809524;
+}
+
+h5, .h5,
+h6, .h6 {
+  text-transform: capitalize;
+}
+
+.lead {
+  font-size: 21.6rem;
+  font-weight: 300;
+  color: tint-color(#16bdb9, 6%);
+}
+
+body {
+  text-align: left;
+  color: #16bdb9;
+  font-family: "Avdira", ca- "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+/* Text elements */
+p {
+  text-align: left;
+  font-size: 100%;
+  font-size: 1rem;
+  margin-bottom: 1.5em;
+  adding: 1em 3em;
+  line-height: 1.5;
+}
+p + p {
+  margin: 0;
+  text-indent: 1.5em;
+}
+p .lead {
+  font-size: 150%;
+  margin: 1em 0;
+}
+p .lead + p {
+  text-indent: 0;
+}
+p > code {
+  padding: 0.25em;
+  background: #eee;
+}
+p + ul,
+p + ol,
+p + dl {
+  margin-bottom: 1.5em;
+}
+
+b, strong {
+  font-weight: bold;
+}
+
+dfn, cite, em, i {
+  font-style: italic;
+}
+
+address {
+  margin: 0 0 1.5em;
+}
+
+/* ______________________________________________ CODE */
+/* ______________________________________________ TABLE */
+figure {
+  margin: 0;
+}
+
+table {
+  margin: 0 0 1.5em;
+  width: 100%;
+}
+
+th {
+  font-weight: bold;
+}
+
+/* RESPONSIVE SETTINGS */
+@media (max-width: 500px) {
+  body {
+    font-size: 80%;
+  }
+
+  img {
+    max-width: 100% !important;
+    height: auto !important;
+    float: none !important;
+  }
+}
+/**
+ * partials/wrapper
+ * ---
+ */
+.wrapper {
+  width: 100%;
+  height: 100%;
+  box-shadow: 0 11px 15px -7px rgba(0, 0, 0, 0.76), 0 24px 38px 3px rgba(10, 186, 181, 0.55), 0 9px 46px 8px rgba(63, 0, 15, 0.68);
+  padding-top: 3.8095238096;
+  padding-right: 20.5714285718;
+  padding-bottom: 0.9523809524;
+  padding-left: 9vw;
+  float: left;
+  margin-top: 0;
+  margin-right: 0;
+  margin-bottom: 0;
+  margin-left: 0;
+  border: 2px solid #a900a9;
+  box-sizing: border-box;
+  box-sizing: border-box;
+}
+.wrapper .row,
+.wrapper .clearfix {
+  zoom: 1;
+}
+.wrapper .row .clearfix:before,
+.wrapper .row .clearfix:after,
+.wrapper .row .row:before,
+.wrapper .row .row:after,
+.wrapper .clearfix .clearfix:before,
+.wrapper .clearfix .clearfix:after,
+.wrapper .clearfix .row:before,
+.wrapper .clearfix .row:after {
+  display: block;
+  visibility: hidden;
+  clear: both;
+  overflow: hidden;
+  width: 0;
+  height: 0;
+  table-layout: fixed;
+  content: " ";
+}
+.wrapper .row .clearfix::after,
+.wrapper .row .row::after,
+.wrapper .clearfix .clearfix::after,
+.wrapper .clearfix .row::after {
+  display: block;
+  clear: both;
+  content: "";
+}
+
+.logo-wrapper {
+  position: fixed;
+  top: -2vh;
+  left: -1vw;
+  z-index: 525;
+}
+
+#main-wrapper {
+  position: relative;
+  margin: 0;
+  padding-left: 6vw;
+  width: 100%;
+  height: 100%;
+  border: 2px solid blue;
+}
+
+.innerwrapper {
+  max-width: 900px;
+  margin: 0 auto;
+  padding-left: 30px;
+  padding-right: 30px;
+  box-sizing: border-box;
+}
+
+#contentwrapper {
+  max-width: 100%;
+  height: auto;
+  /* Make sure images with WordPress-added height and width attributes are scaled correctly */
+}
+
+#wrapper-header {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 3vw;
+  z-index: 500;
+  width: 4.5vw;
+  height: 100%;
+  box-sizing: border-box;
+  background-image: linear-gradient(190deg, #0abab5, #e4edf4);
+  background-size: cover;
+}
+
+.wrapper-content {
+  position: relative;
+  background: green;
+  margin-top: 0;
+  margin-right: 4vw;
+  margin-bottom: 0;
+  margin-left: 1vw;
+  width: 100%;
+}
+
+.wrapper-nav {
+  box-sizing: border-box;
+  display: inline-block;
+  overflow: visible;
+  position: relative;
+  top: 2vh;
+  right: 89vw;
+  bottom: 2vh;
+  left: 6vw;
+  z-index: 900;
+  height: 100%;
+  background: blue;
+}
+.wrapper-nav .row,
+.wrapper-nav .clearfix {
+  zoom: 1;
+}
+.wrapper-nav .row .clearfix:before,
+.wrapper-nav .row .clearfix:after,
+.wrapper-nav .row .row:before,
+.wrapper-nav .row .row:after,
+.wrapper-nav .clearfix .clearfix:before,
+.wrapper-nav .clearfix .clearfix:after,
+.wrapper-nav .clearfix .row:before,
+.wrapper-nav .clearfix .row:after {
+  display: block;
+  visibility: hidden;
+  clear: both;
+  overflow: hidden;
+  width: 0;
+  height: 0;
+  table-layout: fixed;
+  content: " ";
+}
+.wrapper-nav .row .clearfix::after,
+.wrapper-nav .row .row::after,
+.wrapper-nav .clearfix .clearfix::after,
+.wrapper-nav .clearfix .row::after {
+  display: block;
+  clear: both;
+  content: "";
+}
+
+#primary-search-wrapper .menu-toggle-wrapper {
+  padding: 0;
+}
+
+.homewrapper {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding-left: 30px;
+  padding-right: 30px;
+  box-sizing: border-box;
+}
+
+.wrapper,
+.custom-header-content,
+.archive .site-footer .wrapper {
+  margin: 0 auto;
+  max-width: 1500px;
+  width: 100%;
+}
+
+.logo {
+  position: fixed;
+  top: -1.75vh;
+  left: 0;
+  z-index: 505;
+  filter: sepia(75%);
+}
+.logo .logo-img {
+  filter: opacity(0.65);
+}
+
+.custom-logo {
+  display: block;
+  width: 120px;
+}
+.custom-logo .custom-logo-link {
+  display: block;
+}
+.custom-logo .site-identity {
+  display: none;
+}
+
+.slider-logo,
+.site-header-logo {
+  margin: 21px 0;
+  max-width: 270px;
+}
+
+h1.site-title a {
+  font-family: "Euphorigenic";
+  text-transform: capitalize;
+  font-variant: small-caps;
+  font-size: 5.5vw;
+  text-align: center;
+}
+
+/* Style elements inside of the .site-header container */
+header.site-header {
+  /* Container for site title and description */
+  position: relative;
+  display: inline;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+  align-self: baseline;
+  background-image: linear-gradient(#ffcc33, #e4edf4);
+  background-size: cover;
+  box-shadow: 0 3px 5px -1px rgba(0, 0, 0, 0.76), 0 5px 8px 0 rgba(10, 186, 181, 0.55), 0 1px 14px 0 rgba(63, 0, 15, 0.68);
+  height: 100vh;
+}
+
+/* Style elements inside of the .site-header container */
+hgroup.nameplate {
+  /* Container for site title and description */
+  background: #ff555a;
+  transition: all ease-in-out 0.5s;
+  justify-content: center;
+  align-content: center;
+  display: inline-block;
+}
+
+h1.site-title,
+h1.site-title a {
+  writing-mode: vertical-rl;
+  rotate: 180deg;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: #3F000F;
+  filter: drop-shadow(30px 20px 1px rgba(63, 0, 15, 0.432));
+  filter: drop-shadow(20px 10px 1px rgba(10, 186, 181, 0.765));
+  filter: drop-shadow(10px 5px 1px #3f000f);
+}
+
+.site-description {
+  /* This is the tagline */
+  font-style: italic;
+  font-weight: 300;
+  letter-spacing: 0;
+  line-height: 1.62;
+  margin: 0;
+  text-transform: capitalize;
+  opacity: 0.6;
+  width: 30rem;
+}
+
+.blur-leftside {
+  position: fixed;
+  top: 0;
+  right: 95vw;
+  bottom: 0;
+  left: 1vw;
+  width: 2vw;
+  filter: blur(15px);
+  box-shadow: 0 6px 6px -3px rgba(0, 0, 0, 0.76), 0 10px 14px 1px rgba(10, 186, 181, 0.55), 0 4px 18px 3px rgba(63, 0, 15, 0.68);
+  background-image: linear-gradient(120deg, #3F000F, #e4edf4);
+  background-size: cover;
+  height: 100vh;
+}
+
+.site-branding {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  margin: 0px auto 0px 0;
+  max-width: 100%;
+  min-width: 0;
+  text-align: left;
+  overflow: hidden;
+  max-width: 80%;
+  width: auto;
+  background-color: yellow;
+}
+
+.tagline {
+  position: fixed;
+  top: 0;
+  right: 2vw;
+  left: 55vw;
+  z-index: 575;
+  font-style: italic;
+  font-weight: 300;
+  letter-spacing: 0;
+  line-height: 1.62;
+  margin: 0;
+  text-transform: capitalize;
+  text-align: right;
+  opacity: 0.6;
+  -webkit-background-clip: text;
+  -webkit-text-stroke-color: #3F000F;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-fill-color: linear-gradient(#ffcc33, #e4edf4);
+}
+
+footer #site-info .site-footer small.copyright {
+  text-transform: capitalize;
+  text-align: right;
+}
+footer #site-info .site-footer small.copyright a {
+  outline: none;
+}
+footer #site-info .site-footer small.copyright a:active, footer #site-info .site-footer small.copyright a.active {
+  text-decoration: none;
+}
+footer #site-info .site-footer small.copyright a:active:visited, footer #site-info .site-footer small.copyright a.active:visited {
+  text-decoration: none;
+}
+footer #site-info .site-footer small.copyright address {
+  font-family: "GlassAntiqua-Regular", ca- "Helvetica Neue", Helvetica, Arial, sans-serif;
+  text-align: right;
+  font-size: 1.5rem;
+  line-height: 0.25rem;
+}
+
+.footer {
+  background-image: linear-gradient(90deg, transparent, rgba(228, 237, 244, 0.1) 5%, rgba(228, 237, 244, 0.2) 15%, rgba(228, 237, 244, 0.3) 25%, rgba(10, 186, 181, 0.4) 35%, rgba(10, 186, 181, 0.5) 45%, rgba(10, 186, 181, 0.6) 55%, rgba(10, 186, 181, 0.7) 65%, rgba(10, 186, 181, 0.8) 75%, rgba(10, 186, 181, 0.9) 85%);
+  display: inline;
+  align-items: baseline;
+  box-shadow: 0 6px 6px -3px rgba(0, 0, 0, 0.76), 0 10px 14px 1px rgba(10, 186, 181, 0.55), 0 4px 18px 3px rgba(63, 0, 15, 0.68);
+}
+.footer a {
+  text-decoration: none;
+}
+
+/**
+ * 12.6 - Footer
+ */
+.contact-details-widget-area .wrapper,
+.footer-widget-area .wrapper {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  position: relative;
+}
+
+.footer-widget-area .widget-column {
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  -webkit-flex-basis: 100%;
+  -ms-flex-preferred-size: 100%;
+  flex-basis: 100%;
+  min-width: 0;
+}
+
+#footer-menu-section ul li a {
+  font-weight: 700;
+  line-height: 1.75;
+  padding: 0 7px;
+}
+
+#colophon .widget {
+  background-color: transparent;
+}
+
+#social-footer-navigation .icon {
+  top: 0;
+}
+
+#site-generator {
+  clear: both;
+  padding: 35px 30px;
+}
+
+.site-footer .widget-column {
+  padding: 21px 30px;
+}
+
+.contact-details-widget-area .widget-title {
+  padding-bottom: 28px;
+  text-transform: uppercase;
+  font-weight: 300;
+  line-height: 1.97;
+  position: relative;
+}
+
+.contact-details-widget-area .widget-title:before {
+  position: absolute;
+  bottom: 0;
+  width: 150%;
+  content: "";
+  height: 1px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.site-footer .widget .widget-title {
+  border-bottom: 2px solid;
+  position: relative;
+}
+
+.site-footer .widget .widget-title:before {
+  width: 47px;
+  height: 2px;
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -2px;
+}
+
+.site-footer .widget li {
+  line-height: 1.75;
+  margin-bottom: 10px;
+}
+
+.site-footer .main-navigation li {
+  display: inline-block;
+}
+
+.site-footer-menu .social-links-menu {
+  justify-content: center;
+}
+
+#footer-menu-section .social-navigation .icon {
+  height: 20px;
+  width: 20px;
+  transition: all 0.4s;
+}
+
+#footer-menu-section .social-navigation .icon:hover {
+  opacity: 1;
+}
+
+#footer-menu-section .social-navigation ul li a {
+  padding: 0;
+  margin: 0 7px;
+  width: 45px;
+  height: 45px;
+  border: 1px solid;
+  border-radius: 50%;
+  display: flex;
+  transition: all 0.4s;
+  justify-content: center;
+  align-items: center;
+}
+
+#social-footer-navigation {
+  margin-bottom: 35px;
+}
+
+.site-footer .footer-widget-area .wrapper {
+  overflow: hidden;
+  position: relative;
+}
+
+.site-footer-menu .wrapper {
+  border: none;
+}
+
+.site-footer p, .site-footer li {
+  margin-bottom: 7px;
+}
+
+.site-footer p:last-child, .site-footer li:last-child {
+  margin-bottom: 0px;
+}
+
+.contact-details-widget-area .widget {
+  overflow: hidden;
+  padding: 0 14px;
+}
+
+.site-footer .widget .widget-title {
+  margin-bottom: 35px;
+}
+
+.section:nth-child(2n+1)#footer-instagram + .section {
+  border-top: 1px solid;
+}
+
+.site-footer .widget-column .widget {
+  margin-bottom: 42px;
+}
+
+.site-footer .widget-column .widget:last-child {
+  margin-bottom: 0;
+}
+
+.widget-area.footer-widget-area.contact-details-widget-area p {
+  margin-bottom: 7px;
+}
+
+.widget-area.footer-widget-area.contact-details-widget-area p:last-child {
+  margin-bottom: 0;
+}
+
+.site-footer .footer-widget-area {
+  position: relative;
+  padding: 21px 0 0;
+}
+
+.site-footer .widget li {
+  list-style: none;
+}
+
+.site-content + .site-footer,
+.section:nth-child(2n+1) + .site-footer {
+  border-top: 1px solid;
+}
+
+#footer {
+  padding: 15px;
+  color: #f4f6fd;
+  font-size: 14px;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 300px;
+  z-index: 9999;
+  background: #040b14;
+}
+
+#footer .copyright {
+  text-align: center;
+}
+
+#footer .credits {
+  padding-top: 5px;
+  text-align: center;
+  font-size: 13px;
+  color: #eaebf0;
+}
+
+@media (max-width: 1199px) {
+  #footer {
+    position: static;
+    width: auto;
+    padding-right: 20px 15px;
+  }
+}
+/* Elements - basic non-text building blocks */
+/* Links */
+a {
+  outline: none !important;
+  color: #3ec8c5;
+  background-color: transparent;
+  font-family: "GlassAntiqua-Regular", ca- "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: 700;
+}
+a:active {
+  color: #4cccc9;
+  text-decoration: underline;
+  outline: none;
+}
+a:active:hover {
+  color: shift(#4cccc9, 27%);
+  text-decoration: underline bold;
+  outline: 0;
+}
+a:active:focus {
+  color: shift(#4cccc9, 47%);
+  text-decoration: underline bold;
+  outline: thin dotted;
+}
+a:active:visited {
+  color: #8edfdd;
+  text-decoration: strike-through;
+}
+a:disabled {
+  color: #3abab7;
+  text-decoration: none;
+  outline: 0;
+}
+
+p a,
+p a:visited {
+  line-height: inherit;
+}
+
+/* 2 */
+nav ul,
+nav ol {
+  list-style: none;
+  list-style-image: none;
+}
+
+ul, ol, dl {
+  text-align: left;
+}
+
+ol,
+ul {
+  list-style: none;
+  margin: 0 0 16.8rem ol, ul 30.24 24.6857142862;
+  padding: 0;
+}
+ol li,
+ul li {
+  line-height: 38.88;
+  list-style: none;
+  display: inline;
+}
+
+ul {
+  list-style: disc;
+}
+
+ol {
+  list-style: decimal;
+}
+
+li > ol,
+li > ul {
+  margin-bottom: 0;
+}
+
+ol ol,
+ol ul,
+ul ol,
+ul ul {
+  margin: 2vh 2.75vw;
+}
+
+ul li > ul,
+ol li > ol,
+ul li > ol,
+ol li > ul {
+  margin-top: 0;
+  margin-bottom: 0;
+  margin-left: 1.5em;
+}
+
+dt {
+  font-weight: bold;
+}
+
+dd {
+  margin: 0 24.6857142862 28.8000000006;
+}
+
+dl {
+  margin: 0 0 508.032rem;
+}
+dl dd {
+  padding-left: 32px;
+}
+
+menu {
+  padding: 0 0 0 40px;
+}
+
+hr {
+  background: currentColor;
+  color: inherit;
+  border: 0 solid #eee;
+  box-sizing: content-box;
+  height: 1px;
+  margin: 0 0 16.8rem;
+  opacity: 0.25;
+}
+
+/*# sourceMappingURL=style.css.map */

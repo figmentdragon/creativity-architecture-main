@@ -1,0 +1,24 @@
+body,
+html {
+  font-size: 100%;
+  overflow: hidden;
+
+  width: 100%;
+  height: 100%;
+  * {
+    @include box-sizing($type: border-box);
+  }
+}
+
+body {
+  outline: 2px solid orange;
+  z-index: $z-index-body;
+  position: relative;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: 0 auto 0 auto;
+  height: 100%;
+  padding: 2vh 1vw;
+}

@@ -1,0 +1,28 @@
+blockquote {
+	font-style: italic;
+  border-left: 5px solid shade($accent, $border-percentage);
+  padding-left: $xl;
+  margin: 0 1.5em;
+
+  small {
+    display: block;
+    line-height: 1.7em;
+  }
+
+  p:first-child {
+	   margin-top: 0;
+  }
+
+  p:last-child {
+	   margin-bottom: 0;
+  }
+}
+
+blockquote,
+q {
+	background: $secondary;
+	border-left: 10px solid $primary;
+	display: block;
+	font-family: $accent-font;
+	padding: 1rem;
+}

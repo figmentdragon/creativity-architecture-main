@@ -1,0 +1,32 @@
+/**
+ * Media Queries
+ */
+
+/**
+ * Does the same thing as <meta name="viewport" content="width=device-width">,
+ * but in the future W3C standard way. -ms- prefix is required for IE10+ to
+ * render responsive styling in Windows 8 "snapped" views; IE10+ does not honor
+ * the meta tag. See https://core.trac.wordpress.org/ticket/25888.
+ */
+
+@-ms-viewport {
+	width: device-width;
+}
+
+@viewport {
+	width: device-width;
+}
+
+@import "media/responsive";
+
+@import 'media/mobile';
+@import 'media/mobile-portrait';
+@import 'media/mobile-horizontal';
+@import 'media/tablet';
+@import 'media/tablet-width';
+@import 'media/tablet-horizontal';
+@import 'media/desktop';
+@import 'media/large';
+@import 'media/wide-width';
+@import 'media/diagonal';
+@import 'media/ultra-wide';

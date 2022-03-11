@@ -1,0 +1,64 @@
+
+.main-navigation a {
+  display: block;
+  line-height: 2;
+  letter-spacing: 0;
+  text-decoration: none;
+}
+.main-navigation a,
+#primary-menu-wrapper .search-container {
+  padding: 7px 30px;
+}
+.main-navigation ul {
+  list-style: none;
+  margin: 0;
+  padding-left: 0;
+}
+.main-navigation ul a > .icon {
+    display: none;
+}
+.main-navigation ul ul {
+    display: none;
+    margin-left: 0.875em;
+    padding: 14px;
+}
+.main-navigation ul ul .current_page_item > a,
+.main-navigation ul ul .current-menu-item > a {
+  font-weight: 500;
+}
+.main-navigation ul ul li:hover > ul,
+.main-navigation ul ul li.focus > ul {
+  left: 100%;
+}
+.main-navigation ul li:hover > ul,
+.main-navigation ul li.focus > ul {
+  left: auto;
+  right: 0;
+}
+.main-navigation li {
+  margin: 0;
+  position: relative;
+}
+
+
+.main-navigation .menu-item-has-children > a > .icon,
+.main-navigation .page_item_has_children > a > .icon,
+.main-navigation .menu-item-has-children > a,
+.main-navigation .page_item_has_children > a {
+  padding-right: 49px;
+}
+
+.navigation-default .main-navigation ul ul a {
+  font-weight: 400;
+  letter-spacing: 0;
+  text-transform: capitalize;
+  opacity: 0.75;
+  padding: 3px 20px;
+}
+.navigation-default .main-navigation ul ul a:hover {
+  opacity: 1;
+}
+.navigation-default .main-navigation {
+  clear: both;
+  border: none;
+}

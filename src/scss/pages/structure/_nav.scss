@@ -1,0 +1,87 @@
+/**
+ * structure/nav
+ * ---
+ * Menus
+ */
+
+.nav {
+  position: absolute;
+  width: 10vw;
+  display: inline-flex;
+  list-style: none;
+  margin: 0;
+  padding-left: 0;
+  overflow: visible;
+}
+
+.menu {
+  position: absolute;
+  left: 0;
+  right: 0;
+  z-index: 1015;
+
+  font-size: 20px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  outline: 2px solid black;
+}
+
+.menu-item {
+  vertical-align: middle;
+  padding: 0 0;
+  cursor: pointer;
+  border-left: 2px solid $primary;
+  outline: 2px solid orange;
+}
+.menu-item:before {
+  content:"\25CF";
+  font-size: 20px;
+  color: $primary;
+  margin-top: 2vh;
+  margin-left: -1vw;
+  outline: 2px solid red;
+}
+
+.menu-item:hover:before {
+  color: shade($primary, $hover-percentage);
+  outline: 2px solid green;
+}
+
+.menu-item a {
+  overflow: hidden;
+  display: inline-block;
+  color:  shade($primary, $link-percentage);
+  text-indent: -100px;
+  width: 80px;
+  text-decoration: none;
+  text-transform: uppercase;
+  padding: 5px;
+  transition: 0.2s ease;
+  margin:2px 0 0 -7px;
+}
+
+.menu-item:hover a {
+  background-color: shade($secondary, $background-percentage);
+  color:$accent;
+  text-align:center;
+  text-indent:0;
+  outline: 2px solid purple;
+}
+
+.sub-menu {}
+
+.menu-label {
+    transition: 0.3s;
+    display: inline-block;
+    margin-left: 7px;
+    margin-top: 0;
+}
+
+
+@import 'navigation/header';
+@import 'navigation/menus';
+@import 'navigation/main-navigation';
+@import 'navigation/next-previous';
+@import 'navigation/posts-and-pages';
+@import 'navigation/social-menu-navigation';
+@import 'navigation/toggle';

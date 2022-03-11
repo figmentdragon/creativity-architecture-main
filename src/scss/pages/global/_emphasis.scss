@@ -1,0 +1,61 @@
+b, strong, time, cite, dfn, em, i, sub, sup, small, big {
+	font-family: $accent-font;
+
+}
+b, strong, time, cite, dfn, em, i {
+	font-size: $font-size-base;
+  line-height: $base-line-height;
+}
+
+
+b, strong, time, cite, small, big {
+	font-weight: $emphasis-font-weight;
+}
+
+b,
+strong,
+time {
+	font-weight: bold;
+}
+
+dfn, cite, em, i {
+  font-style: italic;
+  font-family: "Georgia", serif;
+  font-style: italic;
+  font-weight: bold;
+  margin-top: 1rem;
+}
+
+
+sub,
+sup {
+	font-size: 75%;
+	height: 0;
+	line-height: 0;
+	position: relative;
+	vertical-align: baseline;
+}
+
+sup {
+	bottom: 1ex;
+}
+
+sub {
+	font-size: 60%;
+	vertical-align: bottom;
+	top: 0.5ex;
+}
+
+small, .small {
+  font-family: $accent-font;
+  color: $secondary;
+  line-height: $sm-line-height;
+  text-transform: lowercase;
+  a{
+    color: $secondary;
+  }
+}
+
+big {
+	font-size: 125%;
+}

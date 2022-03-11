@@ -1,0 +1,85 @@
+/* Style anchor elements. */
+
+$link-text:                     tint($body-text, $link-percentage);
+$link-text-decoration:          underline;
+$link-text-active:              tint($link-text, $active-percentage);
+$link-text-hover:               tint($link-text-active, $hover-percentage);
+$link-hover-decoration:         underline, bold;
+
+$link-text-focus:               tint($link-text-active, $focus-percentage);
+$link-text-visited:             tint($link-text-active, $visited-percentage);
+$link-visited-decoration:       strike-through;
+$link-visited-hover:            tint($link-text-visited, $hover-percentage);
+
+$link-text-inactive:            shade($link-text, $inactive-percentage);
+$link-text-inactive-hover:      shade($link-text-inactive, $hover-percentage);
+$link-text-inactive-focus:      shade($link-text-inactive, $focus-percentage);
+$link-text-inactive-visited:    shade($link-text-inactive, $visited-percentage);
+
+$stretched-link-pseudo-element: after;
+$stretched-link-z-index:        1;
+
+//
+// Stretched link
+//
+
+.stretched-link {
+  &::#{$stretched-link-pseudo-element} {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: $stretched-link-z-index;
+    content: "";
+  }
+}
+
+
+/* Links */
+a,
+a:link {
+  outline: none !important;
+  font-weight: bold;
+  text-decoration: none;
+  font-family: $accent-font;
+  color: $link-text-active;
+
+  @mixin on-event {
+    color: $link-text-hover-color;
+    text-decoration: underline;
+  }
+
+  :active,
+  .active {
+    text-decoration: $link-text-decoration;
+    color: $link-text-active;
+    outline: none;
+
+    & :hover {
+      text-decoration: $link-hover-decoration;
+      color: tint($link-text-active, $hover-percentage);
+    }
+    & :visited {
+      color: $link-text-visited;
+      text-decoration: $link-visited-decoration;
+
+      &:hover{
+        color: $link-visited-hover;
+        text-decoration: $link-visited-decoration;
+      }
+    }
+  }
+
+  :disabled,
+  .disabled,
+  .inactive {
+    color: $link-text-inactive;
+    text-decoration: none;
+
+  }
+}
+
+a:focus {
+	outline: thin dotted;
+}

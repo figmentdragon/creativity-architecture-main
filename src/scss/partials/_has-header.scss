@@ -1,0 +1,56 @@
+.has-header-video .custom-header-media .wp-custom-header img {
+	display: none;
+}
+
+.has-header-image.home .custom-header-media,
+.has-header-video.home .custom-header-media,
+.has-header-text.home .custom-header-media {
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	-webkit-flex-direction: column;
+	-ms-flex-direction: column;
+	flex-direction: column;
+	-webkit-box-pack: end;
+	-webkit-justify-content: center;
+	-ms-flex-pack: end;
+	justify-content: center;
+	height: 100%;
+	height: 100vh;
+	width: 100%;
+}
+
+.has-header-media:not(.home) .custom-header-media {
+	position: relative;
+}
+
+.header-media-text-disabled .custom-header-media .wp-custom-header img {
+	display: block;
+	position: relative;
+}
+
+
+.has-header-media .custom-header-media .wp-custom-header img {
+	display: none;
+}
+
+.has-header-video .custom-header-media .wp-custom-header video,
+.has-header-video .custom-header-media .wp-custom-header iframe {
+	position: absolute;
+	height: auto;
+	left: 50%;
+	max-width: 1000%;
+	min-height: 100%;
+	min-width: 100%;
+	min-width: 100vw; /* vw prevents 1px gap on left that 100% has */
+	width: auto;
+	top: 50%;
+	padding-bottom: 1px; /* Prevent header from extending beyond the footer */
+	-ms-transform: translateX(-50%) translateY(-50%);
+	-moz-transform: translateX(-50%) translateY(-50%);
+	-webkit-transform: translateX(-50%) translateY(-50%);
+	transform: translateX(-50%) translateY(-50%);
+}

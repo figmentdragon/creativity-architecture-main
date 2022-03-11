@@ -1,0 +1,26 @@
+*,
+*::after,
+*::before,
+*:after,
+*:before,
+*:fullscreen {
+  text-rendering: geometricPrecision;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  @include box-sizing($type: inherit);
+  transition: all .3s cubic-bezier(.5, 0, .5, 1);
+}
+
+html {
+  @include container-base;
+  @include gradient-chocolate;
+  padding: .05vh .05vw;
+  height: 100%;
+  width: 100%;
+
+  outline: 4px solid yellow;
+
+  @media screen and (min-width: 768px) {
+    font-size: 75%;
+  }
+}

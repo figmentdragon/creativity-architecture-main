@@ -1,0 +1,157 @@
+/**
+ * partials/wrapper
+ * ---
+ */
+
+.wrapper {
+
+}
+
+.innerwrapper {
+  max-width: 900px;
+  margin: 0 auto;
+  padding-left: 30px;
+  padding-right: 30px;
+  @include border-box;
+}
+
+.wrapper-content {
+  position: relative;
+  background: green;
+
+  margin-top: 0;
+  margin-right: 4vw;
+  margin-bottom: 0;
+  margin-left: 1vw;
+
+  width: 100%;
+}
+
+.homewrapper {
+ max-width: 1200px;
+ margin: 0 auto;
+ padding-left: 30px;
+ padding-right: 30px;
+ box-sizing: border-box;
+}
+
+.archive .site-footer .wrapper {
+   margin: 0 auto;
+   max-width: 1500px;
+   width: 100%;
+}
+
+.menu-inside-wrapper {
+    position: fixed;
+    right: -100%;
+    top: 100%;
+    max-width: 100%;
+    visibility: hidden;
+    -webkit-transition: all 0.4s;
+    transition: all 0.4s;
+    top: 0;
+    height: 100vh;
+    z-index: 99;
+    width: 100%;
+}
+
+
+
+#contentwrapper {
+ max-width: 100%;
+ height: auto; /* Make sure images with WordPress-added height and width attributes are scaled correctly */
+}
+
+#wrapper-footer {
+  outline: 2px solid olive;
+  position: absolute;
+  right: 1vw;
+  bottom: 2.75vh;
+  left: 0;
+  z-index: $z-index-footer;
+
+  height: 2.25vh;
+  margin-top: 0;
+  margin-right: 0;
+  margin-bottom: 0;
+  margin-left: 0;
+}
+
+#wrapper-sidebar {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 950;
+
+  width: 2vw;
+  height: 100%;
+}
+
+#wrapper-title {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: $z-index-article + 10;
+
+  width: 100%;
+  height: 5vh;
+}
+#primary-search-wrapper .menu-toggle,
+#social-menu-wrapper .menu-toggle {
+    background-image: none;
+    border: none;
+    display: inline-block;
+    height: 42px;
+    letter-spacing: 0;
+    padding: 0;
+    -webkit-text-shadow: none;
+    text-shadow: none;
+    text-align: center;
+    width: 42px;
+    border-radius: 0;
+}
+
+#primary-search-wrapper,
+#social-menu-wrapper {
+    display: none;
+}
+#primary-search-wrapper .menu-toggle-wrapper {
+   padding: 0;
+}
+#primary-search-wrapper .menu-inside-wrapper {
+    position: absolute;
+}
+#primary-search-wrapper > .social-navigation {
+    display: none;
+    float: left;
+}
+
+
+#primary-menu-wrapper {
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-align: center;
+	-ms-flex-align: center;
+	align-items: center;
+}
+#primary-menu-wrapper > .cart-contents,
+#primary-menu-wrapper > .my-account {
+	line-height: 1;
+	padding: 13px 7px;
+	height: 46px;
+}
+
+.navigation-modern #primary-menu-wrapper .menu-inside-wrapper {
+  max-width: 350px;
+  position: fixed;
+  width: 300px;
+  padding: 56px 0;
+  height: 100vh;
+}
+
+.admin-bar #primary-menu-wrapper .menu-inside-wrapper {
+    padding-top: 63px;
+}

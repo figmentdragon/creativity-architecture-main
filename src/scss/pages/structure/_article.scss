@@ -1,0 +1,23 @@
+/**
+ * structure/article
+ * ---
+ */
+
+article{
+  &:hover {
+  @include elevation(15);
+}
+  & > figure,
+  & > img {
+    max-width: 100%;
+  }
+}
+
+.content {
+	width: 100%;
+	float: left;
+	margin: 0;
+	padding: 0;
+	margin-top: 120px;
+	opacity: 0;
+}
