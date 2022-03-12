@@ -1,26 +1,14 @@
-/**
- * nusicBand Pro keyboard support for image navigation.
- */
-
-( function( $ ) {
-	$( document ).on( 'keydown.nusicBand', function( e ) {
-		var url = false;
-
-		// Left arrow key code.
-		if ( 37 === e.which ) {
-			url = $( '.nav-previous a' ).attr( 'href' );
-
-		// Right arrow key code.
-		} else if ( 39 === e.which ) {
-			url = $( '.nav-next a' ).attr( 'href' );
-
-		// Other key code.
-		} else {
-			return;
-		}
-
-		if ( url && ! $( 'textarea, input' ).is( ':focus' ) ) {
-			window.location = url;
-		}
-	} );
-} )( jQuery );
+jQuery( document ).ready( function( $ ) {
+    $( document ).keydown( function( e ) {
+        var url = false;
+        if ( e.which === 37 ) {  // Left arrow key code
+            url = $( '.previous-image a' ).attr( 'href' );
+        }
+        else if ( e.which === 39 ) {  // Right arrow key code
+            url = $( '.entry-attachment a' ).attr( 'href' );
+        }
+        if ( url && ( !$( 'textarea, input' ).is( ':focus' ) ) ) {
+            window.location = url;
+        }
+    } );
+} );

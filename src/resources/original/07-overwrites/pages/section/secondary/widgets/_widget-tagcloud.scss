@@ -1,0 +1,14 @@
+/* Tag Cloud widget */
+
+.tagcloud a {
+    border: 1px solid;
+    display: inline-block;
+    line-height: 1;
+    padding: 7px 14px;
+    margin: 0 7px 7px 0;
+}
+
+.tagcloud a:hover,
+.tagcloud a:focus {
+    outline: 0;
+}

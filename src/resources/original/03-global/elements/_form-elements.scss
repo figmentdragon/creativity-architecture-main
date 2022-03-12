@@ -1,0 +1,121 @@
+/* 8 */
+/* Form Elements */
+*:focus {
+  outline: 0;
+}
+
+button,
+input,
+optgroup,
+select,
+textarea {
+  font-size: 100%;
+  margin: 0;
+  vertical-align: baseline;
+  vertical-align: middle;
+  font-family: inherit;
+
+}
+
+button {
+    overflow: visible;
+}
+button,
+select {
+    text-transform: none;
+}
+
+button,
+input {
+  line-height: normal;
+  /* Addresses FF3/4 setting line-height using !important in the UA stylesheet */
+  overflow: visible;
+  /* Corrects inner spacing displayed oddly in IE6/7 */
+}
+
+input {
+    line-height: normal;
+}
+
+
+textarea,
+select {
+  border: 1px solid #ccc;
+  padding: 6px 4px;
+  outline: none;
+  -moz-border-radius: 2px;
+  -webkit-border-radius: 2px;
+  border-radius: 2px;
+  font: 13px "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  color: #777;
+  margin: 0;
+  width: 210px;
+  max-width: 100%;
+  display: block;
+  margin-bottom: 20px;
+  background: #fff;
+}
+
+select {
+  line-height: normal;
+  padding: 0 0 0 divide($offset, 2);
+  font-size: 14px;
+  border: 1px solid #CCC;
+  border-radius: 1px;
+  color: #404040;
+  height: 40px;
+	width: 220px;
+}
+
+textarea {
+  overflow: auto;
+  vertical-align: top;
+  /* Improves readability and alignment in all browsers */
+  padding: 6px 10px;
+  width: 100%;
+  min-height: 100px;
+  height: auto;
+  resize: vertical;
+  :focus {
+    border: 1px solid #aaa;
+    color: #444;
+    -moz-box-shadow: 0 0 3px rgba(0,0,0,.2);
+    -webkit-box-shadow: 0 0 3px rgba(0,0,0,.2);
+    box-shadow:  0 0 3px rgba(0,0,0,.2);
+  }
+}
+
+fieldset {
+    border: 1px solid #c0c0c0;
+    margin: 0 2px 20px;
+    padding: 0.35em 0.625em 0.75em;
+}
+
+label,
+legend {
+  display: block;
+  font-weight: bold;
+  font-size: 13px;
+
+  span {
+    font-weight: normal;
+    font-size: 13px;
+    color: #444;
+  }
+}
+
+legend {
+    border: 0;
+    padding: 0;
+}
+
+optgroup {
+    font-weight: bold;
+}
+
+form {
+  margin-bottom: 20px;
+  p {
+    margin-bottom: 15px;
+  }
+}

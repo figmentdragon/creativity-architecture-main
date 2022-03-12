@@ -1,0 +1,73 @@
+.widget-area .widget-title {
+    font-size: 22px;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+}
+.widget-area ul,
+.widget-area ol {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+.widget-area ul ul,
+.widget-area ol ol {
+    border-top: 1px solid #F9F9F9;
+    padding-top: 8px;
+    margin-top: 8px;
+    margin-left: 10px;
+}
+.widget-area li {
+    padding-bottom: 8px;
+    margin-bottom: 8px;
+    border-bottom: 1px solid #F9F9F9;
+    line-height: 1.56;
+}
+.widget-area li:last-child {
+    border-bottom: 0;
+    padding-bottom: 0;
+    margin-bottom: 0;
+}
+.widget-area a {
+    color: inherit;
+}
+.widget-area a:hover {
+    color: #df2c45;
+}
+
+.widget-area .gallery {
+    margin: 0;
+}
+
+.widget-area .date-label {
+    display: none;
+}
+
+.widget-area .left .featured-image,
+.widget-area .right .featured-image {
+    width: 21%;
+}
+
+.widget-area .left .entry-container,
+.widget-area .right .entry-container {
+    width: 79%;
+}
+
+.widget-area .widget .hentry .entry-meta {
+    margin-top: 7px;
+    line-height: 1.62;
+    font-size: 13px;
+
+    span {
+        margin-bottom: 0;
+    }
+}
+
+.widget-area .essential-widgets .hentry .entry-title {
+    text-transform: initial;
+}
+.widget-area .essential-widgets .tagcloud a {
+    border: 1px solid;
+    margin: 0 7px 7px 0;
+    padding: 7px 14px;
+    display: inline-block;
+}

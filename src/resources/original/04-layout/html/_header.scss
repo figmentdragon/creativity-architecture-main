@@ -1,0 +1,29 @@
+header {
+  background: red;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 1.5vw;
+  z-index: 500;
+
+  width: 4vw;
+  height: 100%;
+
+  padding-top: $horizontal-offset;
+  padding-bottom: $horizontal-offset;
+}
+
+hgroup {
+  border: 2px solid white;
+
+  position: relative;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  z-index: $z-index-hgroup;
+
+  margin: 0 auto;
+
+  max-width: 3vw;
+  height: 100%;
+}

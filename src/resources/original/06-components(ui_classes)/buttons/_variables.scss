@@ -1,0 +1,49 @@
+// Buttons
+//
+// For each of Bootstrap's buttons, define text, background, and border color.
+
+// scss-docs-start button-variables
+$button-padding-y:               $input-button-padding-y !default;
+$button-padding-x:               $input-button-padding-x !default;
+$button-font-family:             $input-button-font-family !default;
+$button-font-size:               $input-button-font-size !default;
+$button-line-height:             $input-button-line-height !default;
+$button-white-space:             null !default; // Set to `nowrap` to prevent text wrapping
+
+$button-padding-y-sm:            $input-button-padding-y-sm !default;
+$button-padding-x-sm:            $input-button-padding-x-sm !default;
+$button-sm-font-size:            $input-button-sm-font-size !default;
+
+$button-padding-y-lg:            $input-button-padding-y-lg !default;
+$button-padding-x-lg:            $input-button-padding-x-lg !default;
+$button-lg-font-size:            $input-button-lg-font-size !default;
+
+$button-border-width:            $input-button-border-width !default;
+
+$button-font-weight:             $normal-font-weight !default;
+$button-box-shadow:              inset 0 1px 0 rgba($shadow-button-inset, .15), 0 1px 1px rgba($shadow-button-inset, .075) !default;
+$button-focus-width:             $input-button-focus-width !default;
+$button-focus-box-shadow:        $input-button-focus-box-shadow !default;
+$button-disabled-opacity:        .65 !default;
+$button-active-box-shadow:       inset 0 3px 5px rgba($black, .125) !default;
+
+$button-link-color:              $button-link-color !default;
+$button-link-hover-color:        $button-link-hover !default;
+$button-link-disabled-color:     $gray-600 !default;
+
+// Allows for customizing button radius independently from global border radius
+$button-border-radius:           $border-radius !default;
+$button-border-radius-sm:        $border-radius-sm !default;
+$button-border-radius-lg:        $border-radius-lg !default;
+
+$button-transition:              color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out !default;
+
+$button-hover-bg-shade-amount:       15% !default;
+$button-hover-bg-tint-amount:        15% !default;
+$button-hover-border-shade-amount:   20% !default;
+$button-hover-border-tint-amount:    10% !default;
+$button-active-bg-shade-amount:      20% !default;
+$button-active-bg-tint-amount:       20% !default;
+$button-active-border-shade-amount:  25% !default;
+$button-active-border-tint-amount:   10% !default;
+// scss-docs-end button-variables

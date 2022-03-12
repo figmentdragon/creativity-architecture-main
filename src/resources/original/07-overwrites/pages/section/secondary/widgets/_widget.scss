@@ -1,0 +1,27 @@
+/* Categories widget */
+
+.widget_categories ul,
+.widget_archive ul {
+    text-align: right;
+}
+
+.widget_categories li,
+.widget_archive li {
+    display: block;
+    height: 1%;
+    overflow: hidden;
+}
+
+.widget_categories ul a,
+.widget_archive ul a {
+    float: left;
+}
+.widget {
+    margin: 0 0 25px;
+}
+.widget select {
+    max-width: 100%;
+}
+.widget_search .search-submit {
+    display: block;
+}

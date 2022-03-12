@@ -14,18 +14,13 @@
 html {
   @include make-container($type: border-box, $display: inline, $overflow: hidden);
   position: relative;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-
   margin-top: 0;
   margin-right: 0;
   margin-bottom: 0;
   margin-left: 0;
 
-  padding-top: 3vh;
-  padding-right: .5vw;
+  padding-top: 2vh;
+  padding-right: .25vw;
   padding-bottom: 2vh;
   padding-left: $vertical-offset;
 
@@ -40,6 +35,7 @@ html {
 
 body,
 html {
+  font-size: 100%;
   overflow: hidden;
   width: 100%;
   height: 100%;
@@ -50,48 +46,33 @@ html {
 }
 
 body {
-  position: relative;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  z-index: 100;
-
-  margin: 0;
-  padding: 0;
-
-  @include border-start-radius($border-radius-sm);
-  @include elevation(20);
-
   text-align: left;
   font-family: $main-font;
   font-size: $font-size-base;
   color: $body-text;
+  line-height: $base-line-height;
 
+  font-family: $main-font;
 }
 
 header {
-  position: absolute;
+  position: fixed;
   top: 0;
   bottom: 0;
-  left: .75vw;
-  z-index: 600;
+  left: 3.5vw;
 
-  margin: 0;
-
-  height: 100vh;
-  width: 4vw;
+  background-color: red;
 }
 
 main {
-  position: relative;
-  z-index: 200;
-  height: 100vh;
+  height: 100%;
   padding-top: .05vh;
   padding-right: .02vw;
   padding-bottom: .05vh;
   padding-left: 9.75vw;
-  @include elevation(20);
+
+  border: 2px solid blue;
+  background-color: green;
 }
 
 article {
@@ -100,12 +81,6 @@ article {
   right: 0;
   bottom: 0;
   left: 0;
-  z-index: 300;
-
-  padding-top: .5vh;
-	padding-right: .5vw;
-	padding-bottom: .5vh;
-	padding-left: 1.5vw;
 
   height: 100%;
   width: 100%;
@@ -115,16 +90,14 @@ article {
 }
 
 nav {
-  position: absolute;
-  top: 30vh;
-  bottom: 10vh;
-  left: 4.25vw;
-  z-index: 1000;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 7vw;
 
-  margin-left: 3vw;
-  margin-bottom: $horizontal-spacer;
+  width: 4vw;
 
-  width: 10vw;
+  background-color: yellow;
 }
 
 footer {
@@ -132,38 +105,10 @@ footer {
   right: 1vw;
   bottom: .25vh;
   left: 10vw;
-  z-index: 500;
 
-  margin: 0;
-  padding: 0;
+  height: 1.5vh;
+
+  outline: 2px solid orange;
 }
 
-aside {
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  z-index: 400;
-
-  margin: 0;
-  padding: 0;
-
-  width: 8vw;
-}
-
-@import "global/div";
-@import "global/section";
-@import "global/span";
-
-@import "global/emphasis";
-@import "global/headings";
-@import "global/hr";
-@import "global/links";
-@import "global/lists";
-@import "global/quote";
-@import "global/table";
-@import "global/text-elements";
-
-@import "global/page";
-
-@import "global/body-classes";
+aside {}

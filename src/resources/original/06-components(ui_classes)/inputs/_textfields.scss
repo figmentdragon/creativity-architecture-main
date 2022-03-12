@@ -1,0 +1,178 @@
+.textbox {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: max-content;
+  position: relative;
+  background: ($dark, "100");
+  padding: 0 10px;
+  padding-right: 0 !important;
+  border-radius: ($border-radius * 4) ($border-radius * 4) 0 0;
+  overflow: hidden;
+  transition: all 0.2s ease;
+
+  &:hover:not(.focus) {
+    background: ($dark, "200");
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: $primary;
+    transform: scaleX(0);
+    transition: all 0.2s ease;
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background: ($dark, "500");
+    transition: all 0.2s ease;
+  }
+
+  &:hover::before {
+    height: 2px;
+    background: ($dark, "900");
+  }
+
+  &.focus::after {
+    transform: scaleX(1);
+  }
+
+  & .left,
+  & .right {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    pointer-events: none;
+  }
+
+  & .left {
+    margin-right: 10px;
+  }
+
+  & .right {
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+
+  & .action {
+    pointer-events: all;
+  }
+
+  & .mdi {
+    font-size: $font-size-base * 20;
+    color: $dark;
+  }
+
+  &:not(.floating) .input {
+    color: transparent;
+  }
+
+  & .middle {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    position: relative;
+
+    & .label {
+      position: absolute;
+      top: 50%;
+      left: 0%;
+      user-select: none;
+      transform: translateY(-50%);
+      font-size: $font-size-base * 1.2;
+      transition: all 0.2s ease-in-out;
+      pointer-events: none;
+      color: ($dark, "800");
+    }
+
+    & .input {
+      width: 100%;
+      padding-top: 30px;
+      padding-bottom: 10px;
+      border: none;
+      outline: none;
+      appearance: none;
+      background: transparent;
+    }
+  }
+
+  &.textarea .label {
+    top: 0%;
+    transform: translateY(20px);
+  }
+
+  &.floating .label {
+    left: 0%;
+    top: 0%;
+    font-size: $font-size-base * 12;
+    transform: translateY(50%) translateX(2px);
+  }
+
+  &.focus.floating .label {
+    color: $primary;
+  }
+
+  &.border-bottom {
+    background: transparent !important;
+
+    & .label,
+    & .input {
+      margin-left: -8px !important;
+    }
+
+    & .input {
+      width: calc(100% + 16px);
+    }
+  }
+
+  &.outlined {
+    background: transparent;
+    box-shadow: 0 0 0 1px ($dark, "400");
+    color: ($dark, "500");
+    transition: none;
+    border-radius: $border-radius * 4;
+    overflow: visible;
+
+    &::after,
+    &::before {
+      background: transparent;
+    }
+
+    &:hover:not(.focus) {
+      background: transparent;
+      box-shadow: 0 0 0 1px ($dark, "600");
+      color: ($dark, "600");
+    }
+
+    &.focus {
+      background: transparent;
+      box-shadow: 0 0 0 2px $primary;
+      color: $primary;
+    }
+
+    & .input {
+      padding-top: 20px;
+      padding-bottom: 20px;
+    }
+
+    &.floating .label {
+      margin-top: -15px;
+      background: white;
+    }
+  }
+
+  &.textarea.outlined .input {
+    padding-top: 10px;
+  }
+}

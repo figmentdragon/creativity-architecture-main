@@ -1,0 +1,16 @@
+// Close
+
+// scss-docs-start close-variables
+$button-close-width:            1em !default;
+$button-close-height:           $button-close-width !default;
+$button-close-padding-x:        .25em !default;
+$button-close-padding-y:        $button-close-padding-x !default;
+$button-close-color:            $black !default;
+$button-close-bg:               url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='$button-close-color}'><path d='M.293.293a1 1 0 0 1 1.414 0L8 6.586 14.293.293a1 1 0 1 1 1.414 1.414L9.414 8l6.293 6.293a1 1 0 0 1-1.414 1.414L8 9.414l-6.293 6.293a1 1 0 0 1-1.414-1.414L6.586 8 .293 1.707a1 1 0 0 1 0-1.414z'/></svg>") !default;
+$button-close-focus-shadow:     $input-button-focus-box-shadow !default;
+$button-close-opacity:          .5 !default;
+$button-close-hover-opacity:    .75 !default;
+$button-close-focus-opacity:    1 !default;
+$button-close-disabled-opacity: .25 !default;
+$button-close-white-filter:     invert(1) grayscale(100%) brightness(200%) !default;
+// scss-docs-end close-variables

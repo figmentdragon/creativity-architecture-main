@@ -3,35 +3,15 @@
 // Tools
 @import "modules/tools";
 
-// Fonts
-
 // Variables
-@import "modules/variables/options";
-
-$duration: .7s;
-
-@import "modules/variables/color";
-
-@import "modules/variables/properties/border";
-@import "modules/variables/properties/zindex";
-// Fonts
-@import "modules/fonts";
-@import "modules/typography/typography";
-@import "modules/typography/font-settings";
-@import "modules/typography/mixins/font-size";
-@import "modules/typography/mixins/type";
-@import "modules/typography/helpers/drop-cap";
+@import "modules/variables";
 
 // Mixins
-@import "modules/mixins/backdrop";
-@import "modules/mixins/border-box";
-@import "modules/mixins/border-radius";
-@import "modules/mixins/clearfix";
-@import "modules/mixins/container";
-@import "modules/mixins/elevation";
-@import "modules/mixins/links";
-@import "modules/mixins/reset-box";
+@import "modules/mixins";
 
+// Fonts
+@import "modules/fonts";
+@import "modules/type";
 
 // Media
 @import "modules/media";

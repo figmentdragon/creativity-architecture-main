@@ -1,0 +1,26 @@
+/* Styling In-Post Tables */
+.entry-content table,
+.comment-content table {
+	border: 1px solid #000;
+	border-left-width: 0;
+	margin: 0 -0.083em 2.083em 0;
+	text-align: left;
+	width: 100%;
+}
+.entry-content tr th,
+.entry-content thead th,
+.comment-content tr th,
+.comment-content thead th {
+	border-left: 1px solid #000;
+	font-weight: bold;
+	padding: 0.5em 	1.25em;
+}
+.entry-content tr td,
+.comment-content tr td {
+	border: 1px solid #000;
+  	border-width: 1px 0 0 1px;
+	padding: 0.5em 	1.25em;
+}
+.entry-content tr.odd td,
+.comment-content tr.odd td { /* If you want to apply alternate styles to even/odd table rows */
+}

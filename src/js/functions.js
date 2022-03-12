@@ -56,7 +56,7 @@
 
 			$( '.testimonial-slider' ).owlCarousel(testimonialOptions);
 		}
-		
+
 		if ( typeof $.fn.masonry === "function" && typeof $.fn.imagesLoaded === "function" ) {
 			/*
 		     * Masonry
@@ -118,7 +118,7 @@ $( document ).ready( function() {
 		$( this ).toggleClass( 'open' );
 		$( this ).attr( 'aria-expanded', $( this ).attr( 'aria-expanded' ) === 'false' ? 'true' : 'false' );
 		$( '.search-wrapper' ).toggle();
-		$( 'body' ).toggleClass( 'search-wrapper-open' );	
+		$( 'body' ).toggleClass( 'search-wrapper-open' );
 
 		if( $("#primary-search-wrapper").hasClass("is-open") ) {
 			setTimeout(function () {
@@ -128,7 +128,7 @@ $( document ).ready( function() {
 	});
 
 	$( '.close-submit' ).on( 'click', function() {
-		$( 'body' ).removeClass( 'search-wrapper-open' );	
+		$( 'body' ).removeClass( 'search-wrapper-open' );
 	});
 });
 
@@ -243,7 +243,7 @@ $( document ).ready( function() {
 			}
 
 			if( search ) {
-				$( 'body' ).removeClass( 'menu-open' );						
+				$( 'body' ).removeClass( 'menu-open' );
 			}
 		} );
 
@@ -264,7 +264,7 @@ $( document ).ready( function() {
 		//Close search when clicked outside search area
 		var container = document.getElementsByClassName('search-content')[0];
 		document.addEventListener('click', function( event ) {
-		  if (container !== event.target && !container.contains(event.target)) {    
+		  if (container !== event.target && !container.contains(event.target)) {
 		    $( 'body' ).removeClass( 'search-wrapper-open' );
 		  }
 		});

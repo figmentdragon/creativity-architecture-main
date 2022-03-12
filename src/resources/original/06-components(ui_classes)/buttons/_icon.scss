@@ -1,0 +1,40 @@
+.icon {
+  $temp: $offset * 45;
+  max-width: $temp;
+  max-height: $temp;
+  min-width: $temp;
+  min-height: $temp;
+  display: inline-flex;
+  align-items: center;
+  overflow: hidden;
+  justify-content: center;
+  border-radius: 100%;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  color: ($dark, "700");
+  position: relative;
+
+  & .mdi {
+    font-size: $font-size-base * 20;
+    pointer-events: none;
+  }
+
+  &:hover {
+    background: ($dark, "300");
+    color: ($dark, "900");
+  }
+
+  &:focus-visible {
+    background: ($dark, "400");
+    color: ($dark, "900");
+  }
+
+  &.inactive,
+  &:inactive {
+    background: ($dark, "200");
+    color: ($dark, "500");
+    cursor: not-allowed;
+  }
+}

@@ -11,13 +11,7 @@
  * @package creativityarchitect
  */
 
-if ( ! function_exists( 'creativityarchitect_header_style' ) ) :
-	/**
-	 * Styles the header image and text displayed on the blog.
-	 *
-	 * @see creativityarchitect_custom_header_setup().
-	 */
-	function creativityarchitect_header_style() {
+function creativityarchitect_header_style() {
 		$header_image = creativityarchitect_featured_overall_image();
 
 	    if ( 'disable' !== $header_image ) :
@@ -28,44 +22,33 @@ if ( ! function_exists( 'creativityarchitect_header_style' ) ) :
 			$image_position_desktop = get_theme_mod( 'creativityarchitect_header_media_image_position_desktop' , 'center center' );
 
 			?>
-	        <style type="text/css" rel="header-image">
-	            .custom-header .wrapper:before {
-	                background-image: url( <?php echo esc_url( $header_image ); ?>);
-	                <?php if ( 'center center' !== $image_position_mobile ) : ?>
-					background-position: <?php echo esc_attr( $image_position_mobile ); ?>;
+			<style type="text/css" rel="header-image">
+				.custom-header .wrapper:before {
+					background-image: url( <?php echo esc_url( $header_image ); ?>);
+					<?php if ( 'center center' !== $image_position_mobile ) : ?>
+						background-position: <?php echo esc_attr( $image_position_mobile ); ?>;
 					<?php endif; ?>
 					background-repeat: no-repeat;
 					background-size: cover;
-	            }
-
-	            <?php if ( 'center center' !== $image_position_desktop ) : ?>
-	            @media only screen and (min-width: 64em) {
-					.custom-header .wrapper:before {
-						background-position: <?php echo esc_attr( $image_position_desktop ); ?>;
-					}
 				}
+				<?php if ( 'center center' !== $image_position_desktop ) : ?>
+					@media only screen and (min-width: 64em) {
+						.custom-header .wrapper:before {
+							background-position: <?php echo esc_attr( $image_position_desktop ); ?>;
+						}
+					}
 				<?php endif; ?>
-	        </style>
-	    <?php
-	    endif;
-
-	    $header_text_color = get_header_textcolor();
-
-		/*
-		 * If no custom options for text are set, let's bail.
-		 * get_header_textcolor() options: Any hex value, 'blank' to hide text. Default: add_theme_support( 'custom-header' ).
-		 */
-		if ( get_theme_support( 'custom-header', 'default-text-color' ) === $header_text_color ) {
-			return;
-		}
-
-		// If we get this far, we have custom styles. Let's do this.
-		?>
+			</style>
+			<?php endif;
+      $header_text_color = get_header_textcolor();
+      if ( get_theme_support( 'custom-header', 'default-text-color' ) === $header_text_color ) {
+        return;
+      }
+      ?>
 		<style type="text/css">
-		<?php
-		// Has the text been hidden?
-		if ( ! display_header_text() ) :
-		?>
+			<?php
+			if ( ! display_header_text() ) :
+				?>
 			.site-title a,
 			.site-description {
 				position: absolute;
@@ -75,27 +58,17 @@ if ( ! function_exists( 'creativityarchitect_header_style' ) ) :
 			// If the user has set a custom color for the text use that.
 			else :
 		?>
-			.absolute-header .site-title a,
-			.absolute-header .site-description {
-				color: #<?php echo esc_attr( $header_text_color ); ?>;
-			}
-		<?php endif; ?>
-		</style>
-		<?php
-	}
-endif;
+		.absolute-header .site-title a,
+		.absolute-header .site-description {
+			color: #<?php echo esc_attr( $header_text_color );
+			?>;
+		}
+    	</style>
+	<?php endif;
+}
 
-if ( ! function_exists( 'creativityarchitect_featured_image' ) ) :
-	/**
-	 * Template for Featured Header Image from theme options
-	 *
-	 * To override this in a child theme
-	 * simply create your own creativityarchitect_featured_image(), and that function will be used instead.
-	 *
-	 * @since 1.0
-	 */
-	function creativityarchitect_featured_image() {
-		if ( is_header_video_active() && has_header_video() ) {
+function creativityarchitect_featured_image() {
+  if ( is_header_video_active() && has_header_video() ) {
 			return true;
 		}
 		$thumbnail = 'post-thumbnail';
@@ -140,18 +113,8 @@ if ( ! function_exists( 'creativityarchitect_featured_image' ) ) :
 			return get_header_image();
 		}
 	} // creativityarchitect_featured_image
-endif;
 
-if ( ! function_exists( 'creativityarchitect_featured_page_post_image' ) ) :
-	/**
-	 * Template for Featured Header Image from Post and Page
-	 *
-	 * To override this in a child theme
-	 * simply create your own creativityarchitect_featured_imaage_pagepost(), and that function will be used instead.
-	 *
-	 * @since 1.0
-	 */
-	function creativityarchitect_featured_page_post_image() {
+function creativityarchitect_featured_page_post_image() {
 		$thumbnail = 'creativityarchitect-single-post-page';
 
 		if ( class_exists( 'WooCommerce' ) && is_shop() ) {
@@ -183,18 +146,8 @@ if ( ! function_exists( 'creativityarchitect_featured_page_post_image' ) ) :
 			return get_the_post_thumbnail_url( get_the_id(), $thumbnail );
 		}
 	} // creativityarchitect_featured_page_post_image
-endif;
 
-if ( ! function_exists( 'creativityarchitect_featured_overall_image' ) ) :
-	/**
-	 * Template for Featured Header Image from theme options
-	 *
-	 * To override this in a child theme
-	 * simply create your own creativityarchitect_featured_pagepost_image(), and that function will be used instead.
-	 *
-	 * @since 1.0
-	 */
-	function creativityarchitect_featured_overall_image() {
+function creativityarchitect_featured_overall_image() {
 		global $post;
 		$enable = get_theme_mod( 'creativityarchitect_header_media_option', 'entire-site' );
 
@@ -247,85 +200,56 @@ if ( ! function_exists( 'creativityarchitect_featured_overall_image' ) ) :
 
 		return 'disable';
 	} // creativityarchitect_featured_overall_image
-endif;
+function creativityarchitect_header_media_text() {
+  if ( ! creativityarchitect_has_header_media_text() ) {
+    return get_header_image();
+  }
+  $content_alignment = get_theme_mod( 'creativityarchitect_header_media_content_alignment', 'content-align-right' );
+  $text_alignment = get_theme_mod( 'creativityarchitect_header_media_text_alignment', 'text-align-left' );
+  $header_media_logo = get_theme_mod( 'creativityarchitect_header_media_logo' );
+  $classes = array();
+  if( is_front_page() ) {
+    $classes[] = $content_alignment;
+    $classes[] = $text_alignment;
+  }
+  ?>
+  <div class="custom-header-content sections header-media-section <?php echo esc_attr( implode( ' ', $classes ) ); ?>">
+    <div class="custom-header-content-wrapper">
+      <?php
+      $header_media_subtitle = get_theme_mod( 'creativityarchitect_header_media_sub_title' );
+      $enable_homepage_logo = get_theme_mod( 'creativityarchitect_header_media_logo_option', 'homepage' );
+      if( is_front_page() ) : ?>
+      <div class="section-subtitle"> <?php echo esc_html( $header_media_subtitle ); ?> </div>
+      <?php endif;
+      if ( creativityarchitect_check_section( $enable_homepage_logo ) && $header_media_logo ) {  ?>
+        <div class="site-header-logo">
+          <img src="<?php echo esc_url( $header_media_logo ); ?>" title="<?php echo esc_url( home_url( '/' ) ); ?>" />
+        </div><!-- .site-header-logo -->
+      <?php } ?>
+      <?php
+      $tag = 'h2';
+      if ( is_singular() || is_404() ) {
+        $tag = 'h1';
+      }
+      creativityarchitect_header_title( '<div class="section-title-wrapper"><' . $tag . ' class="section-title entry-title">', '</' . $tag . '></div>' );
+      ?>
+      <?php creativityarchitect_header_description( '<div class="site-header-text">', '</div>' ); ?>
+      <?php if ( is_front_page() ) :
+        $header_media_url_text = get_theme_mod( 'creativityarchitect_header_media_url_text' );
+        if ( $header_media_url_text ) :
+          $header_media_url = get_theme_mod( 'creativityarchitect_header_media_url', '#' );
+          ?>
+          <span class="more-link">
+            <a href="<?php echo esc_url( $header_media_url ); ?>" target="<?php echo esc_attr( get_theme_mod( 'creativityarchitect_header_url_target' ) ? '_blank' : '_self' ); ?>" class="readmore"><?php echo esc_html( $header_media_url_text ); ?></a>
+          </span>
+        <?php endif;
+      endif; ?>
+    </div><!-- .custom-header-content-wrapper -->
+  </div><!-- .custom-header-content -->
+  <?php
+} // creativityarchitect_header_media_text.
 
-if ( ! function_exists( 'creativityarchitect_header_media_text' ) ):
-	/**
-	 * Display Header Media Text
-	 *
-	 * @since 1.0
-	 */
-	function creativityarchitect_header_media_text() {
-
-		if ( ! creativityarchitect_has_header_media_text() ) {
-			// Bail early if header media text is disabled on front page
-			return get_header_image();
-		}
-
-		$content_alignment = get_theme_mod( 'creativityarchitect_header_media_content_alignment', 'content-align-right' );
-		$text_alignment = get_theme_mod( 'creativityarchitect_header_media_text_alignment', 'text-align-left' );
-
-		$header_media_logo = get_theme_mod( 'creativityarchitect_header_media_logo' );
-
-		$classes = array();
-		if( is_front_page() ) {
-			$classes[] = $content_alignment;
-			$classes[] = $text_alignment;
-		}
-
-		?>
-		<div class="custom-header-content sections header-media-section <?php echo esc_attr( implode( ' ', $classes ) ); ?>">
-			<div class="custom-header-content-wrapper">
-				<?php
-				$header_media_subtitle = get_theme_mod( 'creativityarchitect_header_media_sub_title' );
-				$enable_homepage_logo = get_theme_mod( 'creativityarchitect_header_media_logo_option', 'homepage' );
-
-				if( is_front_page() ) : ?>
-					<div class="section-subtitle"> <?php echo esc_html( $header_media_subtitle ); ?> </div>
-				<?php endif;
-
-				if ( creativityarchitect_check_section( $enable_homepage_logo ) && $header_media_logo ) {  ?>
-					<div class="site-header-logo">
-						<img src="<?php echo esc_url( $header_media_logo ); ?>" title="<?php echo esc_url( home_url( '/' ) ); ?>" />
-					</div><!-- .site-header-logo -->
-				<?php } ?>
-
-				<?php
-				$tag = 'h2';
-
-				if ( is_singular() || is_404() ) {
-					$tag = 'h1';
-				}
-
-				creativityarchitect_header_title( '<div class="section-title-wrapper"><' . $tag . ' class="section-title entry-title">', '</' . $tag . '></div>' );
-				?>
-
-				<?php creativityarchitect_header_description( '<div class="site-header-text">', '</div>' ); ?>
-
-				<?php if ( is_front_page() ) :
-					$header_media_url_text = get_theme_mod( 'creativityarchitect_header_media_url_text' );
-
-					if ( $header_media_url_text ) :
-						$header_media_url = get_theme_mod( 'creativityarchitect_header_media_url', '#' );
-						?>
-						<span class="more-link">
-							<a href="<?php echo esc_url( $header_media_url ); ?>" target="<?php echo esc_attr( get_theme_mod( 'creativityarchitect_header_url_target' ) ? '_blank' : '_self' ); ?>" class="readmore"><?php echo esc_html( $header_media_url_text ); ?></a>
-						</span>
-					<?php endif;
-				endif; ?>
-			</div><!-- .custom-header-content-wrapper -->
-		</div><!-- .custom-header-content -->
-		<?php
-	} // creativityarchitect_header_media_text.
-endif;
-
-if ( ! function_exists( 'creativityarchitect_has_header_media_text' ) ):
-	/**
-	 * Return Header Media Text fro front page
-	 *
-	 * @since 1.0
-	 */
-	function creativityarchitect_has_header_media_text() {
+function creativityarchitect_has_header_media_text() {
 		$header_image = creativityarchitect_featured_overall_image();
 
 		if ( is_front_page() ) {
@@ -346,13 +270,7 @@ if ( ! function_exists( 'creativityarchitect_has_header_media_text' ) ):
 
 		return true;
 	} // creativityarchitect_has_header_media_text.
-endif;
-
-if ( ! function_exists( 'creativityarchitect_header_title' ) ) :
-	/**
-	 * Display header media text
-	 */
-	function creativityarchitect_header_title( $before = '', $after = '' ) {
+function creativityarchitect_header_title( $before = '', $after = '' ) {
 		if ( is_front_page() ) {
 			$header_media_title = get_theme_mod( 'creativityarchitect_header_media_title' );
 			if ( $header_media_title ) {
@@ -381,13 +299,7 @@ if ( ! function_exists( 'creativityarchitect_header_title' ) ) :
 			the_archive_title( $before, $after );
 		}
 	}
-endif;
-
-if ( ! function_exists( 'creativityarchitect_header_description' ) ) :
-	/**
-	 * Display header media description
-	 */
-	function creativityarchitect_header_description( $before = '', $after = '' ) {
+function creativityarchitect_header_description( $before = '', $after = '' ) {
 		if ( is_front_page() ) {
 			echo $before . '<p>' . wp_kses_post( get_theme_mod( 'creativityarchitect_header_media_text' ) ) . '</p>' . $after;
 		} elseif ( is_singular() && ! is_page() ) {
@@ -400,11 +312,7 @@ if ( ! function_exists( 'creativityarchitect_header_description' ) ) :
 			the_archive_description( $before, $after );
 		}
 	}
-endif;
 
-/**
- * Customize video play/pause button in the custom header.
- */
 function creativityarchitect_video_controls( $settings ) {
 	$settings['l10n']['play'] = '<span class="screen-reader-text">' . esc_html__( 'Play background video', 'creativityarchitect' ) . '</span>' . creativityarchitect_get_svg( array( 'icon' => 'play' ) );
 	$settings['l10n']['pause'] = '<span class="screen-reader-text">' . esc_html__( 'Pause background video', 'creativityarchitect' ) . '</span>' . creativityarchitect_get_svg( array( 'icon' => 'pause' ) );

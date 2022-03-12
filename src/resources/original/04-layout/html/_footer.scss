@@ -1,0 +1,35 @@
+footer {
+  margin-right: 0;
+  margin-bottom: 1vh;
+  margin-left: 10vw;
+  z-index: 900;
+
+  padding-right: 2vw;
+
+  height: 2vh;
+  width: 100%;
+
+  @include links;
+  @include footer-gradient;
+}
+
+.site-footer {
+  margin: 0;
+
+  float: left;
+  display: inline-block;
+  align-self: start;
+  width: 100%;
+
+  @include border-box;
+  :hover {
+    @include elevation(5);
+  }
+}
+
+.site-info {
+  font-family: $accent-font;
+  text-align: right;
+  color: white;
+  text-shadow: 0 1px .5px $black, 1px 0px .5px $black;
+}

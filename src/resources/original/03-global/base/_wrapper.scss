@@ -1,0 +1,121 @@
+/**
+ * partials/wrapper
+ * ---
+ */
+ $wrapper-width: $max-content-width;
+ $duration: .7s;
+
+
+
+#wrapper-main {
+  border: 2px solid teal;
+  width: 100%;
+
+  float: left;
+  margin-top: $horizontal-spacer * 4;
+  margin-right: $vertical-spacer-lg;
+  margin-bottom: $horizontal-spacer;
+  margin-left:$horizontal-spacer * 6;
+  border: 2px solid lime;
+  @include border-box;
+}
+
+ .innerwrapper {
+   max-width: 900px;
+   margin: 0 auto;
+   padding-left: 30px;
+   padding-right: 30px;
+   @include border-box;
+ }
+
+#contentwrapper {
+ 	max-width: 100%;
+ 	height: auto; /* Make sure images with WordPress-added height and width attributes are scaled correctly */
+ }
+
+#wrapper-sidebar {
+  outline: 2px solid black;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 1.5vw;
+  z-index: $z-index-sidebar;
+
+  width: 4vw;
+  height: 100%;
+  overflow: visible;
+}
+
+.wrapper-content {
+   position: relative;
+   background: green;
+
+   margin-top: 0;
+   margin-right: 4vw;
+   margin-bottom: 0;
+   margin-left: 1vw;
+
+   width: 100%;
+}
+
+#wrapper-header {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 2vw;
+
+  width: 4vw;
+  height: 100%;
+
+  @include border-box;
+}
+
+.wrapper-nav {
+   @include container-overflow;
+   position: relative;
+   top: 2vh;
+   right: 89vw;
+   bottom: 2vh;
+   left: 6vw;
+   z-index: $z-index-nav;
+
+   height: 100%;
+
+   background: blue;
+}
+
+#wrapper-footer {
+  outline: 2px solid olive;
+  position: absolute;
+  right: 1vw;
+  bottom: 2.75vh;
+  left: 0;
+  z-index: $z-index-footer;
+
+  height: 2vh;
+
+  margin-top: 0;
+  margin-right: 0;
+  margin-bottom: 0;
+  margin-left: 0;
+}
+
+#primary-search-wrapper .menu-toggle-wrapper {
+    padding: 0;
+}
+
+.homewrapper {
+	max-width: 1200px;
+  margin: 0 auto;
+  padding-left: 30px;
+  padding-right: 30px;
+  box-sizing: border-box;
+}
+
+.wrapper,
+.custom-header-content,
+.archive .site-footer .wrapper {
+    margin: 0 auto;
+    max-width: 1500px;
+    width: 100%;
+}

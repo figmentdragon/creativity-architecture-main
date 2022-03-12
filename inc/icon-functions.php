@@ -10,7 +10,7 @@
  */
 function creativityarchitect_include_svg_icons() {
 	// Define SVG sprite file.
-	$svg_icons = get_parent_theme_file_path( '/images/svg-icons.svg' );
+	$svg_icons = get_parent_theme_file_path( '/src/images/icons/svg/svg-icons.svg' );
 
 	// If it exists, include it.
 	if ( file_exists( $svg_icons ) ) {

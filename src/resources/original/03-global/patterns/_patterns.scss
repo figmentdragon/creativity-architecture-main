@@ -1,0 +1,18 @@
+$text:   shade($primary, $text-percentage);
+$link:   shade($secondary, $link-percentage);
+
+
+
+$quote:  shade($text, $quote-percentage);
+
+$border-color: shade($accent, $border-percentage);
+$button: tint($secondary, $button-percentage);
+$shadow: shade($brown, $shadow-percentage);
+
+@import "background";
+@import "button";
+@import "link";
+@import "text";
+
+@import "shadow";
+@import "gradient";

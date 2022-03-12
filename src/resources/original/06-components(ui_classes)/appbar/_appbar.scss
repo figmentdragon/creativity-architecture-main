@@ -1,0 +1,104 @@
+$appbar-padding-x: calc($offset * 10);
+$appbar-padding-y: calc($offset * 16);
+
+.appbar {
+  display: flex;
+  align-items: center;
+  background: ($dark, "100");
+  padding: $appbar-padding-x;
+  padding-bottom: $appbar-padding-x;
+  padding-left: $appbar-padding-y;
+  padding-right: $appbar-padding-y;
+  overflow: hidden;
+
+  & .left {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+  }
+
+  & .right {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+  }
+
+  & .middle {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+  }
+
+  & .title {
+    font-size: $font-size-base * 20;
+    font-weight: 500;
+    margin: 0 ($offset * 8);
+  }
+
+  & .appbar-input {
+    padding: $offset * 8;
+    border-radius: $border-radius * 4;
+    border: none;
+    background: ($dark, "200");
+    width: 150px;
+    transition: width 0.2s ease;
+
+    &:hover,
+    &:focus {
+      background: ($dark, "300");
+    }
+
+    &:focus {
+      width: 200px;
+    }
+  }
+
+  &.primary {
+    background: $primary;
+    color: #fff;
+
+    & .button,
+    & .icon {
+      color: #fff;
+    }
+
+    & .icon:hover,
+    & .icon:focus-visible {
+      background: ($primary "400");
+    }
+
+    & .appbar-input {
+      background: ($primary "400");
+      color: #fff;
+
+      &::placeholder {
+        color: ($primary "200");
+      }
+
+      &:hover,
+      &:focus {
+        background: ($primary "300");
+      }
+    }
+  }
+
+  &.elevated {
+    @include elevation(4);
+  }
+
+  &.elevating {
+      transition: all 0.2s ease;
+  }
+
+  &.fixed {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 99999;
+    width: 100%;
+  }
+}

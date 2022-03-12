@@ -1,0 +1,22 @@
+/* Calendar widget */
+
+.widget.widget_calendar table {
+    margin: 0;
+}
+
+.widget_calendar td,
+.widget_calendar th {
+    line-height: 3;
+    padding: 0;
+    text-align: center;
+}
+
+.widget_calendar caption {
+    font-weight: 600;
+}
+
+.widget_calendar tbody a {
+    display: block;
+    font-weight: 600;
+    text-decoration: none;
+}

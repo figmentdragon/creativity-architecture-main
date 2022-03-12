@@ -1,7 +1,6 @@
-h1.site-title a {
-  font-family: "Euphorigenic";
-  text-transform: capitalize;
-  font-variant: small-caps;
-  font-size: 5.5vw;
-  text-align: center;
+header .site-header {
+  h1.site-title {
+  writing-mode: vertical-lr;
+  transform: rotate(180deg);
+  }
 }

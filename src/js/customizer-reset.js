@@ -1,6 +1,6 @@
 jQuery(function(s) {
     var e = [
-        ["#customize-theme-controls", "all", "ct-reset", "ct-reset-main", creativityarchitectCustomizerReset.confirm, creativityarchitectCustomizerReset.reset]
+        ["#customize-theme-controls", "all", "ct-reset", "ct-reset-main", darcieCustomizerReset.confirm, darcieCustomizerReset.reset]
     ];
     s.each(e, function(e, o) {
         var t = s(o[0]),
@@ -10,7 +10,7 @@ jQuery(function(s) {
             var t = {
                 wp_customize: "on",
                 action: "customizer_reset",
-                nonce: creativityarchitectCustomizerReset.nonce.reset,
+                nonce: darcieCustomizerReset.nonce.reset,
                 section: o[1]
             };
             confirm(o[4]) && (s(".spinner").css("visibility", "visible"), c.attr("disabled", "disabled"), s.post(ajaxurl, t, function() {

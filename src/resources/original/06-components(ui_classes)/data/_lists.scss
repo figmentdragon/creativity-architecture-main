@@ -1,0 +1,39 @@
+.list {
+  display: flex;
+  flex-direction: column;
+
+  & .item {
+    display: flex;
+    flex: 1;
+    align-items: center;
+    padding: $offset*16px $offset*14px};
+    color: ($dark,"900");
+
+    &:hover , &:focus-visible {
+      background: ($dark,"100");
+    }
+
+    &.active {
+      background: lighten($primary"100"),10%);
+      color: $primary;
+
+      &:hover , &:focus-visible {
+        background: lighten($primary"100"),5%);
+      }
+    }
+
+    & .left {
+      margin-right: 10px;
+    }
+    & .middle {
+      flex: 1;
+    }
+    & .right {
+      margin-left: 10px;
+    }
+  }
+
+  &.small .item {
+    padding: $offset*10px $offset*8px};
+  }
+}

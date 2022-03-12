@@ -1,0 +1,13 @@
+/* Recent Posts widget */
+
+.widget_recent_entries .post-date {
+    display: block;
+    font-size: 13px;
+    font-size: 0.8125rem;
+    line-height: 1.615384615;
+    margin-bottom: 0.538461538em;
+}
+
+.widget_recent_entries li:last-child .post-date {
+    margin-bottom: 0;
+}

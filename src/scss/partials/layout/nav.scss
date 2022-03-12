@@ -1,0 +1,35 @@
+/**
+ * partials/nav
+ * ---
+ * Menus
+ */
+ header {
+   nav {
+     position: fixed;
+     top: 15vh;
+     bottom: 2vh;
+     left: 0vw;
+   }
+ }
+
+
+.nav {
+  margin-top: 0;
+  margin-left: 3vw;
+  margin-bottom: $horizontal-spacer;
+
+  width: 2vw;
+
+}
+
+.menu {
+  display: inline-flex;
+  flex-direction: column;
+  list-style: none;
+  margin: 0;
+  padding-left: 0;
+}
+
+.sub-menu {}
+
+.menu-item {}

@@ -1,0 +1,52 @@
+$chip-percentage: 4%;
+
+$chip-color: tint($button, $chip-percentage);
+$chip-text-color: shade($chip-color, $text-percentage);
+$chip-active-color: shade($chip-color, $active-percentage);
+$chip-border-color: shade($chip-color, $border-percentage);
+$chip-focus-color: shade($chip-color, $focus-percentage);
+$chip-hover-color: shade($chip-color, $hover-percentage);
+$chip-background-color: tint($chip-color, $background-percentage);
+$chip-border-radius: $border-radius * 50;
+
+$chip-offset-y: $offset * 10;
+$chip-offset-x: $offset * 8;
+
+.chip {
+  padding: $chip-offset-x $chip-offset-y;
+  user-select: none;
+  background: $chip-background-color;
+  border-radius: $chip-border-radius;
+  transition: all 0.2s ease;
+  cursor: pointer;
+
+  &:hover {
+    background: tint($chip-hover-color, $background-percentage);
+  }
+
+  &:active,
+  &:focus-visible {
+    background: tint($chip-focus-color, $background-percentage);
+  }
+
+  &.active {
+    background: tint($chip-active-color, $background-percentage);
+    color: tint($chip-active-color, $text-percentage);
+
+    &:hover {
+      background: tint($chip-hover-color, $background-percentage);
+    }
+
+    &:active,
+    &:focus-visible {
+      background: tint($chip-active-color, $focus-percentage);
+    }
+  }
+
+  &.inactive,
+  &:inactive {
+    background: tint($chip-background-color, $inactive-percentage);
+    color: tint($chip-text-color, $inactive-percentage);
+    cursor: default;
+  }
+}

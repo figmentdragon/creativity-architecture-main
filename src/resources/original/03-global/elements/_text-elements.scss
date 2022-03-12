@@ -1,0 +1,50 @@
+/* 6 */
+/* Text elements */
+$mark-padding:                .2em !default;
+$mark-bg:                     #fcf8e3 !default;
+
+p {
+	margin-bottom: 1.5em;
+	-webkit-hyphens: auto;
+  -epub-hyphens:   auto;
+  -moz-hyphens:    auto;
+  hyphens:         auto;
+
+	img {
+		margin: 0;
+	}
+	.lead {
+		font-size: 21px;
+		line-height: .75rem;
+		color: tint($heading-text-color, $lead-percentage);
+	}
+}
+
+address {
+	margin: 0 0 1.5em;
+}
+
+abbr, acronym {
+	border-bottom: 1px dotted #666;
+	cursor: help;
+}
+
+abbr[title] {
+    border-bottom: 1px dotted;
+}
+
+mark, ins {
+  background: #fff9c0;
+  color: #000;
+	text-decoration: none;
+}
+cite {
+    font-family: $accent-font;
+    font-style: italic;
+    font-weight: bold;
+    margin-top: 1rem;
+}
+
+del {
+    opacity: 0.8;
+}

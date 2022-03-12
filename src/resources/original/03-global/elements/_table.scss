@@ -1,0 +1,134 @@
+/* 4 */
+table {
+  border-width: 1px 0 0 1px;
+  border: solid $primary;
+  border-collapse: collapse;
+  border-spacing: 0;
+  table-layout: fixed;
+  text-align: left;
+  margin: 0 0 0.7777777777777778em;
+  table-layout: fixed;
+  width: 100%;
+
+	@include media(tablet) {
+		table-layout: auto;
+	}
+	@include media(desktop) {
+		table-layout: auto;
+	}
+	thead tr {
+		border-bottom: 1px solid;
+	}
+	thead th{
+  	font-weight: 700;
+	}
+	p {
+		margin-top: 0;
+	}
+	td,
+	th {
+		padding: $offset;
+	}
+	caption {
+		margin: 2rem 0;
+	}
+	tr {
+		border-bottom: 1px solid $primary;
+	}
+}
+
+thead th,
+tbody th {
+  border-width: 0 1px 1px 0;
+  border-right: $border-width solid;
+  padding: 12px 21px;
+  text-align: left;
+  box-sizing:border-box;
+
+  @include media(tablet) {
+    padding: 12px 28px;
+  }
+}
+
+tbody th {
+	font-weight: 700;
+}
+
+tbody td {
+  border-right: 1px solid;
+}
+
+.calendar_wrap {
+  border-top: 0;
+  table-layout:fixed;
+
+  caption {
+    padding: 10px;
+  }
+
+  thead th,
+	tbody th {
+    padding: 5px;
+    text-align: center;
+  }
+
+  tbody td,
+  tfoot tr td {
+    font-size: 14px;
+    font-size: 0.875rem;
+    padding: 4px;
+    text-align: center;
+
+    @include media(wide) {
+      font-size: 16px;
+      font-size: 1rem;
+      padding: 5px;
+    }
+  }
+
+  tbody tr:last-child {
+    border-top: 1px solid;
+  }
+
+  tbody tr:first-child {
+    border-bottom: 1px solid;
+  }
+}
+
+td#today {
+    font-weight: 700;
+}
+
+tfoot {
+  border-top: 1px solid;
+
+  tr td {
+    border-right: 1px solid;
+  }
+}
+
+th {
+  background: $secondary-bg;
+  font-weight: 700;
+}
+
+table tbody tr:nth-child(even) {
+	background: $accent;
+}
+
+th,
+td {
+  border-width: 0 1px 1px 0;
+  font-weight: normal;
+  text-align: left;
+
+  :not(last-of-type) {
+    border-right: 1px solid $primary;
+	}
+}
+
+caption,
+th,
+td {
+    padding: 0.667em;
+}

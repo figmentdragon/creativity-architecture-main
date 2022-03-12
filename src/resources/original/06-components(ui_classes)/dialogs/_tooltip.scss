@@ -1,0 +1,14 @@
+.tooltip {
+  background: ($dark, "900");
+  font-size: $font-size-base * 11;
+  color: #fff;
+  padding: $offset * 6;
+  border-radius: $border-radius * 4;
+  width: max-content;
+  user-select: none;
+  transition: opacity 0.2s ease;
+  opacity: 0;
+  &.show {
+    opacity: 1;
+  }
+}

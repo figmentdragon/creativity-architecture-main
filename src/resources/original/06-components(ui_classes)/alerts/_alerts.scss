@@ -1,0 +1,44 @@
+.alert {
+  padding: 15px;
+  border-radius: $border-radius * 6+"px";
+  color: ($dark, "800");
+  background: ($dark, "100");
+  border: 1px solid ($dark, "200");
+  display: flex;
+
+  & .alert-center {
+    flex: 1;
+    margin-left: 8px;
+    margin-right: 8px;
+  }
+
+  &.primary {
+    color: ($primary "900");
+    background: ($primary "100");
+    border: 1px solid ($primary "200");
+  }
+
+  &.secondary {
+    color: ($secondary, "900");
+    background: ($secondary, "100");
+    border: 1px solid ($secondary, "200");
+  }
+
+  &.danger {
+    color: ($alert, "900");
+    background: ($alert, "100");
+    border: 1px solid ($alert, "200");
+  }
+
+  &.success {
+    color: ($valid, "900");
+    background: ($valid, "100");
+    border: 1px solid ($valid, "200");
+  }
+
+  &.attention {
+    color: ($attention, "900");
+    background: ($attention, "100");
+    border: 1px solid ($attention, "200");
+  }
+}

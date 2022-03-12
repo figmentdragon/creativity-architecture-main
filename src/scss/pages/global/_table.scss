@@ -1,16 +1,9 @@
-// Figures
-
-// scss-docs-start figure-variables
-$figure-caption-font-size:          $sm-font-size !default;
-$figure-caption-color:              $gray-600 !default;
-// scss-docs-end figure-variables
-
 figure {
-	border: 1px solid darken($accent, $border-percentage);
+	border: 1px solid $primary;
 	display: inline-block;
 	padding: 1rem;
 	width: 100%;
-  margin: 1em 40px;
+	margin: 0;
 }
 
 figure img {
@@ -18,7 +11,7 @@ figure img {
 }
 
 figure figcaption {
-	font-size: $sm-font-size;
+	font-size: 80%;
 	margin-top: 0.5rem;
 	text-align: center;
 }

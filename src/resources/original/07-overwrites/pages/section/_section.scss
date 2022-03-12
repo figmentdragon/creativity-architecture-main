@@ -1,0 +1,55 @@
+/*--------------------------------------------------------------
+# Sections General
+--------------------------------------------------------------*/
+$offset: 3rem 1.5rem !default;
+$offset-desktop: 3rem 3rem !default;
+$offset-md: 9rem 4.5rem !default;
+$offset-lg: 18rem 6rem !default;
+
+
+.section {
+  padding: $offset;
+  border: 3px solid $orange;
+  background: $white;
+  // Responsiveness
+  @include desktop {
+    padding: $offset-desktop;
+    // Sizes
+    &.is-medium {
+      padding: $offset-md;
+    }
+    &.is-large {
+      padding: $offset-lg;
+    }
+  }
+}
+
+
+.section-bg {
+  background: #f5f8fd;
+}
+
+.section-title {
+  padding-bottom: 30px;
+}
+.section-title h2 {
+  font-size: 32px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  padding-bottom: 20px;
+  position: relative;
+  color: #173b6c;
+}
+.section-title h2::after {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 50px;
+  height: 3px;
+  background: #149ddd;
+  bottom: 0;
+  left: 0;
+}
+.section-title p {
+  margin-bottom: 0;
+}

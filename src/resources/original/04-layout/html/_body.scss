@@ -1,0 +1,75 @@
+*,
+*::after,
+*::before,
+*:after,
+*:before,
+*:fullscreen {
+  text-rendering: geometricPrecision;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  @include box-sizing($type: inherit);
+  transition: all .3s cubic-bezier(.5, 0, .5, 1);
+}
+
+html {
+  @include gradient-chocolate;
+  @include container-base;
+  height: 100%;
+  width: 100%;
+  border: 2px solid black;
+
+  @media screen and (min-width: 768px) {
+    font-size: 75%;
+  }
+}
+
+body,
+html {
+  font-size: 100%;
+  overflow: hidden;
+
+  width: 100%;
+  height: 100%;
+  @include gradient-accent;
+  * {
+    @include box-sizing($type: border-box);
+  }
+}
+
+body {
+  border: 5px solid yellow;
+  @include gradient-chocolate;
+  @include border-box;
+  position: relative;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 50;
+
+  max-height: 100vh;
+  max-width: 100vw;
+
+  margin: 0;
+  padding: $horizontal-offset .05vw $horizontal-offset $vertical-offset;
+
+  font-family: $main-font;
+}
+
+//body.custom-background {
+//  background-image: url("http://localhost:10004/wp-content/themes/mytheme/assets/images/backgrounds/architect/comppasses.png");
+//  background-position: center center;
+//  background-size: auto;
+//  background-repeat: no-repeat;
+//  background-attachment: fixed;
+//}
+
+
+
+//#page {
+//  margin: 0 auto;
+//  overflow: hidden;
+//  position: relative;
+//  -ms-word-wrap: break-word;
+//  word-wrap: break-word;
+//}

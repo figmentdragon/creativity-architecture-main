@@ -1,54 +1,59 @@
 $nav-perecentage: 8%;
 
 ul, ol {
-  font-family: $accent-font;
+  margin: 0 0 1.5em 1.5em;
   padding: 0;
-  li {
-  	line-height: 1.2;
-    margin-left: 1vw;
-  }
 }
-
 ul {
   font-family: $accent-font;
-	list-style: none;
-  background-color: yellow;
+  font-size: $lg-font-size;
+	list-style: null;
+  display:block;
+  width:150px;
+  margin:20px auto 0;
 }
 ol {
   font-family: 'Pompiere';
 	list-style: none;
 }
-
-ul ol,
-ol ul,
-ul li,
-ol li {
+ul ul, ol ol, ul ol, ol ul, ul li, ol li {
 	margin-bottom: 0;
 	margin-left: .03vw;
 }
 
-ul li >  ul,
-ol li >  ol,
-ul li >  ol,
-ol li >  ul{
-	margin-top: 0;
-	margin-bottom:0;
-}
-
 li {
-  font-family: $accent-font;
-	line-height: 1.2;
-  display: inline-flex;
-  flex-direction: row;
-  flex-flow: nowrap;
-  width: 100%;
-  background-color: green;
+
+  padding: 5px 0;
+  cursor:pointer;
+  border-left:2px solid red;
 
   :before {
-    font-size: inherit;
+    content:"\25CF";
+    font-size: $lg-font-size;
+    vertical-align:middle;
+    color: shade($primary, $nav-perecentage);
   }
+  :hover:before {
+    color: shade($link-text-active);
+  }
+
   a {
-    :hover{
+    overflow: visible;
+    display: inline-block;
+    color: $link-text-active;
+    text-indent: -10px;
+    width:160px;
+    text-decoration: none;
+    text-transform: uppercase;
+    padding: 5px;
+    transition:0.2s ease;
+    margin:2px 0 0 -7px;
+
+    :hover a {
+      background-color:#eb2800;
+      color:#fff;
+      text-align:center;
+      text-indent:0;
     }
   }
   > ul,

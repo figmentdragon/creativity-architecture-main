@@ -1,0 +1,412 @@
+/* Next/Previous navigation */
+
+/* =Navigation
+----------------------------------------------- */
+
+/* Older/Newer Post Navigation */
+
+.site-content .site-navigation {
+
+}
+.site-content .nav-previous {
+	float: left;
+	width: 50%;
+}
+.site-content .nav-next {
+	float: right;
+	text-align: right;
+	width: 50%;
+}
+
+// All navigation
+.navigation
+{
+    color: $primary;
+
+    a
+    {
+        text-decoration: none;
+
+        color: $link-text;
+
+        &:hover
+        {
+            text-decoration: $hover-decoration;
+
+            color: $link-text-hover;
+        }
+
+        &:focus
+        {
+            color: $link-text-hover;
+        }
+
+        &:active
+        {
+            color: $link-text;
+        }
+    }
+
+    .nav-links
+    {
+        @include media(tablet)
+        {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+
+            .nav-next,
+            .nav-previous
+            {
+                flex: 0 1 auto;
+
+                max-width: 50% - (.5 * $col8);
+                margin-top: inherit;
+                margin-bottom: inherit;
+            }
+
+            .nav-next
+            {
+                text-align: right;
+            }
+        }
+         > *
+        {
+            min-width: 44px;
+            min-height: 44px;
+        }
+
+        .nav-next a,
+        .nav-previous a
+        {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .dots
+        {
+            text-align: center;
+        }
+    }
+
+    .svg-icon
+    {
+        position: relative;
+
+        display: inline-block;
+
+        vertical-align: middle;
+
+        fill: currentColor;
+    }
+
+    .nav-previous .svg-icon,
+    .prev .svg-icon
+    {
+        top: -2px;
+
+        margin-right: .25 * $offset;
+    }
+
+    .nav-next .svg-icon,
+    .next .svg-icon
+    {
+        top: -1px;
+
+        margin-left: $offset-md;
+    }
+}
+
+// Singular navigation
+.post-navigation
+{
+    margin: $offset auto;
+
+    @include media(desktop)
+    {
+        margin: $offset auto;
+    }
+    @extend %responsive-alignwide-width;
+
+    .meta-nav
+    {
+        line-height: $base-line-height;
+
+        color: $purple;
+    }
+
+    .post-title
+    {
+        font-family: $secondary-font;
+        font-size: h3;
+        font-weight: $bold-font-weight;
+        line-height: $lg-line-height;
+
+        display: inline-block;
+
+        @include media(desktop)
+        {
+            margin: 5px calc(24px + (.25 * ($base-value * 1px))) 0;
+        }
+    }
+
+    .nav-links
+    {
+        @include media(mobile)
+        {
+            justify-content: space-between;
+        }
+    }
+
+    .nav-next,
+    .nav-previous
+    {
+        margin-top: $offset;
+        margin-bottom: $offset;
+
+        &:first-child
+        {
+            margin-top: 0;
+        }
+
+        &:last-child
+        {
+            margin-bottom: 0;
+        }
+    }
+}
+
+// Index/archive navigation
+.pagination,
+.comments-pagination
+{
+    margin: $offset auto;
+    padding-top: $offset;
+
+    border-top: 3px solid $border-color;
+
+    @include media(desktop)
+    {
+        margin: $offset auto;
+    }
+    @extend %responsive-alignwide-width;
+    @include media(desktop-only)
+    {
+        .nav-links
+        {
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        .page-numbers
+        {
+            display: none;
+
+            &.prev,
+            &.next
+            {
+                display: inline-block;
+                flex: 0 1 auto;
+            }
+        }
+    }
+    @include media(mobile-only)
+    {
+        .nav-short
+        {
+            display: none;
+        }
+    }
+
+    // Resets the top margin added to the .nav-links items below.
+    .nav-links
+    {
+        margin-top: $offset * -2;
+
+        a:hover
+        {
+            color: $link-text-hover;
+        }
+
+        .is-dark-theme &
+        {
+            a:active,
+            a:hover:active,
+            a:hover:focus
+            {
+                color: $body-text;
+            }
+        }
+
+        .has-background-white &
+        {
+            a:active,
+            a:hover:active,
+            a:hover:focus
+            {
+                color: $white;
+            }
+        }
+    }
+
+    .nav-links > *
+    {
+        font-family: 'Wanda';
+        font-size: $base-value;
+        font-weight: $bold-font-weight;
+
+        margin-top: $offset;
+        margin-right: .66 * $base-value;
+        margin-left: .66 * $base-value;
+
+        color: $body-text;
+
+        &.current
+        {
+            text-decoration: underline;
+        }
+
+        &:not(.dots):not(.current):hover
+        {
+            text-decoration-style: dotted;
+        }
+
+        &:first-child
+        {
+            margin-left: 0;
+        }
+
+        &:last-child
+        {
+            margin-right: 0;
+        }
+
+        &.next
+        {
+            margin-left: auto;
+        }
+
+        &.prev
+        {
+            margin-right: auto;
+        }
+    }
+}
+
+// Comments pagination
+.comments-pagination
+{
+    margin: (3 * $base-value) auto;
+    padding-top: .66 * $base-value;
+
+    @include media(desktop)
+    {
+        margin: (3 * $base-value) auto (4 * $base-value) auto;
+    }
+
+    .nav-links > *
+    {
+        font-size: $base-value;
+    }
+}
+
+.comment-navigation .nav-previous,
+.posts-navigation .nav-previous,
+.post-navigation .nav-previous {
+    float: left;
+    width: 50%;
+}
+.comment-navigation .nav-next,
+.posts-navigation .nav-next,
+.post-navigation .nav-next {
+    float: right;
+    text-align: right;
+    width: 50%;
+}
+.navigation.post-navigation {
+    padding: 20px 0 0 0;
+    margin: 0 -30px;
+}
+.navigation.post-navigation a {
+    display: inline-block;
+    position: relative;
+}
+.navigation.post-navigation .nav-label {
+    position: relative;
+    z-index: 2;
+    display: inline-block;
+    background: #df2c45;
+    color: #fff;
+    font-size: 18px;
+    padding: 10px 20px;
+    transition: all 200ms ease-out;
+    text-transform: uppercase;
+    font-family: "Open Sans Condensed", sans-serif;
+    font-weight: bold;
+    line-height: 20px;
+}
+.navigation.post-navigation .nav-label:hover {
+    background: #111;
+}
+.navigation.post-navigation .nav-previous .nav-label:after {
+    float: left;
+    margin: 0 0 0 -7px;
+    padding: 0 7px 0 0;
+    content: "\f104";
+    font-family: "Fontawesome";
+}
+.navigation.post-navigation .nav-next .nav-label:after {
+    float: right;
+    margin: 0 -7px 0 0;
+    padding: 0 0 0 7px;
+    content: "\f105";
+    font-family: "Fontawesome";
+}
+.navigation.post-navigation .nav-title {
+    pointer-events: none;
+    position: absolute;
+    top: 0;
+    line-height: 20px;
+    padding: 10px;
+    background: #df2c45;
+    color: #fff;
+    text-decoration: none;
+    white-space: nowrap;
+    transition: all 200ms ease-out;
+    max-width: 600px;
+    overflow: hidden;
+    opacity: 0;
+    z-index: 1;
+}
+.navigation.post-navigation .nav-previous .nav-title {
+    left: 80%;
+}
+.navigation.post-navigation .nav-previous a:hover .nav-title {
+    left: 100%;
+    opacity: 1;
+}
+.navigation.post-navigation .nav-next .nav-title {
+    right: 80%;
+    text-align: right;
+}
+.navigation.post-navigation .nav-next a:hover .nav-title {
+    right: 100%;
+    opacity: 1;
+}
+.pagination .nav-links {
+    text-align: center;
+}
+.pagination .nav-links span,
+.pagination .nav-links a {
+    background: #df2c45;
+    padding: 10px;
+    margin: 0 2px;
+    color: #FFF;
+    font-size: 13px;
+    display: inline-block;
+    line-height: 1;
+}
+.pagination .nav-links a:hover,
+.pagination .nav-links span.current {
+    background: #111;
+}

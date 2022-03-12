@@ -1,0 +1,27 @@
+/* =Content
+----------------------------------------------- */
+
+#content {
+    margin-bottom: 70px;
+}
+
+/* Do not show the outline on the skip link target. */
+#content[tabindex="-1"]:focus {
+    outline: 0;
+}
+
+.page-title { /* Page titles */
+}
+
+body.search .page-title,
+body.archive .page-title { /* Optional, if you want your page titles to look different on search and archive pages */
+}
+
+
+
+.comments-link {  /* Link to leave a comment */
+
+}
+.edit-link { /* Link to Edit the post (only shows up for admins) */
+
+}

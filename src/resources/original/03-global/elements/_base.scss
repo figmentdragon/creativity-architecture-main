@@ -1,0 +1,36 @@
+/* Base/Default settings. */
+body,
+button,
+select,
+textarea {
+  font-family: $base-font;
+}
+
+body,
+button,
+input,
+select,
+textarea {
+  color: #404040;
+  font-size: $font-size-base;
+  line-height: $base-line-height;
+  font-weight: $normal-font-weight;
+}
+
+input {
+  font-family: $code-font;
+}
+
+blockquote,
+dl,
+figure,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+img,
+p {
+  margin: $horizontal-spacer 0;
+}

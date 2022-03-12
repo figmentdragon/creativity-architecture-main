@@ -14,17 +14,16 @@
   max-height: 100vh;
 }
 
-.site-header{
-  width: 4vw;
+.site-header,
+.header {
+  width: 3vw;
   height: 100%;
-
-  @include gradient-secondary;
+  border: 2px solid gray;
 }
 
 .main {
-  @include elevation(20);
-  @include border-start-radius($border-radius-sm);
-
+  border: 2px solid purple;
+  border-radius: 15px;
   overflow: hidden;
   transition: background-color $duration;
   *zoom: 1;
@@ -49,18 +48,12 @@
 
 #tertiary{}
 
-.site-footer {
-  height: 1.75vh;
-  display: inline;
-  align-items: baseline;
-  justify-content: flex-end;
+.nav {
+  margin-top: 40vh;
+  margin-bottom: 2vh;
+  border: 2px solid pink;
 }
 
-@import "structure/article";
-@import "structure/footer";
-@import "structure/header";
-@import "structure/main";
-@import "structure/nav";
-@import "structure/sidebar";
-@import "structure/wordpress";
-@import "structure/wrapper";
+.site-footer {
+
+}

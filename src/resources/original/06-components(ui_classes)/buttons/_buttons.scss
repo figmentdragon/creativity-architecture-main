@@ -1,0 +1,205 @@
+/* Button Border */
+$button-border-radius       : $border-radius * 4;
+$button-focus-width         : $border-width-focus;
+
+
+%button,
+.button {
+  display: inline-block;
+  position: relative;
+
+  font-family: $accent-font;
+  text-decoration: none;
+  color: $white;
+  font-size: $font-size-base * 14;
+  line-height: $lg-line-height;
+  font-weight: 500;
+  text-transform: uppercase;
+  padding: ($offset * 10) ($offset * 16);
+  border-radius: $button-border-radius;
+  border: 0;
+  outline: none;
+
+  user-select: none;
+  align-items: center;
+  justify-content: center;
+
+  cursor: pointer;
+  @include transition(background-color 0.24s ease-in-out);
+
+  // clicking on the button
+  &:active {
+    top: 1px; // adds a tiny hop to the click
+    @include elevation(4);
+    // hovering on the button
+    &:hover,
+    &:focus {
+      color: $white;
+      text-decoration: none;
+      outline: none;
+      @include elevation(8);
+    } // end hover
+    &:focus-visible {
+      border-width: $border-width-focus;
+    }
+  } // end active
+
+  &:disabled,
+  &.inactive {
+    background: transparent;
+    color: ($dark, "800");
+    cursor: not-allowed;
+    @include elevation(0);
+  }
+}
+
+.button.unelevated {
+  @extend %button; // here we load the button
+  box-shadow: none !important;
+
+  &:active {
+    background-color: darken($blue, 5%);
+
+    &:hover,
+    &:focus {
+      background-color: darken($blue, 4%);
+
+      &:focus-visible {
+        border-width: $border-width-focus;
+      }
+    } // end hover
+  } // end active
+  &:disabled,
+  &.inactive {
+    background: transparent;
+    color: ($dark, "800");
+    cursor: not-allowed;
+  }
+}
+
+.button.text {
+  @extend %button; // here we load the button
+  background: transparent;
+  box-shadow: none;
+  &:active {
+    background-color: darken($blue, 5%);
+
+    &:hover,
+    &:focus {
+      background-color: darken($blue, 4%);
+
+      &:focus-visible {
+        border-width: $border-width-focus;
+      }
+    } // end hover
+  } // end active
+  &:disabled,
+  &.inactive {
+    background: transparent;
+    color: ($dark, "800");
+    cursor: not-allowed;
+  }
+}
+
+
+.button.small{
+  @extend %button; // here we load the button
+  &:active {
+    background-color: darken($blue, 5%);
+
+    &:hover,
+    &:focus {
+      background-color: darken($blue, 4%);
+
+      &:focus-visible {
+        border-width: $border-width-focus;
+      }
+    } // end hover
+  } // end active
+  &:disabled,
+  &.inactive {
+    background: transparent;
+    color: ($dark, "800");
+    cursor: not-allowed;
+  }
+}
+
+.button.large {
+  @extend %button; // here we load the button
+  &:active {
+    background-color: darken($blue, 5%);
+
+    &:hover,
+    &:focus {
+      background-color: darken($blue, 4%);
+
+      &:focus-visible {
+        border-width: $border-width-focus;
+      }
+    } // end hover
+  } // end active
+  &:disabled,
+  &.inactive {
+    background: transparent;
+    color: ($dark, "800");
+    cursor: not-allowed;
+  }
+}
+
+/*@mixin button() {
+  %color {
+    @extend %button; // here we load the button defaults
+    $background: tint($color, $background-percentage)%color, ;
+    $text: shade()%color, $text-percentage;
+
+    &:active {
+      @include elevation(4);
+      background-color: $background;
+      color: $text;
+
+      &:hover,
+      &:focus {
+        @include elevation(8);
+        $background-hover: tint($background, $hover-percentage);
+        $text-hover: shade($text, $hover-percentage);
+        background-color: $background-hover;
+        color: $text-hover;
+      } // end hover
+    } // end active
+    &:disabled,
+    &.inactive {
+      background: transparent;
+      color: ($dark, "800");
+      cursor: not-allowed;
+    }
+  }
+} // end mixin button
+
+.button.outlined {
+  @extend %button; // here we load the button
+  @include button();
+  background: transparent;
+  outline: 1px solid ($dark, "300");
+  outline-offset: -1px;
+  color: ($dark, "800");
+  box-shadow: none;
+  &:active {
+    background-color: darken($blue, 5%);
+
+    &:hover,
+    &:focus {
+      background-color: darken($blue, 4%);
+
+      &:focus-visible {
+        border-width: $border-width-focus;
+      }
+    } // end hover
+  } // end active
+  &:disabled,
+  &.inactive {
+    background: transparent;
+    color: ($dark, "800");
+    cursor: not-allowed;
+  }
+}
+*/

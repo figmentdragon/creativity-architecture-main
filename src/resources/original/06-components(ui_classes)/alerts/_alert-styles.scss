@@ -1,0 +1,43 @@
+/******************************************************************
+Site Name:
+Author:
+
+Stylesheet: Alert Styles
+
+If you want to use these alerts in your design, you can. If not,
+you can just remove this stylesheet.
+
+******************************************************************/
+
+
+
+// alerts and notices
+%alert {
+  margin: 10px;
+  padding: 5px 18px;
+  border: 1px solid;
+}
+
+.alert-help {
+  @extend %alert;
+  border-color: darken($attention, $border-percentage);
+  background: tint($attention, $background-percentage);
+}
+
+.alert-info {
+  @extend %alert;
+  border-color: darken($info, $border-percentage);
+  background: $info-bg;
+}
+
+.alert-error {
+  @extend %alert;
+  border-color: darken($invalid, $border-percentage);
+  background: $invalid-bg;
+}
+
+.alert-success {
+  @extend %alert;
+  border-color: darken($valid, $border-percentage);
+  background: $valid-bg;
+}

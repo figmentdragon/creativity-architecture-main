@@ -57,7 +57,7 @@ add_action( 'customize_register', 'creativityarchitect_customize_register', 11 )
  */
 function creativityarchitect_customize_preview_js() {
 	$min  = defined( 'SCRIPT_DEBUG' ) && SCRIPT_DEBUG ? '' : '.min';
-	$path = defined( 'SCRIPT_DEBUG' ) && SCRIPT_DEBUG ? 'js/source/' : 'js/';
+	$path = defined( 'SCRIPT_DEBUG' ) && SCRIPT_DEBUG ? 'src/js/source/' : 'src/js/';
 
 	wp_enqueue_script( 'creativityarchitect-customize-preview', trailingslashit( esc_url ( get_template_directory_uri() ) ) . $path . 'customize-preview' . $min . '.js', array( 'customize-preview' ), date( 'Ymd-Gis', filemtime( get_template_directory() . '/' . $path . 'customize-preview' . $min . '.js' ) ), true );
 }
@@ -122,3 +122,8 @@ require get_parent_theme_file_path( 'inc/customizer/service.php' );
  * Include Reset Button
  */
 require get_parent_theme_file_path( 'inc/customizer/reset.php' );
+
+/**
+ * Upgrade to Pro Button
+ */
+require get_parent_theme_file_path( 'inc/customizer/upgrade-button/class-customize.php' );

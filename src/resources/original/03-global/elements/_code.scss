@@ -1,0 +1,47 @@
+/* 5 */
+// Code
+
+$code-font-size:                    $small-font-size !default;
+$code-color:                        tint($pink, $text-percentage) !default;
+
+$kbd-padding-y:                     .2rem !default;
+$kbd-padding-x:                     .4rem !default;
+$kbd-font-size:                     $code-font-size !default;
+$kbd-color:                         $white !default;
+$kbd-bg:                            $gray-900 !default;
+
+$pre-color:                         null !default;
+
+pre {
+  font-family: $code-font;
+  text-align: left;
+  font-size: $code-font-size;
+  line-height: $base-line-height;
+  margin-bottom: 1.6em;
+
+  overflow: auto;
+  padding: 1.6em;
+  max-width: 100%;
+}
+
+code,
+kbd,
+pre,
+samp,
+tt,
+var {
+  background: $kbd-bg;
+  font-family: $code-font;
+  font-size: $code-font-size;
+  padding: 0.5rem 1rem;
+}
+
+code,
+pre {
+  overflow: auto;
+}
+
+code pre,
+pre code {
+  padding: 0;
+}

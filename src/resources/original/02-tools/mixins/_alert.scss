@@ -1,0 +1,16 @@
+// invalids
+
+@mixin invalid-variant($background, $border, $color) {
+  --#{$variable-prefix}invalid-color: #{$color};
+  --#{$variable-prefix}invalid-bg: #{$background};
+  --#{$variable-prefix}invalid-border-color: #{$border};
+
+  @if $enable-gradients {
+    background-image: var(--#{$variable-prefix}gradient);
+  }
+
+  .invalid-link {
+    color: shade-color($color, 20%);
+  }
+}
+// scss-docs-end invalid-variant-mixin

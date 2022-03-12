@@ -1,0 +1,42 @@
+audio,
+canvas,
+progress,
+video {
+  display: inline-block;
+  vertical-align: baseline;
+}
+audio:not([controls]) {
+  display: none;
+  height: 0;
+}
+
+img {
+  border: 0;
+  max-width: 100%;
+  height: auto;
+  vertical-align: middle;
+  .scale-with-grid {
+    max-width: 100%;
+    height: auto;
+  }
+}
+svg:not(:root) {
+  overflow: hidden;
+}
+
+embed,
+iframe,
+object,
+video {
+  max-width: 100%;
+  vertical-align: middle;
+  p > & {
+  }
+}
+
+p > embed,
+p > iframe,
+p > object,
+p > video {
+  margin-bottom: 0;
+}

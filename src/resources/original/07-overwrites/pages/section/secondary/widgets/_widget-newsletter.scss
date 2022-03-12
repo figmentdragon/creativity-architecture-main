@@ -1,0 +1,46 @@
+/* Footer Newsletter */
+
+.footer-newsletter:before,
+.footer-newsletter:after {
+    clear: both;
+    content: "";
+    display: block;
+}
+
+#footer-newsletter .wrapper {
+    max-width: 1920px;
+}
+
+#footer-newsletter .widget {
+    clear: both;
+    margin: 0;
+    padding: 0;
+}
+
+#footer-newsletter .has-background-image.widget {
+    margin: 42px auto;
+}
+
+#footer-newsletter .widget-inner {
+    max-width: 1020px;
+    margin: 0 auto;
+    padding: 0 30px;
+}
+
+#footer-newsletter .ewnewsletter .widget-inner-wrap {
+    padding: 0;
+    margin: 0;
+}
+
+#footer-newsletter .ewnewsletter .hentry {
+    text-align: left;
+    margin-bottom: 42px;
+}
+
+.ew-newsletter-content-container >:last-child {
+    margin-bottom: 0;
+}
+
+.footer-newsletter .ew-newsletter-image-container {
+    margin-bottom: 21px;
+}

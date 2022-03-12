@@ -1,0 +1,40 @@
+$entry-header-color: shade-color($heading-text, 10%);
+
+.entry-title {
+
+	color: $entry-header-color;
+	font-size: $entry-header-font-size;
+	letter-spacing: $letter-spacing-lg;;
+	line-height: $line-height-md;
+	overflow-wrap: break-word;
+
+	a {
+		color: $link-text-color;
+		text-underline-offset: 0.15em;
+
+		&:hover {
+			color: $link-hover-color;
+		}
+
+		&:focus {
+			color: $link-focus-color;
+		}
+
+		&:active {
+			color: $link-text-color;
+		}
+	}
+}
+
+.singular .entry-title {
+	font-size: h3;
+}
+
+h1.entry-title {
+	line-height: $lg;
+	font-weight: bold;
+}
+
+@import "entry/content";
+@import "entry/post-thumbnail";
+@import "entry/author";

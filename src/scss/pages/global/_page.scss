@@ -1,5 +1,13 @@
 .page,
 .post,
 .search .archive-content-wrap {
-    margin: 0;
+  margin: 0;
+}
+
+#page {
+  margin: 0 auto;
+  overflow: hidden;
+  position: relative;
+  -ms-word-wrap: break-word;
+  word-wrap: break-word;
 }
